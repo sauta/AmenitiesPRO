@@ -89,6 +89,7 @@
 <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- iCheck -->
 <script src="<?=base_url()?>AdminLTE-2.4.2/plugins/iCheck/icheck.min.js"></script>
+
 <script>
 <?php if (isset($mensaje)) 
 {?>
