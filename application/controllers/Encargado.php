@@ -13,7 +13,23 @@ class Encargado extends CI_Controller {
 
 	public function ValidarDatos($encargado)
 	{
-		
+		if($encargado['NombreEncargado'] == null || $encargado['NombreEncargado'] == '' )
+		{
+			$mensaje = "";
+			return $mensaje;
+		}
+		  elseif($encargado['RutEncargado']  == null || $encargado['RutEncargado'] == '' )
+		{
+			$mensaje = "No ingresó el rut encargado";
+			return $mensaje;
+		}
+		  elseif($encargado['idCargo']  == null || $encargado['idCargo']   == '' )
+		{
+			$mensaje = "No se encintró al encargado";
+			return $mensaje;
+		}else{
+			return true;
+		}
 	}
  }
 ?>

@@ -10,6 +10,23 @@ class Contacto extends CI_Controller {
 		$this->load->library('session');
 	}
 
+	public function ValidarDatos($contacto)
+	{
+		if($contacto['Celular']    == null || $contacto['Celular']  == '')
+		{
+
+		}
+		elseif($contacto['Email']      == null || $contacto['Email']    == '')
+		{
+
+		}
+		elseif($contacto['Telefono']   == null || $contacto['Telefono'] == '')
+		{
+
+		}else{
+
+		}
+	}
 
 }
 ?>

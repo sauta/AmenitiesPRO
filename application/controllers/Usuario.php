@@ -33,38 +33,32 @@ class Usuario extends CI_Controller {
 	public function ValidaRegistro($usuario)
 	{
 
-
-		foreach ($variable as $key => $value) {
-			# code...
-		}
-		if ($usuario['NombreUsuario'] != null && $usuario['NombreUsuario'] != '')
+		if ($usuario['NombreUsuario'] == null || $usuario['NombreUsuario'] == '')
 		{
-		 if ($usuario['Clave']         != null && $usuario['Clave']         != '')
-		 {
-		  if ($usuario['RepClave']      != null && $usuario['RepClave']      != '')
-		  {
-		   if ($usuario['idPremiso']     != null && $usuario['idPremiso']     != '')
-		   {
-		   	if($usuario['Clave'] == $usuario['RepClave'] ) {
-		   		return true;
-		   	}else{
-		   		echo '<script type="text/javascript>alert("Las calves no coinciden");</script>'
-		   	}
-		   }else{
-		   	echo '<script type="text/javascript>alert("No se pudo ingresar el permiso por alguna razón");</script>';
-		   	return false;
-		   }
-		  }else{
-		  	echo '<script type="text/javascript>alert("El campo re-clave se ecuentra vacio");</script>';
-		  	return false;
-		  }
-		 }else{
-		 	echo '<script type="text/javascript>alert("No ingresó una calve");</script>';
-		 	return false;
-		 }
-		}else{
 			echo '<script type="text/javascript>alert("Nombre del usuario Vacio");</script>';
 			return false;
+		}
+		 elseif ($usuario['Clave'] == null || $usuario['Clave']== '')
+		{
+			echo '<script type="text/javascript>alert("No ingresó una calve");</script>';
+		 	return false;
+		}
+		 elseif ($usuario['RepClave']  == null || $usuario['RepClave']== '')
+		{
+			echo '<script type="text/javascript>alert("El campo re-clave se ecuentra vacio");</script>';
+		  	return false;
+		}
+		 elseif ($usuario['idPremiso'] == null || $usuario['idPremiso']== '')
+		{
+			echo '<script type="text/javascript>alert("No se pudo ingresar el permiso por alguna razón");</script>';
+		   	return false;
+		}
+		 elseif($usuario['Clave'] != $usuario['RepClave']) 
+		{
+			echo '<script type="text/javascript>alert("Las calves no coinciden");</script>';
+			return false;
+		}else{
+			return true;
 		}
 	}
 

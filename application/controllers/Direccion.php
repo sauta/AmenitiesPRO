@@ -28,7 +28,16 @@ class Direccion extends CI_Controller {
 	}
 	public function ValidarDatos($usuario)
 	{
-		
+		if($direccion['idComuna']   == null || $direccion['idComuna']  == '')
+		{
+
+		}
+		elseif ($direccion['Direccion']  == null || $direccion['Direccion'] == '') 
+		{	
+
+		}else{
+
+		}
 	}
  }
 ?>

@@ -44,7 +44,6 @@ class Registro extends CI_Controller
 	public function registro()
 	{
 
-		try {
 		 $data['titulo'] = 'Amenities PRO';
 		//Usuario; entrega de los datos de la vista Rgistro
 		 $usuario['NombreUsuario'] = $this->input->post('txtNombreUsuario');
@@ -75,23 +74,6 @@ class Registro extends CI_Controller
 		$this->Empresa->ValidaRegistro($empresa)     &&
 		$this->Contacto->ValidaRegistro($contacto)   &&
 		$this->Direccion->ValidaRegistro($direccion) &&
-
-		$encargado['NombreEncargado'] != null && $encargado['NombreEncargado'] != '' &&
-		$encargado['RutEncargado']    != null && $encargado['RutEncargado']    != '' &&
-		$encargado['idCargo']         != null && $encargado['idCargo']     	   != '' &&
-
-		$empresa['NombreFantasia']   != null && $empresa['NombreFantasia'] != '' &&
-		$empresa['RutEmpresa']      != null && $empresa['RutEmpresa']      != '' &&
-		$empresa['RazonSocial']     != null && $empresa['RazonSocial']     != '' &&
-		$empresa['Descripcion']     != null && $empresa['Descripcion']     != '' &&
-		$empresa['idTipoCliente']   != null && $empresa['idTipoCliente']   != '' &&
-
-		$contacto['Email']      != null && $contacto['Email']    != '' &&
-		$contacto['Telefono']   != null && $contacto['Telefono'] != '' &&
-		$contacto['Celular']    != null && $contacto['Celular']  != '' &&
-
-		$direccion['idComuna']   != null && $direccion['idComuna']  != '' &&
-		$direccion['Direccion']  != null && $direccion['Direccion'] != '' ) 
 		{
 	
 		 if($usuario['Clave'] == $usuario['RepClave'] ) {
@@ -167,14 +149,8 @@ class Registro extends CI_Controller
 		 	//mensaje de que existen algunos campos sin rellenar
 			 	$data = array('$mensaje' => 'existen algunos campos sin rellenar');
 		 		redirect('Registro','refresh', $data);
-		 }			
-		} catch (Exception $e) {
+		 }
 
-			echo '<script type="text/javascript">alert("'+$e->getMessage()+'");</script>';
-			redirect('Registro','refresh', $data);
-
-
-		}
 	}
 }
 
