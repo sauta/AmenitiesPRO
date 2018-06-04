@@ -10,7 +10,6 @@
 <center>
 
 <from action="<?=site_url()?>/Prueba/buscarEmpresa" method="post">
-
     <h1>Seleciona una Empresa</h1>
     </br>
      <?php
@@ -21,8 +20,7 @@
      ?>
     </br>
     <button type="submit">Enviar</button>
-</from>
-
+    </from>
 </center>
 </body>
 </html>

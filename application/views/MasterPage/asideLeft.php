@@ -30,7 +30,7 @@
             <i class="fa fa-th"></i> <span>Panel <?=$this->session->userdata('s_permiso')?></span>
           </a>
         </li>
-      <!----------------------- Opciones cliente ------------------------>
+      <!---------------------- Opciones cliente ------------------------>
       <?php  if($this->session->userdata('s_permiso') == 'Cliente') {?>
 
         <!-- Estadisticas -->
