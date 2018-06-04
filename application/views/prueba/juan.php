@@ -7,19 +7,21 @@
     <title>juan</title>
 </head>
 <body>
+<center>
 
-<form action="<?=site_url()?>/Prueba/guardar" method="post">
-    <h1>Hola mundo ql</h1> 
-    
-    <?php
-        echo $mensaje1;
-        echo "My first PHP script!";
-    ?>
+<from action="<?=site_url()?>/Prueba/buscarEmpresa" method="post">
+    <h1>Seleciona una Empresa</h1>
+    </br>
+     <?php
+     if($men!=null)
+        echo $men;
+     else
+        echo 'puta2';   
+     ?>
+    </br>
+    <button type="submit">Enviar</button>
+</from>
 
-    <input type="text" name="nombre" class="form-control" placeholder="Nombre">
-    <button type="submit" name="guardar">Guardar</button>
-
-</form>
-
+</center>
 </body>
 </html>
