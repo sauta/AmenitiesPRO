@@ -39,5 +39,27 @@ class Mencargado extends CI_Model
 	    {
 	    	# code...
 	    }
+
+	    
+		public function ValidarDatos($encargado)
+		{
+			if($encargado['NombreEncargado'] == null || $encargado['NombreEncargado'] == '' )
+			{
+				$mensaje = "No ingresó el nombre el encargado";
+				return $mensaje;
+			}
+			  elseif($encargado['RutEncargado']  == null || $encargado['RutEncargado'] == '' )
+			{
+				$mensaje = "No ingresó el rut del encargado";
+				return $mensaje;
+			}
+			  elseif($encargado['idCargo']  == null || $encargado['idCargo']   == '' )
+			{
+				$mensaje = "No se encintró al encargado";
+				return $mensaje;
+			}else{
+				return true;
+			}
+		}
 	}
 ?>

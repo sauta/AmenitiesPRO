@@ -65,14 +65,46 @@ class Musuario extends CI_Model
 				return false; //el usuario no existe D:
 			}
 	    }
-	    /********************************************Validadores*****************************************/
+
+		public function ValidaRegistro($usuario)
+		{
+			if ($usuario['NombreUsuario'] == null || $usuario['NombreUsuario'] == '')
+			{
+				$mensaje = "Nombre del usuario vacio";
+				return $mensaje;
+			}
+			 elseif ($usuario['Clave'] == null || $usuario['Clave']== '')
+			{
+				$mensaje = "No ingresó una calve";
+			 	return false;
+			}
+			 elseif ($usuario['RepClave']  == null || $usuario['RepClave']== '')
+			{
+				$mensaje = "El campo re-clave se ecuentra vacio";
+			  	return $mensaje;
+			}
+			 elseif ($usuario['idPremiso'] == null || $usuario['idPremiso']== '')
+			{
+				$mensaje = "No se pudo ingresar el permiso por alguna razón";
+			   	return $mensaje;
+			}
+			 elseif($usuario['Clave'] != $usuario['RepClave']) 
+			{
+				$mensaje = "Las calves no coinciden";
+				return $mensaje;
+			}else{
+				return 0;
+			}
+		}
+
+	    /********************************************Buscadores*****************************************/
 		public function buscar($parametro)
 		{
 			 $query = $this->db->get_where('usuario',array('NombreUsuario'=>$parametro));
 
 			 return $query->result();
 		}
-		/********************************************Listadores*****************************************/
+
 	    public function listar()
 	    {
 	    	$this->db->select('u.NombreUsu, e.Nombre, m.NombreFantasia');

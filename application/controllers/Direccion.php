@@ -26,18 +26,6 @@ class Direccion extends CI_Controller {
 		$parametro = $this->mdireccion->listarRegion();
 		echo json_encode($parametro);
 	}
-	public function ValidarDatos($usuario)
-	{
-		if($direccion['idComuna']   == null || $direccion['idComuna']  == '')
-		{
-
-		}
-		elseif ($direccion['Direccion']  == null || $direccion['Direccion'] == '') 
-		{	
-
-		}else{
-
-		}
-	}
+	
  }
 ?>

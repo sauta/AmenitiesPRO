@@ -8,11 +8,13 @@ class Mpedidos extends CI_Model
 		{
 			parent::__construct();
 		}
+
+
+	    /********************************************Buscadores*****************************************/
 	    public function buscar($id)
 	    {
 	    	# code...
 	    }
-
 	    public function buscarDeta($parametro) //busca el detalle la id pedido y la id producto con join
 	    {
 	   	 	$this->db->select('r.Nombre, d.Cantidad, Valor_Pedido');
@@ -24,15 +26,14 @@ class Mpedidos extends CI_Model
 			
 	        return $parametro->result();
 	    }
-
 	    public function listar()
 	    {
 	    	$parametro = $this->db->get('pedido');
 
 	        return $parametro->result();
 	    }
-	    /************************************************************************/
-	    public function guardar($parametro) //se guarda el pedido hecho por le cliente
+		/********************************************Guardadores******************************************/
+		public function guardar($parametro) //se guarda el pedido hecho por le cliente
 	    {
 	    	$campos = array(
 					'Fecha_Emicion'   => $parametro['FechaEmicion'],
@@ -43,7 +44,12 @@ class Mpedidos extends CI_Model
 
 	   		return $this->db->insert_id();
 	    }
-
+		/********************************************Eliminadores******************************************/
+	    public function eliminar()
+	    {
+	    	# code...
+	    }
+		/********************************************Editadores******************************************/
 	    public function generarDetalle_Pedido($parametro)
 	    {
 	    	$campos = array(
@@ -54,13 +60,11 @@ class Mpedidos extends CI_Model
 		 	$this->db->insert('usuario',$campos);
 
 	   		return $this->db->insert_id();
-
-	    public function eliminar()
+	   	}
+		public function editar()
 	    {
 	    	# code...
 	    }
-	    public function editar()
-	    {
-	    	# code...
-	    }
+		/********************************************Validadores******************************************/
+	}
   

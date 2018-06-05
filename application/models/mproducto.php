@@ -54,16 +54,19 @@ class Mproductos extends CI_Model
 	   		return $this->db->insert_id();
 	    }
 
-
-
 	   /******************************Eliminar el producto******************************/
-	    public function eliminar()
+	    public function eliminar($idProducto)
 	    {
-	    	# code...
+	    	 $this->db->delete('producto', array('idProducto' => $idProducto));
+	    }
+
+	    public function eliminar($SKU)
+	    {
+	    	 $this->db->delete('producto', array('sku' => $SKU));
 	    }
 
 	    /******************************Modificar el producto******************************/
-	    public function editarSKU() // ediatar po SKU
+	    public function editarSKU($parametro) // ediatar po SKU
 	    {
 	    	$campos = array(
 					'sku'		    => $parametro['sku'],
@@ -73,11 +76,11 @@ class Mproductos extends CI_Model
 					'PK_idCategoria'=> $parametro['idCategoria'],
 					'url_imagen'	=> $parametro['url_imagen']
 					 );
-			$this->db->insert('producto',$campos);
+			$this->db->update('producto', $campos, array('sku' => $parametro['sku']));
 
 	   		return $this->db->insert_id();
 	    }
-	    public function editarId() //editar por Id
+	    public function editarId($parametro) //editar por Id
 	    {
 	    	$campos = array(
 					'sku'		    => $parametro['sku'],
@@ -87,11 +90,11 @@ class Mproductos extends CI_Model
 					'PK_idCategoria'=> $parametro['idCategoria'],
 					'url_imagen'=> $parametro['url_imagen']
 					 );
-			$this->db->insert('producto',$campos);
+			$this->db->update('producto', $campos, array('idProducto' => $parametro['idProducto']));
 
 	   		return $this->db->insert_id();
 	    }
-	    public function editar() // Editar por nombre
+	    public function editar($parametro) // Editar por nombre
 	    {
 	    	$campos = array(
 					'sku'		    => $parametro['sku'],
