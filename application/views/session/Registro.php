@@ -36,7 +36,7 @@
   <div class="login-box-body">
     <p class="login-box-msg">Registro en Amenities PRO</p>
 
-    <form name="form"  action="<?=site_url()?>/Registro/registro" method="POST">
+    <form name="form1"  action="<?=site_url()?>/Registro/registro" method="POST">
         <!--***********************************Registro Usuario************************************-->
         <!--Nombre Usuario-->
          <div class="form-group">
@@ -49,12 +49,12 @@
          </div>
         <!--Clave-->
          <div class="form-group has-feedback">
-          <input name="txtClave" type="password" class="form-control" placeholder="Clave" required>
+          <input name="txtClave" type="password" class="form-control" placeholder="Clave" required min="6" max="13">
           <span class="glyphicon glyphicon-lock form-control-feedback"></span>
          </div>
         <!--Repetir Clave-->
           <div class="form-group has-feedback">
-            <input name="txtRepClave" type="password" class="form-control" placeholder="Repetir Clave" required>
+            <input name="txtRepClave" type="password" class="form-control" placeholder="Repetir Clave" required min="6" max="13">
             <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
           </div>
         <!--****************************************Encargado****************************************-->
@@ -67,7 +67,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-users"></i>
                   </div>
-                  <input name="txtNombreEncargado" maxlength="40" type="text" class="form-control" placeholder="Nombre Encargado" required>
+                  <input name="txtNombreEncargado" maxlength="40" type="text" class="form-control" placeholder="Nombre Encargado" required >
               </div>
          </div>
         <!--Rut-->
@@ -76,7 +76,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-briefcase"></i>
                   </div>
-                        <input id="Rut1" data-mask name="txtRutEncargado"  maxlength="12" type="text" class="form-control" placeholder="RUT" required>
+                        <input id="Rut1" data-mask name="txtRutEncargado"  maxlength="12" type="text" class="form-control" placeholder="RUT" required min=13>
                   
               </div>
          </div>
@@ -105,7 +105,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-mobile-phone"></i>
                   </div>
-                  <input id="Celular" name="txtCelular" type="text" class="form-control" placeholder="Celular" maxlength="15" data-mask  value="<?php if(isset($Celular)) echo $Celular; ?>">
+                  <input id="Celular" name="txtCelular" type="text" class="form-control" placeholder="Celular" maxlength="15" data-mask  required>
               </div>
          </div>
         <!--*****************************************Empresa*****************************************-->
@@ -118,7 +118,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-pencil-square-o"></i>
                   </div>
-                  <input id="Nombre2" name="txtNombreFantasia" type="text" class="form-control" placeholder="Nombre de Fantasia" data-mask  value="<?php if(isset($NombreFantasia)) echo $NombreFantasia; ?>"  >
+                  <input id="Nombre2" name="txtNombreFantasia" type="text" class="form-control" placeholder="Nombre de Fantasia" data-mask required  >
               </div>
          </div>
         <!--Rut Empresa-->
@@ -127,7 +127,10 @@
                   <div class="input-group-addon">
                     <i class="fa fa-briefcase"></i>
                   </div>
-                  <input id="Rut2" onchange=""  data-mask name="txtRutEmpresa" type="text" class="form-control" placeholder="RUT Empresa"  required onkeypress="return function Rut(document.form.txtRutEmpresa.value()); " >
+                  <input id="Rut2" onchange=""  data-mask name="txtRutEmpresa" type="text" class="form-control" 
+                  placeholder="RUT Empresa"  required 
+                  onchange="return function RutEmpresa(document.getElementById('#Rut2').value)" 
+                  min=13>
               </div>
          </div>
         <!--Razon Social-->
