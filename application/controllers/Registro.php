@@ -14,11 +14,6 @@ class Registro extends CI_Controller
 		$this->load->model('mdireccion');
 		$this->load->model('mcontacto');
 		$this->load->model('mencargado');
-		// $this->load->controller('Usuario');
-		// $this->load->controller('Encargado');
-		// $this->load->controller('Empresa');
-		// $this->load->controller('Contacto');
-		// $this->load->controller('Direccion');
 		$this->load->library('session');
 	}
 

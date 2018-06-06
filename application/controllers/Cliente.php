@@ -41,7 +41,6 @@ class Cliente extends CI_Controller {
 
 				}else{redirect('Administrador/cpanel');}
 			}else{redirect('Login');}
-
 		}
 
 	public function perfil()

@@ -136,6 +136,48 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
   window.open(theURL,winName,features);
 }
 
+ 	function ValidaRegistro()
+		{
+			Nombre = document.getElementById("NombreUsuario").value;
+			Clave = document.getElementById("Clave").value;
+			RepClave = document.getElementById("RepClave").value;
+
+			var mensaje;
+			//Usuario
+			if (usuario['NombreUsuario'] == null || usuario['NombreUsuario'] == '')
+			{
+				mensaje = "Nombre del usuario vacio";
+				alert (mensaje);
+				return false;
+			}
+			 else if (usuario['Clave'] == null || usuario['Clave']== '')
+			{
+				mensaje = "No ingresó una clave";
+			 	alert (mensaje);
+			 	return false;
+			}
+			 else if (usuario['RepClave']  == null || usuario['RepClave']== '')
+			{
+				mensaje = "El campo re-clave se ecuentra vacio";
+			  	alert (mensaje);
+			  	return false;
+			}
+
+			 else if(usuario['Clave'] != usuario['RepClave']) 
+			{
+				mensaje = "Las claves no coinciden";
+				alert (mensaje);
+				return false;
+			}
+			//Encargado
+			//Dirección
+			//Usuario
+			//Usuario
+			//Usuario
+			return true;
+		}
+
+
 
 
 

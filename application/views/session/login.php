@@ -91,13 +91,6 @@
 <script src="<?=base_url()?>AdminLTE-2.4.2/plugins/iCheck/icheck.min.js"></script>
 
 
-<?php if(isset($mensaje)) {?>
-  <script>
-  var mensaje = <?=$mensaje?>;
-  alert(mensaje);
-  </script>
-<?php}?>
-
 <script>
   $(function () {
     $('input').iCheck({

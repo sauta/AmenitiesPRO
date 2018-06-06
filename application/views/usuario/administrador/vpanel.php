@@ -15,7 +15,7 @@
             <div class="icon">
               <i class="ion ion-bag"></i>
             </div>
-            <a href="<?=site_url()?>/ccliente/crear_pedido" class="small-box-footer">Crear nueva orden de compra <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?=site_url()?>/Cliente/crear_pedido" class="small-box-footer">Crear nueva orden de compra <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

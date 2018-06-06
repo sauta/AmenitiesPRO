@@ -32,7 +32,7 @@ class Musuario extends CI_Model
 				$s_usuario = array(
 					's_idUsuario' => $r->idUsuario,
 					's_nombreUsuario' => ''+$r->NombreUsu,
-					's_nombreUsuarioSaludo' => 'Bienvenido'+$r->NombreUsu,
+					's_nombreUsuarioSaludo' => 'Bienvenido '+$r->NombreUsu,
 					's_nombreEncargado' => $r->Nombre,
 					's_permiso' => $r->Permiso,
 					's_cargo' => $r->Cargo,
@@ -65,37 +65,6 @@ class Musuario extends CI_Model
 				return false; //el usuario no existe D:
 			}
 	    }
-
-		public function ValidaRegistro($usuario)
-		{
-			if ($usuario['NombreUsuario'] == null || $usuario['NombreUsuario'] == '')
-			{
-				$mensaje = "Nombre del usuario vacio";
-				return $mensaje;
-			}
-			 elseif ($usuario['Clave'] == null || $usuario['Clave']== '')
-			{
-				$mensaje = "No ingresó una calve";
-			 	return false;
-			}
-			 elseif ($usuario['RepClave']  == null || $usuario['RepClave']== '')
-			{
-				$mensaje = "El campo re-clave se ecuentra vacio";
-			  	return $mensaje;
-			}
-			 elseif ($usuario['idPremiso'] == null || $usuario['idPremiso']== '')
-			{
-				$mensaje = "No se pudo ingresar el permiso por alguna razón";
-			   	return $mensaje;
-			}
-			 elseif($usuario['Clave'] != $usuario['RepClave']) 
-			{
-				$mensaje = "Las calves no coinciden";
-				return $mensaje;
-			}else{
-				return 0;
-			}
-		}
 
 	    /********************************************Buscadores*****************************************/
 		public function buscar($parametro)
