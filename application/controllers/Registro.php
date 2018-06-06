@@ -68,7 +68,7 @@ class Registro extends CI_Controller
 		$this->Encargado->ValidaRegistro($encargado) &&
 		$this->Empresa->ValidaRegistro($empresa)     &&
 		$this->Contacto->ValidaRegistro($contacto)   &&
-		$this->Direccion->ValidaRegistro($direccion) &&
+		$this->Direccion->ValidaRegistro($direccion))
 		{
 	
 		 if($usuario['Clave'] == $usuario['RepClave'] ) {

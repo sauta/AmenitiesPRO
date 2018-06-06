@@ -36,7 +36,7 @@
   <div class="login-box-body">
     <p class="login-box-msg">Registro en Amenities PRO</p>
 
-    <form name="form1"  action="<?=site_url()?>/Registro/registro" method="POST" onSubmit="javascript:return Rut(document.form1.txtRutEncargado.value); Rut(document.form1.txtRutEmpresa.value);">
+    <form name="form"  action="<?=site_url()?>/Registro/registro" method="POST">
         <!--***********************************Registro Usuario************************************-->
         <!--Nombre Usuario-->
          <div class="form-group">
@@ -44,17 +44,17 @@
                   <div class="input-group-addon">
                     <i class="fa fa-user"></i>
                   </div>
-                  <input id="Nombre1" name="txtNombreUsuario"  maxlength="40" type="text" class="form-control" placeholder="Nombre Usuario" maxlength="45" value="<?php if(isset($NombreUsuario)) echo $NombreUsuario; ?>">
+                  <input id="Nombre1" name="txtNombreUsuario"  maxlength="40" type="text" class="form-control" placeholder="Nombre Usuario" maxlength="45" required>
               </div>
          </div>
         <!--Clave-->
          <div class="form-group has-feedback">
-          <input name="txtClave" type="password" class="form-control" placeholder="Clave">
+          <input name="txtClave" type="password" class="form-control" placeholder="Clave" required>
           <span class="glyphicon glyphicon-lock form-control-feedback"></span>
          </div>
         <!--Repetir Clave-->
           <div class="form-group has-feedback">
-            <input name="txtRepClave" type="password" class="form-control" placeholder="Repetir Clave" >
+            <input name="txtRepClave" type="password" class="form-control" placeholder="Repetir Clave" required>
             <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
           </div>
         <!--****************************************Encargado****************************************-->
@@ -67,7 +67,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-users"></i>
                   </div>
-                  <input name="txtNombreEncargado" maxlength="40" type="text" class="form-control" placeholder="Nombre Encargado" value="<?php if(isset($NombreEncargado)) echo $NombreEncargado; ?>">
+                  <input name="txtNombreEncargado" maxlength="40" type="text" class="form-control" placeholder="Nombre Encargado" required>
               </div>
          </div>
         <!--Rut-->
@@ -76,7 +76,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-briefcase"></i>
                   </div>
-                        <input id="Rut1" data-mask name="txtRutEncargado"  maxlength="12" type="text" class="form-control" placeholder="RUT" value="<?php if(isset($RutEncargado)) echo $RutEncargado; ?>">
+                        <input id="Rut1" data-mask name="txtRutEncargado"  maxlength="12" type="text" class="form-control" placeholder="RUT" required>
                   
               </div>
          </div>
@@ -86,7 +86,7 @@
          </div>  
         <!--Email-->
          <div class="form-group has-feedback">
-                  <input id="email" name="txtEmail" type="email" class="form-control" placeholder="Email" value="<?php if(isset($Email)) echo $Email; ?>">
+                  <input id="email" name="txtEmail" type="email" class="form-control" placeholder="Email" required>
                   <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
          </div>
         <!--Telefono-->
@@ -95,7 +95,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-phone"></i>
                   </div>
-                  <input id="Telefono" name="txtTelefono" type="text" class="form-control" placeholder="Telefono"  maxlength="19" data-inputmask="'mask': '9999 9999 9999 9999'"  value="<?php if(isset($Telefono)) echo $Telefono; ?>">
+                  <input id="Telefono" name="txtTelefono" type="text" class="form-control" placeholder="Telefono"  maxlength="19" data-inputmask="'mask': '9999 9999 9999 9999'"  required>
 
               </div>
           </div>
@@ -127,7 +127,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-briefcase"></i>
                   </div>
-                  <input id="Rut2" data-mask name="txtRutEmpresa" type="text" class="form-control" placeholder="RUT Empresa"  value="<?php if(isset($RutEmpresa)) echo $RutEmpresa; ?>">
+                  <input id="Rut2" onchange=""  data-mask name="txtRutEmpresa" type="text" class="form-control" placeholder="RUT Empresa"  required onkeypress="return function Rut(document.form.txtRutEmpresa.value()); " >
               </div>
          </div>
         <!--Razon Social-->
@@ -136,7 +136,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-pencil"></i>
                   </div>
-                  <input name="txtRazonSocial" type="text" class="form-control" placeholder="Razon social"  value="<?php if(isset($RazonSocial)) echo $RazonSocial; ?>">
+                  <input name="txtRazonSocial" type="text" class="form-control" placeholder="Razon social"  required>
               </div>
          </div>
         <!--Descripción-->
@@ -145,7 +145,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-comment"></i>
                   </div>
-                  <input maxlength="100" name="txtDescripcion" type="text" class="form-control" placeholder="Descripcion de la Empresa" value="<?php if(isset($Descripcion)) echo $Descripcion; ?>">
+                  <input maxlength="100" name="txtDescripcion" type="text" class="form-control" placeholder="Descripcion de la Empresa" required>
               </div>
          </div>
          <!--***********************************Dirección de facturación********************************--> 
@@ -183,7 +183,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-briefcase"></i>
                   </div>
-                  <input maxlength="45" name="txtDireccion" type="text" class="form-control" placeholder="Direccion" value="<?php if(isset($Direccion)) echo $Direccion; ?>">
+                  <input maxlength="45" name="txtDireccion" type="text" class="form-control" placeholder="Direccion" required>
               </div>
          </div>
              <div class="row">
@@ -196,7 +196,7 @@
          </div>
         <!-- /.col -->
          <div class="col-xs-4">
-           <button type="submit" class="btn btn-primary btn-block btn-flat">Registrarse</button>
+           <button type="submit" onclick="this.disabled=true; this.value=’Enviando...’; this.form.submit()" class="btn btn-primary btn-block btn-flat">Registrarse</button>
          </div>
         <!-- /.col -->
        </div>
@@ -233,6 +233,7 @@
 </script>
 <script src="<?=base_url()?>js/Direccion.js"></script> 
 <script src="<?=base_url()?>js/validarut.js"></script> 
+<script src="<?=base_url()?>js/validadores.js"></script> 
 <script>
     $('#Rut1').mask('99.999.999-A');
     $('#Rut2').mask('99.999.999-A');
