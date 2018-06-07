@@ -84,7 +84,7 @@
       	<div class="col-lg-4">
       	  <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Quick Example</h3>
+              <h3 class="box-title">Lista de facturas</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
@@ -92,7 +92,7 @@
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" >
+                  <input type="submit" class="form-control" id="exampleInputEmail1" placeholder="Enter email" >
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Password</label>

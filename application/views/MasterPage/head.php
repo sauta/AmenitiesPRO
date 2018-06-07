@@ -23,6 +23,8 @@
   <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/bower_components/jvectormap/jquery-jvectormap.css">
   <!-- Date Picker -->
   <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <!-- select 2 -->
+  <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/bower_components/select2/dist/css/select2.min.css">
   <!-- Daterange picker -->
   <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->

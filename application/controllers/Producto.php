@@ -10,5 +10,10 @@ class Producto extends CI_Controller {
 		$this->load->library('session');
 	}
 
+
+	public function pedido()
+	{
+		$this->
+	}
 }
 	?>

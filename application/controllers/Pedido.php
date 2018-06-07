@@ -14,7 +14,19 @@ class Pedido extends CI_Controller {
 	public function guardarPedidos()
 	{
 
-		echo json_encode($this->mpedidos->listar());
+		 $prodcuto['Precio']  = $this->input->post('precio');
+		 $detalle['Cantidad']       = $this->input->post('txtCantidad');
+
+		 $detalle['valor'] = $detalle['Cantidad'] * $prodcuto['Precio'];
+
+		 
+		 $detalle['PK_idProdcuto']  = $this->input->post('idProdcuto');
+
+		 $detalle['FechaEmision']   = $this->input->post('txtEmail');
+		 $detalle['valor']          = $this->input->post('txtTelefono');
+		 $detalle['PK_idUsuario']   = $this->input->post('txtCelular');
+
+		 echo json_encode($this->mpedidos->listar());
 
 	}
 	public function listarPedidos()

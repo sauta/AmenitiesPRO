@@ -148,7 +148,10 @@
                   <div class="input-group-addon">
                     <i class="fa fa-comment"></i>
                   </div>
-                  <input maxlength="100" name="txtDescripcion" type="text" class="form-control" placeholder="Descripcion de la Empresa" required>
+                  <textarea id="descripcion" onkeypress="return limita(100);"
+                  maxlength="100" name="txtDescripcion" type="text" class="form-control" placeholder="Descripcion de la Empresa" required
+                  ></textarea>
+                  
               </div>
          </div>
          <!--***********************************Dirección de facturación********************************--> 
@@ -191,11 +194,11 @@
          </div>
              <div class="row">
           <div class="col-xs-8">
-         <!--  <div class="checkbox icheck">
+         <div class="checkbox icheck">
             <label>
-              <input name="" type="checkbox"> Estoy de acuerdo con los <a href="#">Terminos de uso</a>
+              <input name="terminos" type="checkbox"> Estoy de acuerdo con los <a href="#">Terminos de uso</a>
             </label>
-          </div> -->
+          </div>
          </div>
         <!-- /.col -->
          <div class="col-xs-4">
@@ -232,13 +235,14 @@
 </script>
   <!-- delcaro la direccion del post de javaScrip-->
 <script type="text/javascript">
-             var site_url = '<?=site_url()?>/'; 
+        var site_url = '<?=site_url()?>/'; 
 </script>
 <script src="<?=base_url()?>js/Direccion.js"></script> 
-<script src="<?=base_url()?>js/validarut.js"></script> 
 <script src="<?=base_url()?>js/validadores.js"></script> 
 <script>
-    $('#Rut1').mask('99.999.999-A');
+  
+
+   $('#Rut1').mask('99.999.999-A');
     $('#Rut2').mask('99.999.999-A');
     $('#Celular').mask('+56 9 9999-9999');
     $('#Nombre1').mask('AAAAAAAAAAAAAAAAAAAA');
