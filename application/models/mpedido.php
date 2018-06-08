@@ -1,7 +1,7 @@
 <?php  
 	defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Mpedidos extends CI_Model 
+class Mpedido extends CI_Model 
   {
 
   		function __construct()

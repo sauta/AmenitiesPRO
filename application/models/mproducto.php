@@ -1,7 +1,7 @@
 <?php  
 	defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Mproductos extends CI_Model 
+class Mproducto extends CI_Model 
   {
 
   		function __construct()

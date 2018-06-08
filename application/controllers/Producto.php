@@ -14,9 +14,9 @@ class Producto extends CI_Controller
 
 		public function getProducto()
 		{
-			$parametro = $this->mproducto->listar();
-			echo json_encode($parametro);
-		}
 
-}
+			echo json_encode($this->mproducto->getProductos());
+		}
+	}
+
 ?>
