@@ -46,11 +46,22 @@
 <?php if($this->uri->segment(2)=='facturas'){?>
 	<script type="text/javascript">
              var site_url = '<?=site_url()?>/'; 
+             	alert('esto molesta funca encargar');
 	</script>
     <script src="<?=base_url()?>js/Facturas.js"></script>
-       <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
 <?php } ?>
+
+<?php if($this->uri->segment(2)=='encargar'){?>
+	<script type="text/javascript">
+		
+			 var site_url = '<?=site_url()?>'; 
+			 alert('funca encargar '+site_url+' Si se envia');
+	</script>
+	<script src="<?=base_url()?>js/Productos.js"></script>
+<?php } ?>
+
 
 </body>
 </html>

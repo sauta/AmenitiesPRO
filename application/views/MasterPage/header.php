@@ -6,7 +6,6 @@ skin-yellow
 skin-blue 
 <?php } ?>
  sidebar-mini">
- <script type="text/javascript">$(document).ajaxStart(function() { Pace.restart(); });</script>
 <div class="wrapper">
 
   <header class="main-header">

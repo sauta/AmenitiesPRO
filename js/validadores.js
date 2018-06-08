@@ -1,23 +1,21 @@
 
-(function(){
 
-        var formulario = document.getElementsByName('form1')[0],
-        	elementos = formulario.elements,
-        	
-	 }())
+ 	(function(){
+        var formulario = document.getElemetsByName('form1')[0]
+	 })
 
 function revisarDigito( dvr )
-	{	
-		dv = dvr + ""	
-		if ( dv != '0' && dv != '1' && dv != '2' && dv != '3' && dv != '4' && dv != '5' && dv != '6' && dv != '7' && dv != '8' && dv != '9' && dv != 'k'  && dv != 'K')	
-		{		
-			alert("Debe ingresar un digito verificador valido");		
-			window.document.form1.rut.focus();		
-			window.document.form1.rut.select();		
-			return false;	
-		}	
-		return true;
-	}
+{	
+	dv = dvr + ""	
+	if ( dv != '0' && dv != '1' && dv != '2' && dv != '3' && dv != '4' && dv != '5' && dv != '6' && dv != '7' && dv != '8' && dv != '9' && dv != 'k'  && dv != 'K')	
+	{		
+		alert("Debe ingresar un digito verificador valido");		
+		window.document.form1.rut.focus();		
+		window.document.form1.rut.select();		
+		return false;	
+	}	
+	return true;
+}
 
 function revisarDigito( dvr )
 {	
@@ -276,7 +274,7 @@ function RutEmpresa(texto)
 function MM_openBrWindow(theURL,winName,features) { //v2.0
 		  window.open(theURL,winName,features);
 		}
-function ValidaRegistro()
+	 	function ValidaRegistro()
 			{
 				Nombre = document.getElementById("#NombreUsuario").value;
 				Clave = document.getElementById("#Clave").value;

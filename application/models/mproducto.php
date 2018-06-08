@@ -30,10 +30,14 @@ class Mproductos extends CI_Model
 
 	        return $parametro->result();
 	    }
-
-	    public function listar()// Lista todos los productos
+ 
+	    public function getProductos()// Lista todos los productos
 	    {
-	    	$parametro = $this->db->get('prodcuto');
+
+			$this->db->select('p.sku, p.Nombre, p.Precio, p.url_imagen');
+			$this->db->from('producto p');
+
+	    	$parametro = $this->db->get('producto');
 
 	    	return $parametro->result();
 	    }
@@ -55,14 +59,16 @@ class Mproductos extends CI_Model
 	    }
 
 	   /******************************Eliminar el producto******************************/
-	    public function eliminar($idProducto)
+	    public function eliminarId($idProducto)
 	    {
-	    	 $this->db->delete('producto', array('idProducto' => $idProducto));
+			 $this->db->delete('producto', array('idProducto' => $idProducto));
+			 return true;
 	    }
 
-	    public function eliminar($SKU)
+	    public function eliminarSku($SKU)
 	    {
-	    	 $this->db->delete('producto', array('sku' => $SKU));
+			 $this->db->delete('producto', array('sku' => $SKU));
+			
 	    }
 
 	    /******************************Modificar el producto******************************/

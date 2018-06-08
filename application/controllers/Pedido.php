@@ -14,13 +14,13 @@ class Pedido extends CI_Controller {
 	public function guardarPedidos()
 	{
 
-		 $prodcuto['Precio']  = $this->input->post('precio');
+		 $producto['Precio']  = $this->input->post('precio');
 		 $detalle['Cantidad']       = $this->input->post('txtCantidad');
 
-		 $detalle['valor'] = $detalle['Cantidad'] * $prodcuto['Precio'];
+		 $detalle['valor'] = $detalle['Cantidad'] * $producto['Precio'];
 
 		 
-		 $detalle['PK_idProdcuto']  = $this->input->post('idProdcuto');
+		 $detalle['PK_idProducto']  = $this->input->post('idProducto');
 
 		 $detalle['FechaEmision']   = $this->input->post('txtEmail');
 		 $detalle['valor']          = $this->input->post('txtTelefono');
