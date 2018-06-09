@@ -1,40 +1,11 @@
 <!-- Main content -->
     <section class="content">
       <!-- Small boxes (Stat box) -->
-      <div class="row">
-      	<div class="col-lg-5">
-      	 <div class="box box-success">
-      	 	<div class="box-header with-border">
-                 <h3 class="box-title">Lista de productos</h3>
-            </div>
-	         <div class="box-body no-padding">
-	              <table id="tblProducto" class="table table-striped">
-	                 <!-- <tr>
-	                  <th style="width: 10px">SKU</th>
-	                  <th style="width: 40%" >Nombre</th>
-	                  <th style="width: 40%">Precio</th>
-	                  <th style="width: 60px">Imagen</th>
-	                </tr>
-	                <tr>
-	                  <td>707425</td>
-	                  <td>Shampoo Acondicionador 2 en 1 de 20ml. </td>
-	                  <td>
-	                      <div class="label label-warning pull-right" style="width: 100%">
-	                      	<span class="">$1800</span>
-	                      </div>
-	                  </td>
-	                  <td>
-	                  	<img src="http://www.amenitieschile.cl/6558-large_default/shampoo-45ml-frutos-del-bosque.jpg" 
-	                  	alt="Product Image" style="width: 100%">
-	                  </td>
-	                </tr> -->
-          	   </table>
-            </div>
-		 </div>
+		
+      <div class="row">	
+		<div class="col-lg-3">
       	</div>
-
-      	<!--  -->
-      	<div class="col-lg-7">
+      	<div class="col-lg-6">
       	   <div class="box box-success">
       		   <div class="box-header with-border">
                  <h3 class="box-title">Pedir</h3>
@@ -116,7 +87,59 @@
               </form>
       		</div>
       	</div>
+      	<div class="col-lg-3">
+      	</div>
       </div>
+
+      <div class="row">	
+      	<div class="col-lg-12">
+      	 <div class="box box-success">
+      	 	<div class="box-header with-border">
+                 <h3 class="box-title">Lista de productos</h3>
+            </div>
+	         <div class="box-body no-padding">
+	              <table id="tblProducto" class="table table-bordered table-hover">
+				   <thead>
+					<tr>
+						<th style="width: 10px">SKU</th>
+						<th style="width: 40%" >Nombre</th>
+						<th style="width: 40%">Precio</th>
+						<th style="width: 60px">Imagen</th>
+						</tr>
+					</thead>
+
+					<tfoot>
+						<tr>
+						<th style="width: 10px">SKU</th>
+						<th style="width: 40%" >Nombre</th>
+						<th style="width: 40%">Precio</th>
+						<th style="width: 60px">Imagen</th>
+						</tr>
+					</tfoot> 
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+					
+	                <!-- <tr>
+	                  <td>707425</td>
+	                  <td>Shampoo Acondicionador 2 en 1 de 20ml. </td>
+	                  <td>
+	                      <div class="label label-warning pull-right" style="width: 100%">
+	                      	<span class="">$1800</span>
+	                      </div>
+	                  </td>
+	                  <td>
+	                  	<img src="http://www.amenitieschile.cl/6558-large_default/shampoo-45ml-frutos-del-bosque.jpg" 
+	                  	alt="Product Image" style="width: 100%">
+	                  </td>
+	                </tr> -->
+      	</div>
+
+      	<!--  -->
+
     </section>
 
 

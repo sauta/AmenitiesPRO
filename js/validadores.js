@@ -8,7 +8,7 @@ function revisarDigito( dvr )
 {	
 	dv = dvr + ""	
 	if ( dv != '0' && dv != '1' && dv != '2' && dv != '3' && dv != '4' && dv != '5' && dv != '6' && dv != '7' && dv != '8' && dv != '9' && dv != 'k'  && dv != 'K')	
-	{		
+	{
 		alert("Debe ingresar un digito verificador valido");		
 		window.document.form1.rut.focus();		
 		window.document.form1.rut.select();		

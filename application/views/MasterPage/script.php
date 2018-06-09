@@ -36,7 +36,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="<?=base_url()?>AdminLTE-2.4.2/dist/js/demo.js"></script>
 
-<script src="<?=base_url()?>AdminLTE-2.4.2/plugins/input-mask/jquery.inputmask.phone.extensions.js"></script>
+<!-- <script src="base_url()?>AdminLTE-2.4.2/plugins/input-mask/jquery.inputmask.phone.extensions.js"></script> -->
 <script src="<?=base_url()?>AdminLTE-2.4.2/plugins/input-mask/jquery.inputmask.js"></script>
 <script src="<?=base_url()?>AdminLTE-2.4.2/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
 <script src="<?=base_url()?>AdminLTE-2.4.2/plugins/input-mask/jquery.inputmask.extensions.js"></script>
@@ -54,10 +54,15 @@
 <?php } ?>
 
 <?php if($this->uri->segment(2)=='encargar'){?>
+
+	<!-- DataTables -->
+	<script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+
+	<script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
 	<script type="text/javascript">
 		
 			 var site_url = '<?=site_url()?>'; 
-			 alert('funca encargar '+site_url+' Si se envia');
 	</script>
 	<script src="<?=base_url()?>js/Productos.js"></script>
 <?php } ?>

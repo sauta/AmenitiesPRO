@@ -38,8 +38,7 @@ $('#cboProvincia').change(function(){
 				$.post(site_url+"Direccion/getComuna",
 			    {
 			        /*Aqui se envia la id de la provincia para buscar las comunas*/
-
-			        "PK_idProvincia": id
+					"PK_idProvincia": id
 			    },
 			    function(data){
 			      var c = JSON.parse(data);
