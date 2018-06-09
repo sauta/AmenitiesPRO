@@ -76,7 +76,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-briefcase"></i>
                   </div>
-                        <input id="rutEncargado" data-mask name="txtRutEncargado"  maxlength="12" type="text" class="form-control" placeholder="RUT" required min=13>
+                        <input id="rutEncargado" data-mask name="txtRutEncargado"  maxlength="12" type="text" class="form-control" placeholder="RUT" required >
                   
               </div>
          </div>
@@ -118,7 +118,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-pencil-square-o"></i>
                   </div>
-                  <input id="nombreFantasia" name="txtNombreFantasia" type="text" class="form-control" placeholder="Nombre de Fantasia" data-mask required  >
+                  <input id="nombreFantasia" name="txtNombreFantasia" type="text" class="form-control" placeholder="Nombre de Fantasia" required  >
               </div>
          </div>
         <!--Rut Empresa-->
@@ -202,7 +202,7 @@
          </div>
         <!-- /.col -->
          <div class="col-xs-4">
-           <button type="submit" onclick="this.disabled=true; this.value=’Enviando...’; this.form.submit()" class="btn btn-primary btn-block btn-flat">Registrarse</button>
+           <input type="button" name=""> type="submit" onclick="this.disabled=true; this.value=’Enviando...’; this.form1.submit()" class="btn btn-primary btn-block btn-flat">Registrarse</button>
          </div>
         <!-- /.col -->
        </div>
@@ -238,14 +238,10 @@
 <script src="<?=base_url()?>js/Direccion.js"></script> 
 <script src="<?=base_url()?>js/validadores.js"></script> 
   <script>
-  
-
-   $('#Rut1').mask('99.999.999-A');
-    $('#Rut2').mask('99.999.999-A');
-    $('#Celular').mask('+56 9 9999-9999');
-    $('#Nombre1').mask('AAAAAAAAAAAAAAAAAAAA');
-    $('#Nombre2').mask('AAAAAAAAAAAAAAAAAAAA');
-    $('#Telefono').mask('99 99-9999');
+    $('#rutEmpresa').mask('99.999.999-A');
+    $('#rutEncargado').mask('99.999.999-A');
+    $('#celular').mask('+56 9 9999-9999');
+    $('#telefono').mask('99 99-9999');
   </script>
 
 <script>

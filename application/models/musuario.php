@@ -23,7 +23,12 @@ class Musuario extends CI_Model
 			$this->db->where('NombreUsu',$parametro['nombre']);
 			$this->db->where('Clave',$parametro['clave']);
 
-			$query = $this->db->get();
+			// $nombre = $parametro['nombre'];
+			// $clave  = $parametro['clave'];
+
+			// = $this->db->call_function('login', $nombre, $clave);
+
+			  $query = $this->db->get();
 
 			if ($query->num_rows() == 1) {
 

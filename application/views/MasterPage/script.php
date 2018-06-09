@@ -53,7 +53,7 @@
     <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
 <?php } ?>
 
-<?php if($this->uri->segment(2)=='encargar'){?>
+<?php if($this->uri->segment(2)=='productos'){?>
 
 	<!-- DataTables -->
 	<script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>

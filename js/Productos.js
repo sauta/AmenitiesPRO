@@ -12,13 +12,14 @@ $.post(site_url+"/Producto/getProducto",
 		      var c = JSON.parse(data);
 		       $.each(c,function(i,item){
 		       	 $('#tblProducto').append(
-		              '<tr>\n'+
+		             '<tr>\n'+
 		       	 	      '<td>'+item.sku+'</td>\n'+
 		                  '<td>'+item.Nombre+'</td>\n'+
 		                  '<td>'+item.Precio+'</td>\n'+
-		                  '<td>'+'<img src="'+item.url_imagen+'"</td>\n'+
-		              '</tr>\n'
-		       	 	);
+		                  '<td>\n'+
+		                  '<img alt="Product Image" style="width: 100px" src="'+item.url_imagen+' "</td>\n'+
+		             '</tr>\n'
+		       	   );
 			 });
 		});
 
