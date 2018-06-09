@@ -64,12 +64,7 @@ class Registro extends CI_Controller
 		 $direccion['Direccion'] = $this->input->post('txtDireccion');
 
 	/********************************validadores****************************************/	
-	if ($this->Usuario->ValidaRegistro($usuario)     &&
-		$this->Encargado->ValidaRegistro($encargado) &&
-		$this->Empresa->ValidaRegistro($empresa)     &&
-		$this->Contacto->ValidaRegistro($contacto)   &&
-		$this->Direccion->ValidaRegistro($direccion))
-		{
+
 	
 		 if($usuario['Clave'] == $usuario['RepClave'] ) {
 
@@ -140,11 +135,6 @@ class Registro extends CI_Controller
 		 		$data = array('$mensaje' => 'Clave y reclave diferentes');
 		 		redirect('Registro','refresh', $data);
 		 	}
-		 }else{
-		 	//mensaje de que existen algunos campos sin rellenar
-			 	$data = array('$mensaje' => 'existen algunos campos sin rellenar');
-		 		redirect('Registro','refresh', $data);
-		 }
 
 	}
 }

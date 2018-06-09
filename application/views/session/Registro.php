@@ -36,7 +36,7 @@
   <div class="login-box-body">
     <p class="login-box-msg">Registro en Amenities PRO</p>
 
-    <form name="form1"  action="<?=site_url()?>/Registro/registro" method="POST">
+    <form name="form1"  action="<?=site_url()?>/Registro/registro" method="POST" onsubmit="return validacion()">
         <!--***********************************Registro Usuario************************************-->
         <!--Nombre Usuario-->
          <div class="form-group">
@@ -44,7 +44,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-user"></i>
                   </div>
-                  <input id="Nombre1" name="txtNombreUsuario"  maxlength="40" type="text" class="form-control" placeholder="Nombre Usuario" maxlength="45" required>
+                  <input id="txtNombreUsuario" name="txtNombreUsuario"  maxlength="40" type="text" class="form-control" placeholder="Nombre Usuario" maxlength="45" required>
               </div>
          </div>
         <!--Clave-->
@@ -218,6 +218,8 @@
 <!-- jQuery 3 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+<script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/jquery/dist/jquery.min.js"></script>
+
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -226,20 +228,16 @@
 <!-- jQuery UI 1.11.4 -->
 <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/jquery-ui/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
-
-<script>
-  $.widget.bridge('uibutton', $.ui.button);
-</script>
   <!-- delcaro la direccion del post de javaScrip-->
 <script type="text/javascript">
         var site_url = '<?=site_url()?>/'; 
 </script>
 <script src="<?=base_url()?>js/Direccion.js"></script> 
 <script src="<?=base_url()?>js/validadores.js"></script> 
-<script>
+  <script>
   
 
    $('#Rut1').mask('99.999.999-A');
@@ -248,15 +246,17 @@
     $('#Nombre1').mask('AAAAAAAAAAAAAAAAAAAA');
     $('#Nombre2').mask('AAAAAAAAAAAAAAAAAAAA');
     $('#Telefono').mask('99 99-9999');
-</script>
+  </script>
+
 <script>
   $(function () {
     $('input').iCheck({
       checkboxClass: 'icheckbox_square-blue',
       radioClass: 'iradio_square-blue',
-      increaseArea: '15%' /* optional */
+      increaseArea: '20%' /* optional */
     });
   });
 </script>
+
 </body>
 </html>
