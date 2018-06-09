@@ -44,17 +44,17 @@
                   <div class="input-group-addon">
                     <i class="fa fa-user"></i>
                   </div>
-                  <input id="txtNombreUsuario" name="txtNombreUsuario"  maxlength="40" type="text" class="form-control" placeholder="Nombre Usuario" maxlength="45" required>
+                  <input id="nombreUsuario" name="txtNombreUsuario"  maxlength="40" type="text" class="form-control" placeholder="Nombre Usuario" maxlength="45" required>
               </div>
          </div>
         <!--Clave-->
          <div class="form-group has-feedback">
-          <input name="txtClave" type="password" class="form-control" placeholder="Clave" required min="6" max="13">
+          <input name="txtClave" id="clave"  type="password" class="form-control" placeholder="Clave" required min="6" max="13">
           <span class="glyphicon glyphicon-lock form-control-feedback"></span>
          </div>
         <!--Repetir Clave-->
           <div class="form-group has-feedback">
-            <input name="txtRepClave" type="password" class="form-control" placeholder="Repetir Clave" required min="6" max="13">
+            <input name="txtRepClave" id="repClave" type="password" class="form-control" placeholder="Repetir Clave" required min="6" max="13">
             <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
           </div>
         <!--****************************************Encargado****************************************-->
@@ -67,7 +67,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-users"></i>
                   </div>
-                  <input name="txtNombreEncargado" maxlength="40" type="text" class="form-control" placeholder="Nombre Encargado" required >
+                  <input id="nombreEncargado"  name="txtNombreEncargado" maxlength="40" type="text" class="form-control" placeholder="Nombre Encargado" required >
               </div>
          </div>
         <!--Rut-->
@@ -76,7 +76,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-briefcase"></i>
                   </div>
-                        <input id="Rut1" data-mask name="txtRutEncargado"  maxlength="12" type="text" class="form-control" placeholder="RUT" required min=13>
+                        <input id="rutEncargado" data-mask name="txtRutEncargado"  maxlength="12" type="text" class="form-control" placeholder="RUT" required min=13>
                   
               </div>
          </div>
@@ -95,7 +95,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-phone"></i>
                   </div>
-                  <input id="Telefono" name="txtTelefono" type="text" class="form-control" placeholder="Telefono"  maxlength="19" data-inputmask="'mask': '9999 9999 9999 9999'"  required>
+                  <input id="telefono" name="txtTelefono" type="text" class="form-control" placeholder="Telefono"  maxlength="19" data-inputmask="'mask': '9999 9999 9999 9999'"  required>
 
               </div>
           </div>
@@ -105,7 +105,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-mobile-phone"></i>
                   </div>
-                  <input id="Celular" name="txtCelular" type="text" class="form-control" placeholder="Celular" maxlength="15" data-mask  required>
+                  <input id="celular" name="txtCelular" type="text" class="form-control" placeholder="Celular" maxlength="15" data-mask  required>
               </div>
          </div>
         <!--*****************************************Empresa*****************************************-->
@@ -118,7 +118,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-pencil-square-o"></i>
                   </div>
-                  <input id="Nombre2" name="txtNombreFantasia" type="text" class="form-control" placeholder="Nombre de Fantasia" data-mask required  >
+                  <input id="nombreFantasia" name="txtNombreFantasia" type="text" class="form-control" placeholder="Nombre de Fantasia" data-mask required  >
               </div>
          </div>
         <!--Rut Empresa-->
@@ -127,7 +127,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-briefcase"></i>
                   </div>
-                  <input id="Rut2" onchange=""  data-mask name="txtRutEmpresa" type="text" class="form-control" 
+                  <input id="rutEmpresa" onchange=""  data-mask name="txtRutEmpresa" type="text" class="form-control" 
                   placeholder="RUT Empresa"  required 
                   onchange="return function RutEmpresa(document.getElementById('#Rut2').value)" 
                   min=13>
@@ -139,7 +139,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-pencil"></i>
                   </div>
-                  <input name="txtRazonSocial" type="text" class="form-control" placeholder="Razon social"  required>
+                  <input id="razonSocial" name="txtRazonSocial" type="text" class="form-control" placeholder="Razon social"  required>
               </div>
          </div>
         <!--Descripción-->
@@ -189,14 +189,14 @@
                   <div class="input-group-addon">
                     <i class="fa fa-briefcase"></i>
                   </div>
-                  <input maxlength="45" name="txtDireccion" type="text" class="form-control" placeholder="Direccion" required>
+                  <input maxlength="45" id="direccion" name="txtDireccion" type="text" class="form-control" placeholder="Direccion" required>
               </div>
          </div>
              <div class="row">
           <div class="col-xs-8">
          <div class="checkbox icheck">
             <label>
-              <input name="terminos" type="checkbox"> Estoy de acuerdo con los <a href="#">Terminos de uso</a>
+              <input id="terminos" name="terminos" type="checkbox"> Estoy de acuerdo con los <a href="#">Terminos de uso</a>
             </label>
           </div>
          </div>
