@@ -35,8 +35,8 @@ class Cliente extends CI_Controller {
 					$this->load->view('MasterPage/header',$data);
 					$this->load->view('MasterPage/asideLeft',$data);
 					$this->load->view('usuario/cliente/vpanel'); //cambiar solamente esto  para cambiar de pagina
-					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/footer');
+					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/script');
 
 				}else{redirect('Administrador/cpanel');}
@@ -58,8 +58,8 @@ class Cliente extends CI_Controller {
 			$this->load->view('MasterPage/header',$data);
 			$this->load->view('MasterPage/asideLeft',$data);
 			$this->load->view('usuario/vperfil');
-			$this->load->view('MasterPage/asideRight');
 			$this->load->view('MasterPage/footer');
+			$this->load->view('MasterPage/asideRight');
 			$this->load->view('MasterPage/script');
 			}else{redirect('Administrador/cpanel');}
 			}else{redirect('Login');}
@@ -80,8 +80,8 @@ class Cliente extends CI_Controller {
 					$this->load->view('MasterPage/header',$data);
 					$this->load->view('MasterPage/asideLeft',$data);
 					$this->load->view('usuario/cliente/estadistica/vconsumo');
-					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/footer');
+					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/script');
 					}else{redirect('Administrador/cpanel');}
 			}else{redirect('Login');}
@@ -100,8 +100,8 @@ class Cliente extends CI_Controller {
 					$this->load->view('MasterPage/header',$data);
 					$this->load->view('MasterPage/asideLeft',$data);
 					$this->load->view('usuario/cliente/estadistica/vfactura');
-					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/footer');
+					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/script');
 				}else{redirect('Administrador/cpanel');}
 		    }else{redirect('Login');}
@@ -120,8 +120,8 @@ class Cliente extends CI_Controller {
 						$this->load->view('MasterPage/header',$data);
 						$this->load->view('MasterPage/asideLeft',$data);
 						$this->load->view('usuario/cliente/estadistica/vpedido');
-						$this->load->view('MasterPage/asideRight');
 						$this->load->view('MasterPage/footer');
+						$this->load->view('MasterPage/asideRight');
 						$this->load->view('MasterPage/script');
 					}else{redirect('Administrador/cpanel');}	
 			}else{redirect('Login');}
@@ -142,8 +142,8 @@ class Cliente extends CI_Controller {
 					$this->load->view('MasterPage/header',$data);
 					$this->load->view('MasterPage/asideLeft',$data);
 					$this->load->view('usuario/cliente/mantenedor/vencargado');
-					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/footer');
+					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/script');
 				}else{redirect('Administrador/cpanel');}
 			}else{redirect('Login');}
@@ -163,8 +163,8 @@ class Cliente extends CI_Controller {
 					$this->load->view('MasterPage/header',$data);
 					$this->load->view('MasterPage/asideLeft',$data);
 					$this->load->view('usuario/cliente/mantenedor/vencargar');
-					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/footer');
+					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/script');
 				}else{redirect('Administrador/cpanel');}
 			}else{redirect('Login');}
@@ -184,8 +184,8 @@ class Cliente extends CI_Controller {
 					$this->load->view('MasterPage/header',$data);
 					$this->load->view('MasterPage/asideLeft',$data);
 					$this->load->view('usuario/cliente/mantenedor/vproducto');
-					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/footer');
+					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/script');
 				}else{redirect('Administrador/cpanel');}
 			}else{redirect('Login');}
@@ -206,8 +206,8 @@ class Cliente extends CI_Controller {
 					$this->load->view('MasterPage/header',$data);
 					$this->load->view('MasterPage/asideLeft',$data);
 					$this->load->view('usuario/cliente/mensajeria/vcompra');
-					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/footer');
+					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/script');
 				}else{redirect('Administrador/cpanel');}
 			}else{redirect('Login');}
@@ -227,8 +227,8 @@ class Cliente extends CI_Controller {
 					$this->load->view('MasterPage/header',$data);
 					$this->load->view('MasterPage/asideLeft',$data);
 					$this->load->view('usuario/cliente/mensajeria/vfactura');
-					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/footer');
+					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/script');
 				}else{redirect('Administrador/cpanel');}
 			}else{redirect('Login');}
@@ -248,8 +248,8 @@ class Cliente extends CI_Controller {
 					$this->load->view('MasterPage/header',$data);
 					$this->load->view('MasterPage/asideLeft',$data);
 					$this->load->view('usuario/cliente/mensajeria/voferta');
-					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/footer');
+					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/script');
 				}else{redirect('Administrador/cpanel');}
 			}else{redirect('Login');}
@@ -269,8 +269,8 @@ class Cliente extends CI_Controller {
 					$this->load->view('MasterPage/header',$data);
 					$this->load->view('MasterPage/asideLeft',$data);
 					$this->load->view('usuario/cliente/mensajeria/vpedido');
-					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/footer');
+					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/script');
 				}else{redirect('Administrador/cpanel');}
 			}else{redirect('Login');}
