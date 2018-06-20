@@ -17,7 +17,7 @@
     # Antes de redireccionar, se verifica que la petición no sea a un directorio o archivo existente
     #RewriteCond %{REQUEST_FILENAME} !-f
     #RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond $1 !^(index\.php|images|AdminLTE-2.4.2|js)
+    RewriteCond $1 !^(index\.php|images|AdminLTE-2.4.2|js|imagenes)
 
     # Si el archivo/directorio no existe, redireccionamos
     RewriteRule ^(.*) index.php/$1 [L]

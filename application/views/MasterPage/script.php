@@ -63,7 +63,7 @@
 		
 			 var site_url = '<?=site_url()?>'; 
 	</script>
-	<script src="<?=base_url()?>js/Productos.js"></script>
+	<script src="<?=base_url()?>js/clases/Productos.js"></script>
 <?php } ?>
 
 
