@@ -13,7 +13,8 @@ class Prueba extends CI_Controller
 
 		public function index()
 		{
-            $this->load->view('prueba/prueba');
+            $this->load->view('prueba/juan');
+            
 		}
 	}
 

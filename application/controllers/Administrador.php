@@ -23,8 +23,8 @@ class Administrador extends CI_Controller
 				$this->load->view('MasterPage/header',$data);
 				$this->load->view('MasterPage/asideLeft',$data);
 				$this->load->view('usuario/administrador/vpanel');
-				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/footer');
+				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/script');
 				}else{redirect('Login');}
 		}
@@ -42,8 +42,8 @@ class Administrador extends CI_Controller
 				$this->load->view('MasterPage/header',$data);
 				$this->load->view('MasterPage/asideLeft',$data);
 				$this->load->view('usuario/vperfil');
-				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/footer');
+				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/script');
 				}else{redirect('Login');}
 		}
@@ -63,8 +63,8 @@ class Administrador extends CI_Controller
 				$this->load->view('MasterPage/header',$data);
 				$this->load->view('MasterPage/asideLeft',$data);
 				$this->load->view('usuario/administrador/estadistica/vfactura');
-				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/footer');
+				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/script');
 					}else{redirect('Login');}
 		}
@@ -82,8 +82,8 @@ class Administrador extends CI_Controller
 				$this->load->view('MasterPage/header',$data);
 				$this->load->view('MasterPage/asideLeft',$data);
 				$this->load->view('usuario/administrador/estadistica/vpedido');
-				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/footer');
+				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/script');
 				}else{redirect('Login');}
 		}
@@ -100,8 +100,8 @@ class Administrador extends CI_Controller
 				$this->load->view('MasterPage/header',$data);
 				$this->load->view('MasterPage/asideLeft',$data);
 				$this->load->view('usuario/administrador/estadistica/vventa');
-				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/footer');
+				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/script');
 
 					}else{redirect('Login');}
@@ -121,10 +121,10 @@ class Administrador extends CI_Controller
 				$this->load->view('MasterPage/header',$data);
 				$this->load->view('MasterPage/asideLeft',$data);
 				$this->load->view('usuario/administrador/mantenedor/vcliente');
-				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/footer');
+				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/script');
-				}else{redirect('ccliente/login');}
+				}else{redirect('Login');}
 		}
 
 	public function encargo()
@@ -141,8 +141,8 @@ class Administrador extends CI_Controller
 				$this->load->view('MasterPage/header',$data);
 				$this->load->view('MasterPage/asideLeft',$data);
 				$this->load->view('usuario/administrador/mantenedor/vencargo');
-				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/footer');
+				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/script');
 				}else{redirect('Login');}
 		}
@@ -159,8 +159,8 @@ class Administrador extends CI_Controller
 				$this->load->view('MasterPage/header',$data);
 				$this->load->view('MasterPage/asideLeft',$data);
 				$this->load->view('usuario/administrador/mantenedor/vfactura');
-				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/footer');
+				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/script');
 					}else{redirect('Login');}
 		}
@@ -177,8 +177,8 @@ class Administrador extends CI_Controller
 				$this->load->view('MasterPage/header',$data);
 				$this->load->view('MasterPage/asideLeft',$data);
 				$this->load->view('usuario/administrador/mantenedor/vproducto');
-				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/footer');
+				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/script');
 					}else{redirect('Login');}
 		}
@@ -197,8 +197,8 @@ class Administrador extends CI_Controller
 				$this->load->view('MasterPage/header',$data);
 				$this->load->view('MasterPage/asideLeft',$data);
 				$this->load->view('usuario/administrador/mensajeria/vdemanda');
-				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/footer');
+				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/script');
 				}else{redirect('Login');}
 		}
@@ -215,8 +215,8 @@ class Administrador extends CI_Controller
 				$this->load->view('MasterPage/header',$data);
 				$this->load->view('MasterPage/asideLeft',$data);
 				$this->load->view('usuario/administrador/mensajeria/voferta');
-				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/footer');
+				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/script');
 					}else{redirect('Login');}
 		}
@@ -233,8 +233,8 @@ class Administrador extends CI_Controller
 				$this->load->view('MasterPage/header',$data);
 				$this->load->view('MasterPage/asideLeft',$data);
 				$this->load->view('usuario/administrador/mensajeria/vreporte');
-				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/footer');
+				$this->load->view('MasterPage/asideRight');
 				$this->load->view('MasterPage/script');
 				}else{redirect('Login');}
 		}

@@ -1,4 +1,11 @@
   <!-- /.content-wrapper -->
+
+ </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0

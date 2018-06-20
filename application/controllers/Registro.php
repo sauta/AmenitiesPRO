@@ -66,7 +66,7 @@ class Registro extends CI_Controller
 	/********************************validadores****************************************/	
 
 	
-		 if($usuario['Clave'] == $usuario['RepClave'] ) {
+		 if($usuario['Clave'] == $usuario[''] ) {
 
 		 	if(!$this->musuario->validarExistencia($usuario)){
 

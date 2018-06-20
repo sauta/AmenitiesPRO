@@ -202,7 +202,7 @@
          </div>
         <!-- /.col -->
          <div class="col-xs-4">
-           <input type="button" name=""> type="submit" onclick="this.disabled=true; this.value=’Enviando...’; this.form1.submit()" class="btn btn-primary btn-block btn-flat">Registrarse</button>
+           <input  name="registro" type="submit" onclick="this.disabled=true; this.value=’Enviando...’; this.form1.submit()" class="btn btn-primary btn-block btn-flat">Registrarse</button>
          </div>
         <!-- /.col -->
        </div>

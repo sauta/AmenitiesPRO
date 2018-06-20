@@ -63,7 +63,7 @@
           <li class="treeview">
             <a href="<?=site_url()?>/Administrador/cpanel">
                 <i class="fa fa-dashboard"></i> 
-                <span>Creación y Solisitudes</span>
+                <span>Creación y Solicitudes</span>
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>

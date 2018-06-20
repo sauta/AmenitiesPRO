@@ -188,7 +188,7 @@
 				}
 				 
 				return true;
-				
+		  }
 		function revisarDigito( dvr, variable)
 		{	
 			dv = dvr + ""	
@@ -321,7 +321,7 @@
 
 			return false;
 		}
-	}
+	
 	//////////////FINDE DE LA VALIDACIONES/////////////
 
 			function permite(elEvento, permitidos) {
