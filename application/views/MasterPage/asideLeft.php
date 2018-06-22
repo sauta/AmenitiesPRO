@@ -43,7 +43,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
-              <ul class="treeview-menu" style="display: block;">
+              <ul class="treeview-menu">
                 <li>
                   <a href="<?=site_url()?>/Cliente/consumo">
                   <i class="fa fa-circle-o"></i> Consumo</a>
@@ -134,7 +134,7 @@
                     <i class="fa fa-angle-left pull-right"></i>
                   </span>
               </a>
-                <ul class="treeview-menu" style="display: block;">
+                <ul class="treeview-menu" >
 
                   <li><a href="<?=site_url()?>/Administrador/estadisticas_de_facturas">
                     <i class="fa fa-circle-o">
@@ -196,7 +196,7 @@
                     <i class="fa fa-angle-left pull-right"></i>
                   </span>
               </a>
-                <ul class="treeview-menu" style="display: block;">
+                <ul class="treeview-menu">
 
                   <li><a href="<?=site_url()?>/Administrador/demanda">
                     <i class="fa fa-circle-o">
