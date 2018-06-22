@@ -17,6 +17,19 @@ class Producto extends CI_Controller
 
 			echo json_encode($this->mproducto->getProductos());
 		}
+	
+	public function getCategorias()
+	{
+		$parametro = $this->mproducto->getCategoria();
+		echo json_encode($parametro);
 	}
 
+	public function setProducto()
+	{
+		$producto[''] = $this->input->post('sku');
+		$producto[''] = $this->input->post('nombre');
+		$producto[''] = $this->input->post('categoria');
+		$producto[''] = $this->input->post('#InputFile');
+	}
+}
 ?>
