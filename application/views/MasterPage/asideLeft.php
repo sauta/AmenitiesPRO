@@ -38,7 +38,6 @@
             <a href="<?=site_url()?>/Cliente/cpanel">
               <i class="fa fa-dashboard"></i>
               <span>Estadisticas</span>
-
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -62,13 +61,13 @@
         <!-- Mantendores -->
           <li class="treeview">
             <a href="<?=site_url()?>/Administrador/cpanel">
-                <i class="fa fa-dashboard"></i> 
+                <i class="fa fa-cart-arrow-down"></i> 
                 <span>Creación y Solicitudes</span>
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
             </a>
-              <ul class="treeview-menu" style="display: block;">
+              <ul class="treeview-menu" ">
 
                 <li><a href="<?=site_url()?>/Cliente/encargadado">
                   <i class="fa fa-circle-o">
@@ -81,7 +80,7 @@
 
                 <li><a href="<?=site_url()?>/Cliente/productos">
                   <i class="fa fa-circle-o">
-                  </i>Ver prodcutos</a>
+                  </i>Ver productos</a>
                 </li>
 
               </ul>
@@ -90,13 +89,13 @@
         <!-- mensajeria -->
           <li class="treeview">
             <a href="<?=site_url()?>/Administrador/cpanel">
-                <i class="fa fa-dashboard"></i> 
+                <i class="fa  fa-truck"></i> 
                 <span>Buzón de mensajes</span>
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
             </a>
-              <ul class="treeview-menu" style="display: block;">
+              <ul class="treeview-menu" >
 
                 <li><a href="<?=site_url()?>/Cliente/compra">
                   <i class="fa fa-circle-o">
@@ -128,7 +127,7 @@
           <!-- Estadisticas -->
             <li class="treeview">
               <a href="<?=site_url()?>/Administrador/cpanel">
-                  <i class="fa fa-dashboard"></i> 
+                  <i class="fa fa-line-chart"></i> 
                   <span>Estadisticas</span>
                   <span class="pull-right-container">
                     <i class="fa fa-angle-left pull-right"></i>
@@ -156,13 +155,13 @@
           <!-- Mantenedores -->
             <li class="treeview">
               <a href="<?=site_url()?>/Administrador/cpanel">
-                  <i class="fa fa-dashboard"></i> 
+                  <i class="fa fa-wrench"></i> 
                   <span>Mantenedores</span>
                   <span class="pull-right-container">
                     <i class="fa fa-angle-left pull-right"></i>
                   </span>
               </a>
-                <ul class="treeview-menu" style="display: block;">
+                <ul class="treeview-menu" >
 
                   <li><a href="<?=site_url()?>/Administrador/clientes">
                     <i class="fa fa-circle-o">
@@ -180,7 +179,7 @@
 
                   <li><a href="<?=site_url()?>/Administrador/productos">
                     <i class="fa fa-circle-o">
-                    </i>Mantenedor prodcutos</a>
+                    </i>Mantenedor productos</a>
                   </li>
 
                 </ul>
@@ -190,7 +189,7 @@
           <!-- mensajeria -->
             <li class="treeview">
               <a href="<?=site_url()?>/Administrador/cpanel">
-                  <i class="fa fa-dashboard"></i> 
+                  <i class="fa fa-envelope"></i> 
                   <span>Buzón de mensajes</span>
                   <span class="pull-right-container">
                     <i class="fa fa-angle-left pull-right"></i>
@@ -223,6 +222,8 @@
     </section>
     <!-- /.sidebar -->
   </aside>
+
+
     <!-- Contenido de la pagina vpanel -->
  <div class="content-wrapper">
     <!-- Content Header (Page header) -->

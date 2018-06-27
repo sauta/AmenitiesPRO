@@ -1,6 +1,6 @@
   <section class="content">
-      <!-- <div class="row">  
-        <div class="col-lg-12"> -->
+      <div class="row">  
+        <!-- <div class="col-lg-12"> -->
          <!-- <div class="box box-success">
           <div class="box-header with-border">
                  <h3 class="box-title">Lista de productos</h3>
@@ -66,7 +66,7 @@
 
                 <div class="form-group">
                   <label>Agregar Imagen</label>
-                  <input type="file" id="InputFile">
+                  <input type="file" id="InputFile" name="url_imagen">
                   <p class="help-block">Seleccione una Imagen en su equipo.</p>
                 </div>
 
@@ -81,73 +81,7 @@
     </div>
 
     <div class="col-md-6">
-      <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">Insertar Categoria</h3>
-            </div>
-            <form action="<?=site_url()?>/Producto/setCategoria" method="post">
-              <div class="box-body">
-                <div class="form-group">
-                  <label>Nombre de la Categoria</label>
-                  <input type="text" class="form-control" name="sku" placeholder="Ingresar Nombre...">
-                </div>
-              </div>
-              <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Agregar</button>
-              </div>
-            </form>
-      </div>
-     </div>
-
-     <div class="col-md-6">
-      <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">Eliminar Categoria</h3>
-            </div>
-            <form action="<?=site_url()?>/Producto/deleteCategoria" method="post">
-              <div class="box-body">
-                <div class="form-group">
-                  <select id="sltCategoria" name="categoria" size="6" >
-                        <option value="0" selected="selected">Seleccione Categoria...</option>
-                  </select>
-               </div>
-
-              </div>
-              <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Eliminar</button>
-              </div>
-            </form>
-      </div>
-     </div>
-
-    <div class="col-md-6">
-      <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">Eliminar Producto</h3>
-            </div>
-            <form action="<?=site_url()?>/Producto/deleteProducto" method="post">
-              <div class="box-body">
-                <div class="form-group">
-                  <select id="sltCategoria" name="categoria" size="6" >
-                        <option value="0" selected="selected">Primero Seleccione Categoria...</option>
-                  </select>
-               </div>
-               <div class="form-group">
-                  <select id="sltProducto" name="categoria" size="6" >
-                        <option value="0" selected="selected">SegundoSeleccione Producto...</option>
-                  </select>
-               </div>
-              </div>
-              <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Eliminar</button>
-              </div>
-            </form>
-      </div>
-     </div>
-
-
-     <div class="col-md-6">
-      <div class="box box-primary">
+        <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title">Actualizar Producto</h3>
             </div>
@@ -194,7 +128,74 @@
               </div>
             </form>
           </div>
+     </div>
+
+    <div class="col-md-6">
+      <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Insertar Categoria</h3>
+            </div>
+            <form action="<?=site_url()?>/Producto/setCategoria" method="post">
+              <div class="box-body">
+                <div class="form-group">
+                  <label>Nombre de la Categoria</label>
+                  <input type="text" class="form-control" name="sku" placeholder="Ingresar Nombre...">
+                </div>
+              </div>
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Agregar</button>
+              </div>
+            </form>
+      </div>
     </div>
 
+    <div class="col-md-6">
+      <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Eliminar Categoria</h3>
+            </div>
+            <form action="<?=site_url()?>/Producto/deleteCategoria" method="post">
+              <div class="box-body">
+                <div class="form-group">
+                  <select id="sltCategoria" name="categoria" size="6" >
+                        <option value="0" selected="selected">Seleccione Categoria...</option>
+                  </select>
+               </div>
+
+              </div>
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Eliminar</button>
+              </div>
+            </form>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Eliminar Producto</h3>
+            </div>
+            <form action="<?=site_url()?>/Producto/deleteProducto" method="post">
+              <div class="box-body">
+                <div class="form-group">
+                  <select id="sltCategoria" name="categoria" size="6" >
+                        <option value="0" selected="selected">Primero Seleccione Categoria...</option>
+                  </select>
+               </div>
+               <div class="form-group">
+                  <select id="sltProducto" name="categoria" size="6" >
+                        <option value="0" selected="selected">SegundoSeleccione Producto...</option>
+                  </select>
+               </div>
+              </div>
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Eliminar</button>
+              </div>
+            </form>
+      </div>
+     </div>
+
+  </div>
+  <!-- row -->
 </section>
 

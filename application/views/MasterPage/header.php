@@ -5,7 +5,7 @@ skin-yellow
 <?php }else if($this->session->userdata('s_permiso') == 'Cliente'){ ?>
 skin-blue 
 <?php } ?>
- sidebar-mini">
+ fixed">
 <div class="wrapper">
 
   <header class="main-header">
