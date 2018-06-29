@@ -10,6 +10,7 @@ class Producto extends CI_Controller
 
 		$this->load->model('mproducto');
 		$this->load->library('session');
+		$this->load->library('file');
 	}
 
 		public function getProducto()

@@ -50,7 +50,8 @@
 
                 <div class="form-group">
                   <label>Descripcion del Producto</label>
-                  <textarea class="form-control" name="descripcion" placeholder="Ingresar una Descripcion..."></textarea>
+                  <textarea class="form-control" name="descripcion" placeholder="Ingresar una Descripcion...">
+                  </textarea>
                 </div>
 
                 <div class="form-group">
