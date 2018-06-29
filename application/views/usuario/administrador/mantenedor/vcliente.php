@@ -1,33 +1,8 @@
-
-
-   <section class="content">
+<section class="content">
       <!-- Small boxes (Stat box) -->
     <div class="row">
-      <div class="col-lg-4">
-        <div class="box box-info">
-           <div class="box-header with-border">
-              <h3 class="box-title">Lista de clientes</h3>
-            </div>
-              <div class="box-body" >
-                <div class="form-group">
-                 <label>Provincia</label>
-                  <select id="cboProvincia" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" name="txtProvincia" aria-hidden="true">
-                      <option> Selecciones la provincia</option>
-                  </select>
-                </div>
-             </div>
-          </div>
-
-           <div class="box box-info">
-           <div class="box-header with-border">
-              <h3 class="box-title">Lista de clientes</h3>
-            </div>
-              <div class="box-body" >
-                
-              </div>
-        </div>
-      </div>
-        <div class="col-lg-8">
+ 
+        <div class="col-lg-6">
           <div class="box box-info">
                       <div class="box-header with-border">
                           <h3 class="box-title">Registro de Cliente</h3>
@@ -193,7 +168,7 @@
                    </div>
                   <!-- /.col -->
                    <div class="col-xs-4">
-                     <button type="submit" class="btn btn-primary btn-block btn-flat">Registrarse</button>
+                     <button type="submit" class="btn btn-primary btn-block btn-flat">Registrar</button>
                    </div>
                   <!-- /.col -->
                  </div>
@@ -205,7 +180,28 @@
           <!-- fin del la información de la caja box-info -->
         </div>
         <!-- fin de  cold spam-->
-      </div>
+        <div class="col-lg-6">
+            <div class="box box-info">
+                 <div class="box-header with-border">
+                    <h3 class="box-title">Lista de clientes</h3>
+                  </div>
+                    <div class="box-body" >
+                      <div class="form-group">
+                       <label>Empresas</label>
+                        <select id="cboEmpresas" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" name="txtEmpresa" aria-hidden="true">
+                            <option> Seleccione la Empresa</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                       <label>Cliente</label>
+                        <select id="cboCliente" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" name="txtCliente" aria-hidden="true">
+                            <option> Selecciones al Cliente</option>
+                        </select>
+                      </div>
+                   </div>
+            </div> 
+        </div> 
+    </div>
       <!-- fin del Row -->
-      </section>
+</section>
       <!-- Fin del contenido -->
