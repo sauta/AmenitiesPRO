@@ -1,34 +1,6 @@
   <section class="content">
       <div class="row">  
-        <!-- <div class="col-lg-12"> -->
-         <!-- <div class="box box-success">
-          <div class="box-header with-border">
-                 <h3 class="box-title">Lista de productos</h3>
-            </div>
-           <div class="box-body no-padding">
-                <table id="tblProducto" class="table table-bordered table-hover">
-           <thead>
-          <tr>
-            <th style="width: 10px">SKU</th>
-            <th style="width: 40%" >Nombre</th>
-            <th style="width: 40%">Precio</th>
-            <th style="width: 60px">Imagen</th>
-            </tr>
-          </thead>
-
-          <tfoot>
-            <tr>
-            <th style="width: 10px">SKU</th>
-            <th style="width: 40%" >Nombre</th>
-            <th style="width: 40%">Precio</th>
-            <th style="width: 60px">Imagen</th>
-            </tr>
-          </tfoot> 
-                   </table>
-            </div>
-
-          </div> -->
-      <!-- row -->
+        
     <div class="col-md-6">
       <div class="box box-primary">
             <div class="box-header with-border">
@@ -40,22 +12,23 @@
 
                 <div class="form-group">
                   <label>SKU del Producto</label>
-                  <input type="text" class="form-control" name="sku" placeholder="Ingresar SKU...">
+                  <input type="text" class="form-control" name="sku" placeholder="Ingresar SKU..." required>
                 </div>
 
                 <div class="form-group">
                   <label>Nombre del Producto</label>
-                  <input type="text" class="form-control" name="nombre" placeholder="Ingresar Nombre...">
+                  <input type="text" class="form-control" name="nombre" placeholder="Ingresar Nombre..." required>
                 </div>
 
                 <div class="form-group">
                   <label>Descripcion del Producto</label>
-                  <textarea class="form-control" name="descripcion" placeholder="Ingresar una Descripcion..."></textarea>
+                  <textarea class="form-control" name="descripcion" placeholder="Ingresar una Descripcion" required>
+                  </textarea>
                 </div>
 
                 <div class="form-group">
                   <label>Precio del Producto</label>
-                  <input  type="number" step="0" class="form-control" name="precio" placeholder="$$$" min="10" max="100"/>
+                  <input  type="number" step="0" class="form-control" name="precio" placeholder="$$$" min="10" max="100" required/>
                 </div>
                
                <div class="form-group">
@@ -80,6 +53,7 @@
           </div>
     </div>
 
+<!-- Fijarse en los required... -->
     <div class="col-md-6">
         <div class="box box-primary">
             <div class="box-header with-border">
@@ -87,6 +61,21 @@
             </div>
             <form action="<?=site_url()?>/Producto/updateProducto" method="post">
               <div class="box-body">
+
+                <div class="form-group">
+                       <label>Cual Categoria Es</label>
+                        <select id="cboCategoria" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" name="cual_categoria" aria-hidden="true" required>
+                            <option> Seleccione la Categoria</option>
+                        </select>
+                </div>
+
+                <div class="form-group">
+                       <label>CualProducto Es</label>
+                        <select id="cboProducto" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" name="cual_producto" aria-hidden="true" required>
+                            <option> Seleccione el Producto</option>
+                        </select>
+                </div>
+
 
                 <div class="form-group">
                   <label>Nuevo SKU del Producto</label>
@@ -110,7 +99,7 @@
                
                <div class="form-group">
                   <select id="sltCategoria" name="categoria" size="6" >
-                        <option value="0" selected="selected">Seleccione Categoria...</option>
+                        <option value="0" selected="selected">Seleccione Nueva Categoria...</option>
                   </select>
                </div>
 
@@ -128,7 +117,7 @@
               </div>
             </form>
           </div>
-     </div>
+    </div>
 
     <div class="col-md-6">
       <div class="box box-primary">
