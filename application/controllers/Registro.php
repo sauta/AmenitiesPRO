@@ -33,7 +33,6 @@ class Registro extends CI_Controller
 			$titulo['mensaje'] = 'algo';
 
 		$this->load->view('session/Registro',$data);
-		
 	}
 
 	public function registro()
@@ -64,7 +63,6 @@ class Registro extends CI_Controller
 		 $direccion['Direccion'] = $this->input->post('txtDireccion');
 
 	/********************************validadores****************************************/	
-
 	
 		 if($usuario['Clave'] == $usuario[''] ) {
 
@@ -81,8 +79,8 @@ class Registro extends CI_Controller
 			 		$idDireccion = $this->mdireccion->guardar($direccion); //guardar Direccion
 
 			 		if ($idEmpresa > 0)
-			 			{ if ($idDireccion > 0) 
-			 				{ if ($idEncargado > 0) 
+			 			{ if ($idDireccion > 0)
+			 				{ if ($idEncargado > 0)
 			 					{
 					 			//se guarda en un array las Id's empresa y encargado que necesita contacto
 					 			$contacto['idEmpresa'] = $idEmpresa;

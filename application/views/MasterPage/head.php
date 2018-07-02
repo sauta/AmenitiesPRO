@@ -20,196 +20,118 @@
   <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/dist/css/skins/_all-skins.min.css">
 <!-- generico -->
   <?php if($this->uri->segment(2)=='cpanel'){?>
-
-
-
-
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php }?>
-
   <?php if($this->uri->segment(2)=='perfil'){?>
-
-
-
-
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php }?>
-
   <?php if($this->uri->segment(2)=='productos'){?>
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
-
-
-
-
-
-  <?php }?>
+  <?php } ?>
 
 <!-- cliente -->
 
-
-
   <?php if($this->uri->segment(2)=='consumo'){?>
-
-
-
-
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php }?>
   <?php if($this->uri->segment(2)=='facturas'){?>
-
-
-
-
-
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php }?>
-
   <?php if($this->uri->segment(2)=='estadisticas_de_pedidos'){?>
-
-
-
-
-
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php }?>
-
   <?php if($this->uri->segment(2)=='encargadado'){?>
-
-
-
-
-
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php }?>
-
   <?php if($this->uri->segment(2)=='encargar'){?>
-
-
-
-
-
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php }?>
-
   <?php if($this->uri->segment(2)=='encargar'){?>
-
-
-
-
-
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php }?>
   <?php if($this->uri->segment(2)=='compra'){?>
-
-
-
-
-
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php }?>
   <?php if($this->uri->segment(2)=='factura'){?>
-
-
-
-
-
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php }?>
   <?php if($this->uri->segment(2)=='ofertas'){?>
-
-
-
-
-
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php }?>
-
-
-
-
   <?php if($this->uri->segment(2)=='pedidos'){?>
-
-
-
-
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php }?>
-
   <?php if($this->uri->segment(2)=='prueba'){?>
-
-
-
-
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php }?>
 
 <!-- adminitrador -->
 
-  <?php if($this->uri->segment(2)=='estadisticas_de_facturas'){?>
 
-
-
-
-
-  <?php }?>
   <?php if($this->uri->segment(2)=='estadisticas_de_pedidos'){?>
-
-
-
-
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php }?>
   <?php if($this->uri->segment(2)=='estadisticas_de_ventas'){?>
-
-
-
-
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php }?>
   <?php if($this->uri->segment(2)=='clientes'){?>
-
-
-
-
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php }?>
   <?php if($this->uri->segment(2)=='facturas'){?>
-
-
-
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php }?>
   <?php if($this->uri->segment(2)=='demanda'){?>
-
-
-
-
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php }?>
   <?php if($this->uri->segment(2)=='envio_de_ofertas'){?>
-
-
-
-
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php }?>
   <?php if($this->uri->segment(2)=='reportes'){?>
-
-
-
-
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php }?>
-
-
   <?php if($this->uri->segment(2)=='facturas'){?>
     <link id="themecss" rel="stylesheet" type="text/css" href="//www.shieldui.com/shared/components/latest/css/light/all.min.css" />
-  <?php }?>
 
+  <?php }?>
   <?php if($this->uri->segment(2)=='encargar'){?>
     <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
-  <?php }?>
 
+  <?php }?>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
