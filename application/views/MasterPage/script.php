@@ -63,8 +63,18 @@
 		
 			 var site_url = '<?=site_url()?>'; 
 	</script>
+
 	<script src="<?=base_url()?>js/clases/Productos.js"></script>
+	
 	<script src="<?=base_url()?>js/clases/Categorias.js"></script>
+<?php } ?>
+
+<?php if($this->uri->segment(2)=='categorias'){?>
+	<script type="text/javascript">
+		
+			 var site_url = '<?=site_url()?>'; 
+	</script>
+	<script src="<?=base_url()?>js/clases/categorias.js"></script>
 <?php } ?>
 </body>
 </html>

@@ -1,64 +1,36 @@
-  <section class="content">
-      <div class="row">  
-        
-    <div class="col-md-6">
+<section class="content">
+  <div class="row">  
+     
+    <div class="col-md-4">
       <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Agregar Producto</h3>
+              <h3 class="box-title">Eliminar Producto</h3>
             </div>
 
-            <form action="<?=site_url()?>/Producto/setProducto" method="post">
+            <form action="<?=site_url()?>/Producto/deleteProducto" method="post">
               <div class="box-body">
 
                 <div class="form-group">
-                  <label>SKU del Producto</label>
-                  <input type="text" class="form-control" name="sku" placeholder="Ingresar SKU..." required>
+                       <label>Seleccione Categoria</label>
+                        <select id="sltCategoria2" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" name="cual_categoria" aria-hidden="true" required>
+                            <option> Seleccione la Categoria</option>
+                        </select>
                 </div>
 
-                <div class="form-group">
-                  <label>Nombre del Producto</label>
-                  <input type="text" class="form-control" name="nombre" placeholder="Ingresar Nombre..." required>
-                </div>
-
-                <div class="form-group">
-                  <label>Descripcion del Producto</label>
-<<<<<<< HEAD
-                  <textarea class="form-control" name="descripcion" placeholder="Ingresar una Descripcion...">
-=======
-                  <textarea class="form-control" name="descripcion" placeholder="Ingresar una Descripcion" required>
->>>>>>> 8240082ecbb32baa3591bccaabbb4fbc5ab6a2ff
-                  </textarea>
-                </div>
-
-                <div class="form-group">
-                  <label>Precio del Producto</label>
-                  <input  type="number" step="0" class="form-control" name="precio" placeholder="$$$" min="10" max="100" required/>
-                </div>
-               
                <div class="form-group">
-                  <select id="sltCategoria" name="categoria" size="6" >
-                        <option value="0" selected="selected">Seleccione Categoria...</option>
+                  <select id="sltProducto" name="categoria" size="6" >
+                        <option value="0" selected="selected">SegundoSeleccione Producto...</option>
                   </select>
                </div>
-
-                <div class="form-group">
-                  <label>Agregar Imagen</label>
-                  <input type="file" id="InputFile" name="url_imagen">
-                  <p class="help-block">Seleccione una Imagen en su equipo.</p>
-                </div>
-
               </div>
-              <!-- /.box-body -->
-
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Agregar</button>
+                <button type="submit" class="btn btn-primary">Eliminar</button>
               </div>
             </form>
-          </div>
+      </div>
     </div>
 
-<!-- Fijarse en los required... -->
-    <div class="col-md-6">
+    <div class="col-md-4">
         <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title">Actualizar Producto</h3>
@@ -72,6 +44,7 @@
                             <option> Seleccione la Categoria</option>
                         </select>
                 </div>
+
 
                 <div class="form-group">
                        <label>CualProducto Es</label>
@@ -122,72 +95,60 @@
             </form>
           </div>
     </div>
-
-    <div class="col-md-6">
+        
+    <div class="col-md-4">
       <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Insertar Categoria</h3>
+              <h3 class="box-title">Agregar Producto</h3>
             </div>
-            <form action="<?=site_url()?>/Producto/setCategoria" method="post">
+
+            <form action="<?=site_url()?>/Producto/setProducto" method="post">
               <div class="box-body">
+
                 <div class="form-group">
-                  <label>Nombre de la Categoria</label>
-                  <input type="text" class="form-control" name="sku" placeholder="Ingresar Nombre...">
+                  <label>SKU del Producto</label>
+                  <input type="text" class="form-control" name="sku" placeholder="Ingresar SKU..." required>
                 </div>
-              </div>
-              <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Agregar</button>
-              </div>
-            </form>
-      </div>
-    </div>
 
-    <div class="col-md-6">
-      <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">Eliminar Categoria</h3>
-            </div>
-            <form action="<?=site_url()?>/Producto/deleteCategoria" method="post">
-              <div class="box-body">
                 <div class="form-group">
+                  <label>Nombre del Producto</label>
+                  <input type="text" class="form-control" name="nombre" placeholder="Ingresar Nombre..." required>
+                </div>
+
+                <div class="form-group">
+                  <label>Descripcion del Producto</label>
+                  <textarea class="form-control" name="descripcion" placeholder="Ingresar una Descripcion" required>
+                  </textarea>
+                </div>
+
+                <div class="form-group">
+                  <label>Precio del Producto</label>
+                  <input  type="number" step="0" class="form-control" name="precio" placeholder="$$$" min="10" max="100" required/>
+                </div>
+               
+               <div class="form-group">
                   <select id="sltCategoria" name="categoria" size="6" >
                         <option value="0" selected="selected">Seleccione Categoria...</option>
                   </select>
                </div>
 
+                <div class="form-group">
+                  <label>Agregar Imagen</label>
+                  <input type="file" id="InputFile" name="url_imagen">
+                  <p class="help-block">Seleccione una Imagen en su equipo.</p>
+                </div>
+
               </div>
+              <!-- /.box-body -->
+
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Eliminar</button>
+                <button type="submit" class="btn btn-primary">Agregar</button>
               </div>
             </form>
-      </div>
+          </div>
     </div>
 
-    <div class="col-md-6">
-      <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">Eliminar Producto</h3>
-            </div>
-            <form action="<?=site_url()?>/Producto/deleteProducto" method="post">
-              <div class="box-body">
-                <div class="form-group">
-                  <select id="sltCategoria" name="categoria" size="6" >
-                        <option value="0" selected="selected">Primero Seleccione Categoria...</option>
-                  </select>
-               </div>
-               <div class="form-group">
-                  <select id="sltProducto" name="categoria" size="6" >
-                        <option value="0" selected="selected">SegundoSeleccione Producto...</option>
-                  </select>
-               </div>
-              </div>
-              <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Eliminar</button>
-              </div>
-            </form>
-      </div>
-     </div>
-
+<!-- Fijarse en los required por errores... -->   
   </div>
   <!-- row -->
 </section>

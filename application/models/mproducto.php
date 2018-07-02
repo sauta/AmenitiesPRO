@@ -41,12 +41,7 @@ class Mproducto extends CI_Model
 
 	    	return $parametro->result();
 	    }
-	    public function getCategoria()
-	    {
-	    	$parametro = $this->db->get('categoria');
-	    	
-	    	return $parametro->result();
-	    }
+
 
 	  /**********************************Guardar producto*********************************/
 	    public function guardar($parametro)

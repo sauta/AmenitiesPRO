@@ -189,7 +189,7 @@
                       <div class="form-group">
                        <label>Empresas</label>
                         <select id="cboEmpresas" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" name="txtEmpresa" aria-hidden="true">
-                            <option> Seleccione la Empresa</option>
+                            <option> Seleccione la Empresa del Cliente</option>
                         </select>
                       </div>
                       <div class="form-group">

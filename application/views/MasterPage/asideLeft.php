@@ -53,7 +53,7 @@
                 </li>
                 <li>
                   <a href="<?=site_url()?>/Cliente/estadisticas_de_pedidos">
-                  <i class="fa fa-circle-o"></i> Estadisticas de Pedidos</a>
+                  <i class="fa fa-circle-o"></i>Pedidos</a>
                 </li>
               </ul>
           </li>
@@ -71,16 +71,16 @@
 
                 <li><a href="<?=site_url()?>/Cliente/encargadado">
                   <i class="fa fa-circle-o">
-                </i>Nuevo encargado</a></li>
+                </i>Nuevo Encargado</a></li>
 
                 <li><a href="<?=site_url()?>/Cliente/encargar">
                   <i class="fa fa-circle-o">
-                  </i>Crear un pedido</a>
+                  </i>Crear un Pedido</a>
                 </li>
 
                 <li><a href="<?=site_url()?>/Cliente/productos">
                   <i class="fa fa-circle-o">
-                  </i>Ver productos</a>
+                  </i>Ver Productos</a>
                 </li>
 
               </ul>
@@ -165,21 +165,26 @@
 
                   <li><a href="<?=site_url()?>/Administrador/clientes">
                     <i class="fa fa-circle-o">
-                    </i>Administrar Clientes</a></li>
+                    </i>Clientes</a></li>
 
                   <li><a href="<?=site_url()?>/Administrador/encargo">
                     <i class="fa fa-circle-o">
-                    </i>Crear un pedido</a>
+                    </i>Pedidos</a>
                   </li>
 
                   <li><a href="<?=site_url()?>/Administrador/facturas">
                     <i class="fa fa-circle-o">
-                    </i>Mantenedor facturas</a>
+                    </i>Facturas</a>
+                  </li>
+
+                  <li><a href="<?=site_url()?>/Administrador/categorias">
+                    <i class="fa fa-circle-o">
+                    </i>Categorias de Productos</a>
                   </li>
 
                   <li><a href="<?=site_url()?>/Administrador/productos">
                     <i class="fa fa-circle-o">
-                    </i>Mantenedor productos</a>
+                    </i>Productos</a>
                   </li>
 
                 </ul>
@@ -209,7 +214,7 @@
 
                   <li><a href="<?=site_url()?>/Administrador/reportes">
                     <i class="fa fa-circle-o">
-                    </i>Reportes de estadisticas</a>
+                    </i>Reportes de Estadisticas</a>
                   </li>
 
                 </ul>

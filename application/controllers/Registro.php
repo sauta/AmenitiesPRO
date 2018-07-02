@@ -96,7 +96,7 @@ class Registro extends CI_Controller
 					 			$this->mdireccion->generarAsociacion($asociacion); //guardar asociacion
 						 			if ($idContacto > 0) {
 						 				//se guardó correctamente todo el formulario
-						 				$data = array('$mensaje' => 'Se guardó correctamente todo el formulario puede ingresar');
+						 				$data = array('$mensaje' => 'Se guardó correctamente todo el formulario, puede ingresar');
 						 				redirect('login',$data);
 						 			} else {
 						 				//el contacto no se pudo guardar correctamente
@@ -108,12 +108,12 @@ class Registro extends CI_Controller
 					 			redirect('Registro','refresh', $data);
 			 				}
 			 			} else {
-			 			  	$data = array('$mensaje' => 'No se pudo guardar la direcio');
+			 			  	$data = array('$mensaje' => 'No se pudo guardar la direcion');
 			 				redirect('Registro','refresh', $data);
 			 			}
 			 		} else {
 			 			//No se pudo guardar la empresa ni/o el encargardo ni/o la direccion
-			 			$data = array('$mensaje' => 'No se pudo guardar la empres');
+			 			$data = array('$mensaje' => 'No se pudo guardar la empresa');
 			 			redirect('Registro','refresh', $data);
 			 		}
 

@@ -11,10 +11,10 @@ class Prueba extends CI_Controller
 		$this->load->library('session');
 	}
 
+
 		public function index()
 		{
-            
-           
+  
 		}
 	}
 

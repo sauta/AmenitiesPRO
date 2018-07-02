@@ -183,6 +183,24 @@ class Administrador extends CI_Controller
 					}else{redirect('Login');}
 		}
 
+		public function categorias()
+		{
+	  		   if(isset($_SESSION['s_idUsuario'])){
+
+				$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
+								'nombre' => $this->session->userdata('s_nombreEncargado'),
+								 'permiso' => $this->session->userdata('s_permiso'));
+
+				$this->load->view('MasterPage/head');
+				$this->load->view('MasterPage/header',$data);
+				$this->load->view('MasterPage/asideLeft',$data);
+				$this->load->view('usuario/administrador/mantenedor/vcategoria');
+				$this->load->view('MasterPage/footer');
+				$this->load->view('MasterPage/asideRight');
+				$this->load->view('MasterPage/script');
+					}else{redirect('Login');}
+		}
+
 /*****************************************Mensajeria***********************************************/
 	
 	public function demanda()
