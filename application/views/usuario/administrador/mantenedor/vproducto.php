@@ -22,11 +22,11 @@
 
                 <div class="form-group">
                   <label>Descripcion del Producto</label>
-<<<<<<< HEAD
+
                   <textarea class="form-control" name="descripcion" placeholder="Ingresar una Descripcion...">
-=======
+
                   <textarea class="form-control" name="descripcion" placeholder="Ingresar una Descripcion" required>
->>>>>>> 8240082ecbb32baa3591bccaabbb4fbc5ab6a2ff
+
                   </textarea>
                 </div>
 

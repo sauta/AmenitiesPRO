@@ -18,20 +18,63 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/dist/css/skins/_all-skins.min.css">
+<!-- generico -->
+  <?php if($this->uri->segment(2)=='cpanel'){?>
 
 
 
 
 
-      <?php if($this->uri->segment(2)=='encargar'){?>
+  <?php }?>
+
+  <?php if($this->uri->segment(2)=='perfil'){?>
 
 
 
 
 
-      <?php }?>
+  <?php }?>
 
-  <?php if($this->uri->segment(2)=='encargar'){?>
+  <?php if($this->uri->segment(2)=='productos'){?>
+
+
+
+
+
+
+  <?php }?>
+
+<!-- cliente -->
+
+
+
+  <?php if($this->uri->segment(2)=='consumo'){?>
+
+
+
+
+
+  <?php }?>
+  <?php if($this->uri->segment(2)=='facturas'){?>
+
+
+
+
+
+
+  <?php }?>
+
+  <?php if($this->uri->segment(2)=='estadisticas_de_pedidos'){?>
+
+
+
+
+
+
+  <?php }?>
+
+  <?php if($this->uri->segment(2)=='encargadado'){?>
+
 
 
 
@@ -45,6 +88,7 @@
 
 
 
+
   <?php }?>
 
   <?php if($this->uri->segment(2)=='encargar'){?>
@@ -55,7 +99,107 @@
 
 
   <?php }?>
+  <?php if($this->uri->segment(2)=='compra'){?>
 
+
+
+
+
+
+  <?php }?>
+  <?php if($this->uri->segment(2)=='factura'){?>
+
+
+
+
+
+
+  <?php }?>
+  <?php if($this->uri->segment(2)=='ofertas'){?>
+
+
+
+
+
+
+  <?php }?>
+
+
+
+
+  <?php if($this->uri->segment(2)=='pedidos'){?>
+
+
+
+
+
+  <?php }?>
+
+  <?php if($this->uri->segment(2)=='prueba'){?>
+
+
+
+
+
+  <?php }?>
+
+<!-- adminitrador -->
+
+  <?php if($this->uri->segment(2)=='estadisticas_de_facturas'){?>
+
+
+
+
+
+  <?php }?>
+  <?php if($this->uri->segment(2)=='estadisticas_de_pedidos'){?>
+
+
+
+
+
+  <?php }?>
+  <?php if($this->uri->segment(2)=='estadisticas_de_ventas'){?>
+
+
+
+
+
+  <?php }?>
+  <?php if($this->uri->segment(2)=='clientes'){?>
+
+
+
+
+
+  <?php }?>
+  <?php if($this->uri->segment(2)=='facturas'){?>
+
+
+
+
+  <?php }?>
+  <?php if($this->uri->segment(2)=='demanda'){?>
+
+
+
+
+
+  <?php }?>
+  <?php if($this->uri->segment(2)=='envio_de_ofertas'){?>
+
+
+
+
+
+  <?php }?>
+  <?php if($this->uri->segment(2)=='reportes'){?>
+
+
+
+
+
+  <?php }?>
 
 
   <?php if($this->uri->segment(2)=='facturas'){?>
