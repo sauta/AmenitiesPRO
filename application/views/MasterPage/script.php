@@ -9,10 +9,9 @@
 <!-- Bootstrap 3.3.7 -->
 <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Morris.js charts -->
+<!-- <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/raphael/raphael.min.js"></script>
 
-<script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/raphael/raphael.min.js"></script>
-
-<script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/morris.js/morris.min.js"></script>
+<script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/morris.js/morris.min.js"></script> -->
 <!-- Sparkline -->
 <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
 <!-- jvectormap -->

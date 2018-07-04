@@ -29,9 +29,11 @@ class Mdireccion extends CI_Model
 			}
 		}
 		/********************************************Buscadores******************************************/
-		public function buscar()
+		public function buscar() //busca la dirección
 	    {
-	    	# code...
+	    	$parametro = $this->db->get('direccion');
+
+	        return $parametro->result();
 	    }
 	
 	    public function listarComuna($parametro)
@@ -41,12 +43,14 @@ class Mdireccion extends CI_Model
 	      return $parametro->result();
 
 	    }
+
 	    public function listarProvincia($parametro)
 	    {
 	    	$parametro = $this->db->get_where('provincia',array('PK_idRegion'=>$parametro));
 
 	        return $parametro->result();
 	    }
+
 	    public function listarRegion()
 	    {
 	    	$parametro = $this->db->get('region');
@@ -67,9 +71,11 @@ class Mdireccion extends CI_Model
 	    }
 
 	    /********************************************Eliminadores********************************************/
-	    	    public function eliminar()
+	    	public function eliminar($idDirección)
 	    {
-	    	# code...
+
+	    	$this->db->delete('direccion', array('idDireccion' => $idDirección));
+
 	    }
 	    
  		/********************************************Editores******************************************/

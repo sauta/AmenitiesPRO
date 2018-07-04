@@ -8,15 +8,19 @@ class Mcontacto extends CI_Model
 		{
 			parent::__construct();
 		}
-		
-	    public function buscar()
-	    {
-	    	# code...
-	    }
+		/********************************************Buscadores******************************************/
+	   	public function buscar($parametro)
+		{
+			 $query = $this->db->get_where('contacto',array('idContacto'=>$parametro));
+
+			 return $query->result();
+		}
+
 	    public function listar()
 	    {
 	    	# code...
 	    }
+	    /********************************************Guardadores******************************************/
 	    public function guardar($parametro)
 	    {
 	   		 $campos = array(
@@ -31,10 +35,12 @@ class Mcontacto extends CI_Model
 	   		return $this->db->insert_id();
 	   		
 	    }
+	    /********************************************Eliminadores******************************************/
 	    public function eliminar()
 	    {
 	    	# code...
 	    }
+	    /********************************************Editores******************************************/
 	    public function editar()
 	    {
 	    	# code...
