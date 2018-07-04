@@ -17,6 +17,18 @@ class Mcategoria extends CI_Model
     	return $parametro->result();
     }
     
+    public function buscarId($idCategoria)
+    {
+		 $this->db->select('categoria', array('idCategoria' => $idCategoria));
+		 return true;
+    }
+
+    public function buscarNombre($idCategoria)
+    {
+		 $this->db->select('categoria', array('Categoria' => $idCategoria));
+		 return true;
+    }
+
     /********************************************Guardadores******************************************/
     public function guardar($parametro)
 	    {
@@ -28,7 +40,7 @@ class Mcategoria extends CI_Model
 	/********************************************Eliminadores******************************************/
     public function eliminarId($idCategoria)
     {
-		 $this->db->delete('categoria', array('idCategoria' => $idProducto));
+		 $this->db->delete('categoria', array('idCategoria' => $idCategoria));
 		 return true;
     }
  

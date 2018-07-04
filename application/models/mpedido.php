@@ -38,7 +38,7 @@ class Mpedido extends CI_Model
 	    	$campos = array(
 					'Fecha_Emicion'   => $parametro['FechaEmicion'],
 					'Valor_Pedido'	  => $parametro['ValorPedido'],
-					'PK_idUsusario'   => $parametro['idUsuario']
+					'PK_idUsuario'   => $parametro['idUsuario']
 					 );
 		 	$this->db->insert('usuario',$campos);
 
