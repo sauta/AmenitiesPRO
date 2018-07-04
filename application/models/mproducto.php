@@ -8,7 +8,7 @@ class Mproducto extends CI_Model
 		{
 			parent::__construct();
 		}
-
+		
 	  /******************************** Buscar y Listar productos ***********************************/		
 	    public function buscarSKU($sku) //busca el producto por el codigo SKU
 	    {
@@ -17,6 +17,13 @@ class Mproducto extends CI_Model
 	        return $parametro->result();
 	    }
 
+		public function buscarCategoria($categoria) //busca el producto por el codigo SKU
+	    {
+	    	$parametro = $this->db->get_where('producto',array('PK_idCategoria'=>$categoria));
+
+	        return $parametro->result();
+		}
+		
 	    public function buscarNom($nombre) //busca el producto por Nombre
 	    {
 	    	$parametro = $this->db->get_where('producto',array('Nombre'=>$nombre));
