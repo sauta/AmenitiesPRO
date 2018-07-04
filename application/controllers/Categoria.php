@@ -20,7 +20,8 @@ class Categoria extends CI_Controller
 
 	public function deleteCategoria()
 	{
-
+		$id = $this->input->post('idCategoria');
+		$this->mcategoria->eliminarId($id);
 	}
 
 	public function setCategoria()

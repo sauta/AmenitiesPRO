@@ -53,7 +53,7 @@ class Mdireccion extends CI_Model
 
 	        return $parametro->result();
 	    }
- 		/********************************************Guardar*********************************************/
+ 		/********************************************Guardardadores*********************************************/
  		public function guardar($parametro)
 	    {
 	    	$campos = array(
@@ -66,13 +66,13 @@ class Mdireccion extends CI_Model
 	   		return $this->db->insert_id();
 	    }
 
-	    /********************************************Eliminar********************************************/
+	    /********************************************Eliminadores********************************************/
 	    	    public function eliminar()
 	    {
 	    	# code...
 	    }
 	    
- 		/********************************************Editadores******************************************/
+ 		/********************************************Editores******************************************/
 	    public function generarAsociacion($parametro)
 	    {
 	    	$campos = array(

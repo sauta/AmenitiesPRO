@@ -10,7 +10,5 @@ class Empresa extends CI_Controller {
 		$this->load->library('session');
 	}
 
-
-	
  }
 ?>

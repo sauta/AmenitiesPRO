@@ -18,24 +18,17 @@ class Producto extends CI_Controller
 		echo json_encode($this->mproducto->getProductos());
 	}		
 
-	// public function updateProducto()
-	// {
-	// 	$producto['sku'] 		    = $this->input->post('sku');
-	// 	$producto['Nombre']     	= $this->input->post('nombre');
-	// 	$producto['idCategoria'] 	= $this->input->post('categoria');
-	// 	$producto['categoria'] 	    = $this->input->post('categoria');
-	// 	$producto['categoria'] 	    = $this->input->post('categoria');
-	// 	$producto['categoria'] 	    = $this->input->post('categoria');
+	public function updateProducto()
+	{
+		$producto['sku'] 		    = $this->input->post('sku');
+		$producto['Nombre']     	= $this->input->post('nombre');
+		$producto['Descripcion'] 	= $this->input->post('Descripcion');
+		$producto['Precio'] 	    = $this->input->post('Precio');
+		$producto['idCategoria'] 	    = $this->input->post('idCategoria');
+		$producto['url_imagen'] 	    = $this->input->post('url_imagen');
 
-	// 	'sku'		    => $parametro['sku'],
-	// 	'Nombre'	    => $parametro['Nombre'],
-	// 	'Descripcion'   => $parametro['Descripcion'],
-	// 	'Precio'	    => $parametro['Precio'],
-	// 	'PK_idCategoria'=> $parametro['idCategoria'],
-	// 	'url_imagen'	=> $parametro['url_imagen'];
-
-	// 	$this->mproducto->
-	// }
+		$this->mproducto->guardar($producto);
+	}
 
 	public function updateProducto()
 	{

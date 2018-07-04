@@ -8,6 +8,7 @@ class Mcontacto extends CI_Model
 		{
 			parent::__construct();
 		}
+		
 	    public function buscar()
 	    {
 	    	# code...

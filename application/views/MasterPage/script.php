@@ -9,6 +9,7 @@
 <!-- Bootstrap 3.3.7 -->
 <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Morris.js charts -->
+
 <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/raphael/raphael.min.js"></script>
 
 <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/morris.js/morris.min.js"></script>
@@ -42,11 +43,11 @@
 <script src="<?=base_url()?>AdminLTE-2.4.2/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
 <script src="<?=base_url()?>AdminLTE-2.4.2/plugins/input-mask/jquery.inputmask.extensions.js"></script>
 
-	<script type="text/javascript">
+<script type="text/javascript">
 		
 			 var site_url = '<?=site_url()?>';
-			  
-	</script>
+
+</script>
 
 <!-- generico -->
   <?php if($this->uri->segment(2)=='cpanel'){?>
@@ -134,32 +135,39 @@
 <!-- adminitrador -->
 
   <?php if($this->uri->segment(2)=='categorias'){?>
-
 	<script src="<?=base_url()?>js/clases/categorias.js"></script>
 
   <?php } ?>
   <?php if($this->uri->segment(2)=='estadisticas_de_facturas'){?>
+  	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
 
   <?php }?>
   <?php if($this->uri->segment(2)=='estadisticas_de_pedidos'){?>
+  	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
 
   <?php }?>
   <?php if($this->uri->segment(2)=='estadisticas_de_ventas'){?>
+  	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
 
   <?php }?>
   <?php if($this->uri->segment(2)=='clientes'){?>
+  	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
 
   <?php }?>
   <?php if($this->uri->segment(2)=='facturas'){?>
+  	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
 
   <?php }?>
   <?php if($this->uri->segment(2)=='demanda'){?>
+  	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
 
   <?php }?>
   <?php if($this->uri->segment(2)=='envio_de_ofertas'){?>
+  	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
 
   <?php }?>
   <?php if($this->uri->segment(2)=='reportes'){?>
+  	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
 
   <?php }?>
   <?php if($this->uri->segment(2)=='facturas'){?>

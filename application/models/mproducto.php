@@ -42,7 +42,6 @@ class Mproducto extends CI_Model
 	    	return $parametro->result();
 	    }
 
-
 	  /**********************************Guardar producto*********************************/
 	    public function guardar($parametro)
 	    {
