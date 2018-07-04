@@ -12,14 +12,14 @@
 
                 <div class="form-group">
                        <label>Seleccione Categoria</label>
-                        <select id="cboCategoria" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" name="cual_categoria" aria-hidden="true" required>
+                        <select id="cboCategoria1" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" required>
                             <option> Seleccione la Categoria</option>
                         </select>
                 </div>
 
                <div class="form-group">
                        <label>Seleccione Producto</label>
-                        <select id="cboProducto" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" name="cual_categoria" aria-hidden="true" required>
+                        <select id="cboProducto1" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" required>
                             <option> Seleccione un Producto</option>
                         </select>
                 </div>
@@ -41,18 +41,18 @@
 
                 <div class="form-group">
                        <label>Cual Categoria Es</label>
-                        <select id="cboCategoria2" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" name="cual_categoria" aria-hidden="true" required>
+                        <select id="cboCategoria2" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" required>
                             <option> Seleccione la Categoria</option>
                         </select>
                 </div>
 
 
                 <div class="form-group">
-                  <select id="sltProducto" name="categoria" size="6" >
-                        <option value="0" selected="selected">SegundoSeleccione Producto...</option>
-                  </select>
+                  <label>Productos</label>
+                    <select id="cboProducto2" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1"  aria-hidden="true" required>
+                          <option value="0" selected="selected"> Seleccione Producto...</option>
+                    </select>
                </div>
-
 
                 <div class="form-group">
                   <label>Nuevo SKU del Producto</label>
@@ -75,7 +75,8 @@
                 </div>
                
                <div class="form-group">
-                  <select id="sltCategoria" name="categoria" size="6" >
+                <label>Categorias</label>
+                  <select id="cboCategoria3" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1"  aria-hidden="true" required>
                         <option value="0" selected="selected">Seleccione Nueva Categoria...</option>
                   </select>
                </div>
@@ -127,7 +128,8 @@
                 </div>
                
                <div class="form-group">
-                  <select id="sltCategoria2" name="categoria" size="6" >
+                <label>Categoria</label>
+                  <select id="cboCategoria4" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" required>
                         <option value="0" selected="selected">Seleccione Categoria...</option>
                   </select>
                </div>

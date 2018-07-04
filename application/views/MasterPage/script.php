@@ -61,8 +61,8 @@
 	
 		 var site_url = '<?=site_url()?>'; 
 </script>
-
-<script src="<?=base_url()?>js/clases/Productos.js"></script>
+<!-- asignar el JS de perfil correspondiente -->
+<script src="<?=base_url()?>js/clases/????????.js"></script>
 
 
 
@@ -76,13 +76,13 @@
 <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 
 <script type="text/javascript">
-	
 		 var site_url = '<?=site_url()?>'; 
 </script>
 
 <script src="<?=base_url()?>js/clases/Productos.js"></script>
 
 <script src="<?=base_url()?>js/clases/Categorias.js"></script>
+
 <?php } ?>
 
 <!-- cliente -->
@@ -169,9 +169,24 @@
   	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
 
   <?php }?>
-  <?php if($this->uri->segment(2)=='facturas'){?>
-    <link id="themecss" rel="stylesheet" type="text/css" href="//www.shieldui.com/shared/components/latest/css/light/all.min.css" />
+
+  <?php if($this->uri->segment(1)=='Registro'){?>
+
+     <script type="text/javascript">
+                 var site_url = '<?=site_url()?>/'; 
+      </script>
+      <script type="text/javascript" src="js/clases/Direccion" ></script>>
+
   <?php }?>
+
+  <?php if($this->uri->segment(2)=='facturas'){?>
+      <script type="text/javascript">
+                 var site_url = '<?=site_url()?>/'; 
+      </script>
+        <script src="<?=base_url()?>js/clases/Facturas.js"></script>
+        <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+  <?php } ?>
 
   <?php if($this->uri->segment(2)=='encargar'){?>
     <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
@@ -189,14 +204,7 @@
 
 
 <!--********************************   Faturas ****************************** -->
-<?php if($this->uri->segment(2)=='facturas'){?>
-	<script type="text/javascript">
-             var site_url = '<?=site_url()?>/'; 
-	</script>
-    <script src="<?=base_url()?>js/clases/Facturas.js"></script>
-    <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
-<?php } ?>
+
 
 </body>
 </html>

@@ -17,7 +17,7 @@ class Mproducto extends CI_Model
 	        return $parametro->result();
 	    }
 
-		public function buscarCategoria($categoria) //busca el producto por el codigo SKU
+		public function buscarPorCategoria($categoria) //busca el producto por Categoria
 	    {
 	    	$parametro = $this->db->get_where('producto',array('PK_idCategoria'=>$categoria));
 
@@ -40,11 +40,7 @@ class Mproducto extends CI_Model
  
 	    public function getProductos()// Lista todos los productos
 	    {
-
-			$this->db->select('p.sku, p.Nombre, p.Precio, p.url_imagen');
-			$this->db->from('producto p');
-
-	    	$parametro = $this->db->get('producto');
+			$parametro = $this->db->get('producto');
 
 	    	return $parametro->result();
 	    }

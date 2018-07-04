@@ -23,9 +23,9 @@ class Mcategoria extends CI_Model
 		 return true;
     }
 
-    public function buscarNombre($idCategoria)
+    public function buscarNombre($categoria)
     {
-		 $this->db->select('categoria', array('Categoria' => $idCategoria));
+		 $this->db->select('categoria', array('Categoria' => $categoria));
 		 return true;
     }
 

@@ -16,7 +16,13 @@ class Producto extends CI_Controller
 	public function getProducto()
 	{
 		echo json_encode($this->mproducto->getProductos());
-	}		
+	}
+
+	public function getProductoCategoria()
+	{
+		$c = $this->input->post('PK_idCategoria');
+		echo json_encode($this->mproducto->buscarPorCategoria($c));
+	}	
 
 	public function updateProducto()
 	{
