@@ -11,35 +11,37 @@
 		}
 
 	function validacion()
-			{
+		{
 
 				var mensaje = '',
-					_nombre          = document.getElementById("nombreUsuario").value,
-					_clave           = document.getElementById("clave").value,
-					_repClave        = document.getElementById("repClave").value,
+					_nombre          = $("#nombreUsuario").val(),
+					_clave           = $("#clave").val(),
+					_repClave        = $("#repClave").val(),
 
-					_nombreEncargado = document.getElementById("nombreEncargado").value,
-					_rutEncargado    = document.getElementById("rutEncargado").value,
+					_nombreEncargado = $("#nombreEncargado").val(),
+					_rutEncargado    =  document.getElementById("rutEncargado").value,
+					// _rutEncargado    = $("#rutEncargado").val(),
 
-					_email		     = document.getElementById("email").value,
-					_telefono        = document.getElementById("telefono").value,
-					_celular         = document.getElementById("celular").value,
+					_email		     = $("#email").val(),
+					_telefono        = $("#telefono").val(),
+					_celular         = $("#celular").val(),
 
-					_nombreFantasia  = document.getElementById("nombreFantasia").value,
-					_rutempresa      = document.getElementById("rutEmpresa").value,
-					_razonSocial     = document.getElementById("razonSocial").value,
-					_descripcion     = document.getElementById("descripcion").value,
+					_nombreFantasia  = $("#nombreFantasia").val(),
+					_rutempresa      =  document.getElementById("rutEmpresa").value,
+					// _rutempresa      = $("#rutEmpresa").val(),
+					_razonSocial     = $("#razonSocial").val(),
+					_descripcion     = $("#descripcion").val(),
 
-					_region          = document.getElementById("cboRegion").selectedIndex,
-					_provincia       = document.getElementById("cboProvinacia").selectedIndex,
-					_comuna          = document.getElementById("cboComuna").selectedIndex,
-					_direccion	     = document.getElementById("direccion").value,
-					_terminos 		 = document.getElementById("terminos");
+					_region          = $("#cboRegion").val(),
+					_provincia       = $("#cboProvinacia").val(),
+					_comuna          = $("#cboComuna").val(),
+					_direccion	     = $("#direccion").val(),
+					_terminos 		 = $("#terminos").val();
 
 				//Nombre _usuario
 				if (_nombre == null || _nombre.length == 0 || /^\s+$/.test(_nombre)) {
 
-					_nombre.focus();
+					$("#nombreUsuario").focus();
 					mensaje = "Nombre del usuario vacio";
 					alert (mensaje);
 					return false;
@@ -47,30 +49,30 @@
 				//validacion _clave
 				 else if (_clave == null || _clave.length == 0 || /^\s+$/.test(_clave)) {
 
-					_clave.focus();
+					$("#clave").focus();
 					mensaje = "No ingresó una clave";
 				 	alert (mensaje);
 				 	return false;
 				}
-				 else if ( _clave.length < 6) {
-					_clave.focus();
-					mensaje = "la clave es muy corta";
+				 else if ( _clave.length <= 6) {
+					$("#clave").focus();
+					mensaje = "la clave es muy corta, tiene que ser minimo de 6 caracteres";
 				 	alert (mensaje);
 				 	return false;
 				}
 				//validacion _repclave
 				 else if (_repClave == null || _repClave.length == 0 || /^\s+$/.test(_repClave)) {
 
-					_repClave.focus();
-					mensaje = "El campo re-clave se ecuentra vacio";
+					$("#repClave").focus();
+					mensaje = "El campo repetir clave se ecuentra vacio";
 				  	alert (mensaje);
 
 				  	return false;
 				}
 				//validacion comparación clave y re calve
-				 else if(_clave != repClave ) {
+				 else if(_clave != _repClave ) {
 
-					_clave.focus();
+					$("#clave").focus();
 					mensaje = "Las claves no coinciden";
 					alert (mensaje);
 					return false;
@@ -79,7 +81,7 @@
 				//Validación nombre encargado
 				else if (_nombreEncargado == null || _nombreEncargado.length == 0 || /^\s+$/.test(_nombreEncargado)) {
 
-					variable.focus();
+					$('#nombreEncargado').focus();
 					mensaje = "El Nombre del encargado es obligatorio";
 					alert (mensaje);
 					return false;
@@ -87,7 +89,7 @@
 				//validacion rut encargado
 				 else if (_rutEncargado == null || _rutEncargado.length == 0 || /^\s+$/.test(_rutEncargado)) {
 
-					variable.focus();
+					$('#rutEncargado').focus();
 					mensaje = "El rut del encargado es obligatorio";
 					alert (mensaje);
 					return false;
@@ -96,31 +98,30 @@
 
 					return false;
 				}
-
 				//validacion email
-				 else if (_clave == null || _clave.length == 0 || /^\s+$/.test(_clave)) {
-					variable.focus();
+				 else if (_email == null || _email.length == 0 || /^\s+$/.test(_email)) {
+					$('#email').focus();
 					mensaje = "El email es obligatorio";
 					alert (mensaje);
 					return false;
 				}
 				//validacion telefono
 				 else if (_telefono == null || _telefono.length == 0 || /^\s+$/.test(_telefono)) {
-					_telefono.focus();
+					$('#telefono').focus();
 					mensaje = "El telefono es obligatorio";
 					alert (mensaje);
 					return false;
 				}
 				//validacion celular
 				 else if (_celular == null || _celular.length == 0 || /^\s+$/.test(_celular)) {
-					_celular.focus();
+					$('#celular').focus();
 					mensaje = "El celular es obligatorio";
 					alert (mensaje);
 					return false;
 				}
 				//validacion nombre Fantasia
 				 else if (_nombreFantasia == null || _nombreFantasia.length == 0 || /^\s+$/.test(_nombreFantasia)) {
-					_nombreFantasia.focus();
+					$('#nombreFantasia').focus();
 					mensaje = "El nombre de fantasia es obligatorio";
 					alert (mensaje);
 					return false;
@@ -128,7 +129,7 @@
 				//validacion Rut empresa
 				
 				 else if (_rutEmpresa == null || _rutEmpresa.length == 0 || /^\s+$/.test(_rutEmpresa)) {
-					_rutEmpresa.focus();
+					$('#rutEmpresa').focus();
 					mensaje = "El rut empresa es obligatorio";
 					alert (mensaje);
 					return false;
@@ -139,35 +140,35 @@
 				}
 				//validacion reazón social
 				 else if (_razonSocial == null || _razonSocial.length == 0 || /^\s+$/.test(_razonSocial)) {
-					_razonSocial.focus();
+					$('#razonSocial').focus();
 					mensaje = "El rut rezón es obligatorio";
 					alert (mensaje);
 					return false;
 				}
 				//validacion descripción
 				 else if (_descripcion == null || _descripcion.length == 0 || /^\s+$/.test(_descripcion)) {
-					_descripcion.focus();
+					$('#descripcion').focus();
 					mensaje = "El campo descripción es obligatorio";
 					alert (mensaje);
 					return false;
 				}
 				//validacion region 
 				 else if (_region == null || _region == 0 ) {
-					_region.focus();
+					$('#cboRegion').focus();
 					mensaje = "no a seleccionado una ragion";
 					alert (mensaje);
 					return false;
 				}
 				//validacion provincia
 				 else if (_provincia == null || _provincia == 0 ) {
-					
+					$('#cboProvinacia').focus();
 					mensaje = "No a seleccionado una provincia";
 					alert (mensaje);
 					return false;
 				}
 				//validacion comuna
 				 else if (_comuna == null || _comuna == 0 ) {
-					
+					$('#cboComuna').focus();
 					mensaje = "no a seleccionado una comuna";
 					alert (mensaje);
 					return false;
@@ -175,20 +176,22 @@
 				//validacion dirección
 				else if (_direccion == null || _direccion.length == 0 || /^\s+$/.test(_direccion)) {
 					
+					$('#direccion').focus();
 					mensaje = "dirección";
 					alert (mensaje);
 					return false;
 				}
 				//validacion _terminosos
 				else if (!_terminos.checked) {
-					_terminos.focus();
+					$('#terminos').focus();
 					mensaje = "No a aceptado los termino y condiciones";
 					alert (mensaje);
 					return false;
 				}
 				 
 				return true;
-		  }
+		}
+
 		function revisarDigito( dvr, variable)
 		{	
 			dv = dvr + ""	

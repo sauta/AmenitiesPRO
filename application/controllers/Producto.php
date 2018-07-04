@@ -36,9 +36,6 @@ class Producto extends CI_Controller
 		$this->mproducto->guardar($producto);
 	}
 
-	public function updateProducto()
-	{
-		# code...
-	}
+	
 }
 ?>

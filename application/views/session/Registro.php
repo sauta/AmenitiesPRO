@@ -36,7 +36,7 @@
   <div class="login-box-body">
     <p class="login-box-msg">Registro en Amenities PRO</p>
 
-    <form name="form1"  action="<?=site_url()?>/Registro/registro" method="POST" onsubmit="return validacion()">
+    <form name="form1"  action="<?=site_url()?>/Registro/registro" method="POST" >
         <!--***********************************Registro Usuario************************************-->
         <!--Nombre Usuario-->
          <div class="form-group">
@@ -44,17 +44,17 @@
                   <div class="input-group-addon">
                     <i class="fa fa-user"></i>
                   </div>
-                  <input id="nombreUsuario" name="txtNombreUsuario"  maxlength="40" type="text" class="form-control" placeholder="Nombre Usuario" maxlength="45" required>
+                  <input id="nombreUsuario" name="txtNombreUsuario"  maxlength="40" type="text" class="form-control" placeholder="Nombre Usuario" maxlength="45" >
               </div>
          </div>
         <!--Clave-->
          <div class="form-group has-feedback">
-          <input name="txtClave" id="clave"  type="password" class="form-control" placeholder="Clave" required min="6" max="13">
+          <input name="txtClave" id="clave"  type="password" class="form-control" placeholder="Clave"  min="6" max="13">
           <span class="glyphicon glyphicon-lock form-control-feedback"></span>
          </div>
         <!--Repetir Clave-->
           <div class="form-group has-feedback">
-            <input name="txtRepClave" id="repClave" type="password" class="form-control" placeholder="Repetir Clave" required min="6" max="13">
+            <input name="txtRepClave" id="repClave" type="password" class="form-control" placeholder="Repetir Clave"  min="6" max="13">
             <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
           </div>
         <!--****************************************Encargado****************************************-->
@@ -67,7 +67,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-users"></i>
                   </div>
-                  <input id="nombreEncargado"  name="txtNombreEncargado" maxlength="40" type="text" class="form-control" placeholder="Nombre Encargado" required >
+                  <input id="nombreEncargado"  name="txtNombreEncargado" maxlength="40" type="text" class="form-control" placeholder="Nombre Encargado"  >
               </div>
          </div>
         <!--Rut-->
@@ -76,7 +76,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-briefcase"></i>
                   </div>
-                        <input id="rutEncargado" data-mask name="txtRutEncargado"  maxlength="12" type="text" class="form-control" placeholder="RUT" required >
+                        <input id="rutEncargado" data-mask name="txtRutEncargado"  maxlength="12" type="text" class="form-control" placeholder="RUT"  >
                   
               </div>
          </div>
@@ -86,7 +86,7 @@
          </div>  
         <!--Email-->
          <div class="form-group has-feedback">
-                  <input id="email" name="txtEmail" type="email" class="form-control" placeholder="Email" required>
+                  <input id="email" name="txtEmail" type="email" class="form-control" placeholder="Email" >
                   <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
          </div>
         <!--Telefono-->
@@ -95,7 +95,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-phone"></i>
                   </div>
-                  <input id="telefono" name="txtTelefono" type="text" class="form-control" placeholder="Telefono"  maxlength="19" data-inputmask="'mask': '9999 9999 9999 9999'"  required>
+                  <input id="telefono" name="txtTelefono" type="text" class="form-control" placeholder="Telefono"  maxlength="19" data-inputmask="'mask': '9999 9999 9999 9999'"  >
 
               </div>
           </div>
@@ -105,7 +105,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-mobile-phone"></i>
                   </div>
-                  <input id="celular" name="txtCelular" type="text" class="form-control" placeholder="Celular" maxlength="15" data-mask  required>
+                  <input id="celular" name="txtCelular" type="text" class="form-control" placeholder="Celular" maxlength="15" data-mask  >
               </div>
          </div>
         <!--*****************************************Empresa*****************************************-->
@@ -118,7 +118,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-pencil-square-o"></i>
                   </div>
-                  <input id="nombreFantasia" name="txtNombreFantasia" type="text" class="form-control" placeholder="Nombre de Fantasia" required  >
+                  <input id="nombreFantasia" name="txtNombreFantasia" type="text" class="form-control" placeholder="Nombre de Fantasia"   >
               </div>
          </div>
         <!--Rut Empresa-->
@@ -128,8 +128,8 @@
                     <i class="fa fa-briefcase"></i>
                   </div>
                   <input id="rutEmpresa" onchange=""  data-mask name="txtRutEmpresa" type="text" class="form-control" 
-                  placeholder="RUT Empresa"  required 
-                  onchange="return function RutEmpresa(document.getElementById('#Rut2').value)" 
+                  placeholder="RUT Empresa"  
+                  onchange="return function RutEmpresa(document.getElementById('#Rut2').value()" 
                   min=13>
               </div>
          </div>
@@ -139,7 +139,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-pencil"></i>
                   </div>
-                  <input id="razonSocial" name="txtRazonSocial" type="text" class="form-control" placeholder="Razon social"  required>
+                  <input id="razonSocial" name="txtRazonSocial" type="text" class="form-control" placeholder="Razon social"  >
               </div>
          </div>
         <!--Descripción-->
@@ -149,8 +149,9 @@
                     <i class="fa fa-comment"></i>
                   </div>
                   <textarea id="descripcion" onkeypress="return limita(100);"
-                  maxlength="100" name="txtDescripcion" type="text" class="form-control" placeholder="Descripcion de la Empresa" required
-                  ></textarea>
+                  maxlength="100" name="txtDescripcion" type="text" class="form-control" placeholder="Descripcion de la Empresa">
+                    
+                  </textarea>
                   
               </div>
          </div>
@@ -189,7 +190,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-briefcase"></i>
                   </div>
-                  <input maxlength="45" id="direccion" name="txtDireccion" type="text" class="form-control" placeholder="Direccion" required>
+                  <input maxlength="45" id="direccion" name="txtDireccion" type="text" class="form-control" placeholder="Direccion">
               </div>
          </div>
              <div class="row">
@@ -202,7 +203,7 @@
          </div>
         <!-- /.col -->
          <div class="col-xs-4">
-           <input  name="registro" type="submit" onclick="this.disabled=true; this.value=’Enviando...’; this.form1.submit()" class="btn btn-primary btn-block btn-flat">Registrarse</button>
+           <input  name="registro" type="button" onClick="validacion()" class="btn btn-primary btn-block btn-flat">Registrarse</button>
          </div>
         <!-- /.col -->
        </div>
@@ -235,8 +236,8 @@
 <script type="text/javascript">
         var site_url = '<?=site_url()?>/'; 
 </script>
-<script src="<?=base_url()?>js/Direccion.js"></script> 
-<script src="<?=base_url()?>js/validadores.js"></script> 
+<script src="<?=base_url()?>js/clases/Direccion.js"></script> 
+<script src="<?=base_url()?>js/validadores/validadores.js"></script> 
   <script>
     $('#rutEmpresa').mask('99.999.999-A');
     $('#rutEncargado').mask('99.999.999-A');

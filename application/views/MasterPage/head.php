@@ -30,7 +30,8 @@
 
   <?php }?>
   <?php if($this->uri->segment(2)=='productos'){?>
-    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
+
+    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
     <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/">
 
   <?php } ?>
