@@ -149,9 +149,7 @@
                     <i class="fa fa-comment"></i>
                   </div>
                   <textarea id="descripcion" onkeypress="return limita(100);"
-                  maxlength="100" name="txtDescripcion" type="text" class="form-control" placeholder="Descripcion de la Empresa">
-                    
-                  </textarea>
+                  maxlength="100" name="txtDescripcion" type="text" class="form-control" placeholder="Descripcion de la Empresa"></textarea>
                   
               </div>
          </div>
@@ -203,7 +201,8 @@
          </div>
         <!-- /.col -->
          <div class="col-xs-4">
-           <input  name="registro" type="button" onClick="validacion()" class="btn btn-primary btn-block btn-flat">Registrarse</button>
+           <input name="registro" value="Registrarse" type="button" onClick="validacion()" class="btn btn-primary btn-block btn-flat">
+           <!-- <button name="registro" onClick="validacion()" class="btn btn-primary btn-block btn-flat">Registrarse</button> -->
          </div>
         <!-- /.col -->
        </div>

@@ -54,7 +54,7 @@
 				 	alert (mensaje);
 				 	return false;
 				}
-				 else if ( _clave.length <= 6) {
+				 else if ( _clave.length <= 5) {
 					$("#clave").focus();
 					mensaje = "la clave es muy corta, tiene que ser minimo de 6 caracteres";
 				 	alert (mensaje);
@@ -141,7 +141,7 @@
 				//validacion reazón social
 				 else if (_razonSocial == null || _razonSocial.length == 0 || /^\s+$/.test(_razonSocial)) {
 					$('#razonSocial').focus();
-					mensaje = "El rut rezón es obligatorio";
+					mensaje = "El nombre oficial de la empresa es obligatorio";
 					alert (mensaje);
 					return false;
 				}
@@ -155,7 +155,7 @@
 				//validacion region 
 				 else if (_region == null || _region == 0 ) {
 					$('#cboRegion').focus();
-					mensaje = "no a seleccionado una ragion";
+					mensaje = "No a seleccionado una ragion";
 					alert (mensaje);
 					return false;
 				}
@@ -169,7 +169,7 @@
 				//validacion comuna
 				 else if (_comuna == null || _comuna == 0 ) {
 					$('#cboComuna').focus();
-					mensaje = "no a seleccionado una comuna";
+					mensaje = "No a seleccionado una comuna";
 					alert (mensaje);
 					return false;
 				}
@@ -325,49 +325,52 @@
 			return false;
 		}
 	
-	//////////////FINDE DE LA VALIDACIONES/////////////
+//////////////FINDE DE LA VALIDACIONES/////////////
 
-			function permite(elEvento, permitidos) {
-			  // Variables que definen los caracteres permitidos
-			  var numeros = "0123456789";
-			  var rut = ".-";
-			  var caracteres = " abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
-			  var numeros_caracteres = numeros + caracteres;
-			  var teclas_especiales = [8, 37, 39, 46];
-			  // 8 = BackSpace, 46 = Supr, 37 = flecha izquierda, 39 = flecha derecha
-			 
-			 
-			  // Seleccionar los caracteres a partir del parámetro de la función
-			  switch(permitidos) {
-			    case 'num':
-			      permitidos = numeros;
-			      break;
-			    case 'car':
-			      permitidos = caracteres;
-			      break;
-			    case 'num_car':
-			      permitidos = numeros_caracteres;
-			      break;
-			  }
-			 
-			  // Obtener la tecla pulsada 
-			  var evento = elEvento || window.event;
-			  var codigoCaracter = evento.charCode || evento.keyCode;
-			  var caracter = String.fromCharCode(codigoCaracter);
-			 
-			  // Comprobar si la tecla pulsada es alguna de las teclas especiales
-			  // (teclas de borrado y flechas horizontales)
-			  var tecla_especial = false;
-			  for(var i in teclas_especiales) {
-			    if(codigoCaracter == teclas_especiales[i]) {
-			      tecla_especial = true;
-			      break;
-			    }
-			  } 
-			  // Comprobar si la tecla pulsada se encuentra en los caracteres permitidos
-			  // o si es una tecla especial
-			  return permitidos.indexOf(caracter) != -1 || tecla_especial;
-			}
+function permite(elEvento, permitidos) 
+{
+	// Variables que definen los caracteres permitidos
+	var numeros = "0123456789";
+	var rut = ".-";
+	var caracteres = " abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+	var numeros_caracteres = numeros + caracteres;
+	var teclas_especiales = [8, 37, 39, 46];
+	// 8 = BackSpace, 46 = Supr, 37 = flecha izquierda, 39 = flecha derecha
+	
+	
+	// Seleccionar los caracteres a partir del parámetro de la función
+	switch(permitidos) {
+	case 'num':
+		permitidos = numeros;
+		break;
+	case 'car':
+		permitidos = caracteres;
+		break;
+	case 'num_car':
+		permitidos = numeros_caracteres;
+		break;
+	}
+	
+	// Obtener la tecla pulsada 
+	var evento = elEvento || window.event;
+	var codigoCaracter = evento.charCode || evento.keyCode;
+	var caracter = String.fromCharCode(codigoCaracter);
+	
+	// Comprobar si la tecla pulsada es alguna de las teclas especiales
+	// (teclas de borrado y flechas horizontales)
+	var tecla_especial = false;
+	for(var i in teclas_especiales) 
+	{
+		if(codigoCaracter == teclas_especiales[i]) 
+		{
+			tecla_especial = true;
+			break;
+		}
+	} 
+	// Comprobar si la tecla pulsada se encuentra en los caracteres permitidos
+	// o si es una tecla especial
+	return permitidos.indexOf(caracter) != -1 || tecla_especial;
+}
 
 
 
