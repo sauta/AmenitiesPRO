@@ -148,8 +148,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-comment"></i>
                   </div>
-                  <textarea id="descripcion" onkeypress="return limita(100);"
-                  maxlength="100" name="txtDescripcion" type="text" class="form-control" placeholder="Descripcion de la Empresa"></textarea>
+                  <textarea id="descripcion" maxlength="100" name="txtDescripcion" type="text" class="form-control" placeholder="Descripcion de la Empresa"></textarea>
                   
               </div>
          </div>

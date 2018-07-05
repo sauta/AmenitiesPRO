@@ -94,7 +94,7 @@
 					alert (mensaje);
 					return false;
 				}
-				 else if (Rut(_rutEncargado,_rutEncargado)) {
+				 else if (Rut(_rutEncargado)) {
 
 					return false;
 				}
@@ -134,8 +134,10 @@
 					alert (mensaje);
 					return false;
 				}
-				else if (Rut(_rutEmpresa,_rutEmpresa)) {
-
+				else if (!Rut(_rutEmpresa)) {
+					$('#rutEmpresa').focus();
+					mensaje = "El rut empresa es obligatoriooooo";
+					alert (mensaje);
 					return false;
 				}
 				//validacion reazón social
@@ -181,7 +183,7 @@
 					alert (mensaje);
 					return false;
 				}
-				//validacion _terminosos
+				//validacion _terminos
 				else if (!_terminos.checked) {
 					$('#terminos').focus();
 					mensaje = "No a aceptado los termino y condiciones";
@@ -191,28 +193,26 @@
 				 
 				return true;
 		}
+		
+//Fin validaciones normales, sigue Rut
 
-		function revisarDigito( dvr, variable)
+		function revisarDigito( dvr)
 		{	
 			dv = dvr + ""	
 			if ( dv != '0' && dv != '1' && dv != '2' && dv != '3' && dv != '4' && dv != '5' && dv != '6' && dv != '7' && dv != '8' && dv != '9' && dv != 'k'  && dv != 'K')	
 			{
-				alert("Debe ingresar un digito verificador valido");		
-				alerta.focus();
-				alerta.select();		
+				alert("Debe ingresar un digito verificador valido");				
 				return false;	
 			}	
 			return true;
 		}
 
-		function revisarDigito2( crut, variable )
+		function revisarDigito2(crut)
 		{	
 			largo = crut.length;	
 			if ( largo < 2 )	
 			{		
-				alert("Debe ingresar el rut completo")		
-				variable.focus();		
-				variable.select();		
+				alert("Debe ingresar el rut completo")				
 				return false;	
 			}	
 			if ( largo > 2 )		
@@ -220,7 +220,7 @@
 			else		
 				rut = crut.charAt(0);	
 			dv = crut.charAt(largo-1);	
-			revisarDigito( dv, variable );	
+			revisarDigito(dv);	
 
 			if ( rut == null || dv == null )
 				return 0	
@@ -249,16 +249,14 @@
 			}
 			if ( dvr != dv.toLowerCase() )	
 			{		
-				alert("EL rut es incorrecto")		
-				variable.focus();		
-				variable.select();		
+				alert("EL rut es incorrecto")				
 				return false	
 			}
 
 			return true
 		}
 
-		function Rut(texto,variable)
+		function Rut(texto)
 		{	
 			var tmpstr = "";	
 			for ( i=0; i < texto.length ; i++ )		
@@ -269,9 +267,7 @@
 
 			if ( largo < 2 )
 			{		
-				alert("Debe ingresar el rut completo")		
-				variable.focus();		
-				variable.select();		
+				alert("Debe ingresar el rut completo")				
 				return false;	
 			}	
 
@@ -282,8 +278,6 @@
 					alert("El valor ingresado no corresponde a un R.U.T valido");			
 					// window.document.form1.txtRutEmpresa.focus();			
 					// window.document.form1.txtRutEmpresa.select();			
-					variable.focus();		
-					variable.select();
 					return false;		
 				}	
 			}	
@@ -317,9 +311,9 @@
 			for ( i=(dtexto.length-1),j=0; i>=0; i--,j++ )		
 				invertido = invertido + dtexto.charAt(i);	
 
-			variable.value = invertido.toUpperCase()		
+			// variable = invertido.toUpperCase();		
 
-			if ( revisarDigito2(texto,variable) )		
+			if ( revisarDigito2(texto) )		
 				return true;	
 
 			return false;
@@ -337,7 +331,7 @@ function permite(elEvento, permitidos)
 	var teclas_especiales = [8, 37, 39, 46];
 	// 8 = BackSpace, 46 = Supr, 37 = flecha izquierda, 39 = flecha derecha
 	
-	
+
 	// Seleccionar los caracteres a partir del parámetro de la función
 	switch(permitidos) {
 	case 'num':
