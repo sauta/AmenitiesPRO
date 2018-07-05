@@ -11,8 +11,10 @@
                    <thead>
                   <tr>
                     <th style="width: 10px">SKU</th>
-                    <th style="width: 40%" >Nombre</th>
-                    <th style="width: 40%">Precio</th>
+                    <th style="width: 35%" >Nombre</th>
+                    <th style="width: 15%">Precio CLP</th>
+                    <th style="width: 40%">Descripción</th>
+                    <!-- <th style="width: 40%">Disponibilidad</th> -->
                     <th style="width: 60px">Imagen</th>
                     </tr>
                   </thead>
@@ -20,8 +22,10 @@
                   <tfoot>
                     <tr>
                     <th style="width: 10px">SKU</th>
-                    <th style="width: 40%" >Nombre</th>
-                    <th style="width: 40%">Precio</th>
+                    <th style="width: 35%" >Nombre</th>
+                    <th style="width: 15%">Precio CLP</th>
+                    <th style="width: 40%">Descripción</th>
+                    <!-- <th style="width: 40%">Disponibilidad</th> -->
                     <th style="width: 60px">Imagen</th>
                     </tr>
                   </tfoot> 

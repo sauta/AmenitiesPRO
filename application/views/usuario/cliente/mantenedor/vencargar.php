@@ -3,91 +3,50 @@
       <!-- Small boxes (Stat box) -->
 		
       <div class="row">	
-		<div class="col-lg-3">
-      	</div>
+		<div class="col-lg-5">
+                 <div class="box box-success">
+                  <div class="box-header with-border">
+                         <h3 class="box-title">Lista de productos</h3>
+                    </div>
+                   <div class="box-body no-padding">
+                <table id="tblProductoEncargo" class="table table-bordered table-hover">
+                    <thead>
+	                  	<tr>
+	                  		<th style="width: 10%"></th>
+		                    <th style="width: 10px">SKU</th>
+		                    <th style="width: 35%" >Nombre</th>
+		                    <th style="width: 15%">Precio CLP</th>
+                    	</tr>
+                    </thead>
+                    <tfoot>
+	                    <tr>
+	                    	<th style="width: 10%"></th>
+		                    <th style="width: 10px">SKU</th>
+		                    <th style="width: 35%" >Nombre</th>
+		                    <th style="width: 15%">Precio CLP</th>
+	                    </tr>
+                    </tfoot> 
+                </table>
+                  </div>
+                    <!-- /.box-body -->
+                 </div>
+                  <!-- /.box -->
+	      	</div>
       	<div class="col-lg-6">
       	   <div class="box box-success">
       		   <div class="box-header with-border">
-                 <h3 class="box-title">Pedir</h3>
+                 <h3 class="box-title">Pedir mis prodcutos</h3>
                </div>
               <form name="formulario_producto"  action="<?=site_url()?>/Pedido/guardarPedidos" method="POST">
-	              <div class="box-body">
-	              	 <table class="table table-striped">
-	              	 	<tbody>
-	              	 	<tr>
-	              	 		<td>Producto</td>
-	              	 		<td>Precio</td>
-	              	 		<td>Cantidad</td>
-	              	 		<td>Total</td>
-	              	 	</tr>
-	              	 	<tr>
-	              	 		<td>
-	              	 			<select>
-	              	 				<option>Producto 1</option>
-	              	 				<option>Producto 2</option>
-	              	 				<option>Producto 3</option>
-	              	 				<option>Producto 4</option>
-	              	 				<option>Producto 4</option>
-	              	 				<option>Producto 4</option>
-	              	 				<option>Producto 4</option>
-	              	 				<option>Producto 4</option>
-	              	 				<option>Producto 4</option>
-	              	 				<option>Producto 4</option>
-	              	 				<option>Producto 4</option>
-	              	 			</select>
-	              	 		</td>
-	              	 		<td>Precio</td>
-	              	 		<td>Cantidad</td>
-	              	 		<td>Total</td>
-	              	 	</tr>
-	              	 	<tr>
-	              	 	</tr>
-	              	 </tbody>
-	              	 </table>	
-		              <br>
-		              Producto
-		              <div class="form-group">
-		                <label>Minimal</label>
-		                <select class="form-control select2 select2-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
-		                  <option selected="selected">Alabama</option>
-		                  <option>Alaska</option>
-		                  <option>California</option>
-		                  <option>Delaware</option>
-		                  <option>Tennessee</option>
-		                  <option>Texas</option>
-		                  <option>Washington</option>
-		                </select>
-		              </div>
 
-		             <div class="form-group">
-                  		<label for="exampleInputEmail1">Email address</label>
-	                  	<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-               		 </div>
-		              <input class="form-control" type="text" placeholder="Default input">
-		              Cantidad
-		              <input class="form-control" type="text" placeholder="Default input">
-		              <br>
-		              <input class="form-control" type="text" placeholder="Default input">
-		              <br>
-		              <input class="form-control" type="text" placeholder="Default input">
-		              <br>
-		              <input class="form-control" type="text" placeholder="Default input">
-		              <br>
-		              <input class="form-control" type="text" placeholder="Default input">
-		              <br>
-		              <input class="form-control" type="text" placeholder="Default input">
-		              <br>
-		              <input class="form-control input-sm" type="text" placeholder=".input-sm">
-		              <br>
-		              <div class="box-footer">
-			                <button type="submit" class="btn btn-default col-lg-5">Cancel</button>
-			                <button type="submit" class="btn btn-info pull-right col-lg-5">Enviar</button>
-              		  </div>
-	              </div>
+
+
+
+	           
               </form>
       		</div>
       	</div>
-      	<div class="col-lg-3">
+      	<div class="col-lg-1">
       	</div>
       </div>
 

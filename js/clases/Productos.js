@@ -5,21 +5,7 @@
 
 
 
-var t = $('#tblProducto').DataTable(
-		// {
-  //               "columns": [
-  //                   { "data": "sku", "orderable" : true },
-  //                   { "data": "Nombre", "orderable": false },
-  //                   { "data": "Precio", "orderable": true },
-  //                   {
-  //                       "render": function (data, type, JsonResultRow, meta) {
-  //                           return '<img src="Content/'+JsonResultRow.ImageAddress+'">';
-  //                       }
-  //                   }
-  //               ],
-  //               "order": [[0, "asc"]]
-		// }
-		);
+var t = $('#tblProducto').DataTable();
 
 $.post(site_url+"/Producto/getProducto",
 	    {/*parametro en este caso no se necesita ninguna parametro por que traemos las productos directamente de la BDD*/},
@@ -32,10 +18,12 @@ $.post(site_url+"/Producto/getProducto",
 					     item.sku,
 			             item.Nombre,
 		                 item.Precio,
+		                 item.Descripcion,
+		                 // item.Disponibilidad,
 		                 '<img src="'+item.url_imagen+'" style="width: 100px">'
-		                 
 
 		       		]).draw(false);
+
 			 });
 		});
 
