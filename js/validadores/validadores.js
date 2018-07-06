@@ -13,7 +13,6 @@
 	function validacion()
 		{
 
-
 				var mensaje = '',
 					_nombre          = $("#nombreUsuario").val(),
 					_clave           = $("#clave").val(),
@@ -28,7 +27,7 @@
 					_celular         = $("#celular").val(),
 
 					_nombreFantasia  = $("#nombreFantasia").val(),
-					_ruteEmpresa      =  document.getElementById("rutEmpresa").value,
+					_rutEmpresa      =  document.getElementById("rutEmpresa").value,
 					// _rutempresa      = $("#rutEmpresa").val(),
 					_razonSocial     = $("#razonSocial").val(),
 					_descripcion     = $("#descripcion").val(),
