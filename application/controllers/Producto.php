@@ -18,6 +18,12 @@ class Producto extends CI_Controller
 		echo json_encode($this->mproducto->getProductos());
 	}
 
+	public function getProductoById()
+	{
+		$c = $this->input->post('idProductos');
+		echo json_encode($this->mproducto->buscarId($c));	
+	}
+
 	public function getProductoCategoria()
 	{
 		$c = $this->input->post('PK_idCategoria');
@@ -36,6 +42,6 @@ class Producto extends CI_Controller
 		$this->mproducto->guardar($producto);
 	}
 
-	
+
 }
 ?>

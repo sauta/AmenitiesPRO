@@ -13,6 +13,7 @@
 	function validacion()
 		{
 
+
 				var mensaje = '',
 					_nombre          = $("#nombreUsuario").val(),
 					_clave           = $("#clave").val(),
@@ -27,7 +28,7 @@
 					_celular         = $("#celular").val(),
 
 					_nombreFantasia  = $("#nombreFantasia").val(),
-					_rutempresa      =  document.getElementById("rutEmpresa").value,
+					_ruteEmpresa      =  document.getElementById("rutEmpresa").value,
 					// _rutempresa      = $("#rutEmpresa").val(),
 					_razonSocial     = $("#razonSocial").val(),
 					_descripcion     = $("#descripcion").val(),
@@ -53,13 +54,13 @@
 					mensaje = "No ingresó una clave";
 				 	alert (mensaje);
 				 	return false;
-				}
+				 }
 				 else if ( _clave.length <= 5) {
 					$("#clave").focus();
 					mensaje = "la clave es muy corta, tiene que ser minimo de 6 caracteres";
 				 	alert (mensaje);
 				 	return false;
-				}
+				 }
 				//validacion _repclave
 				 else if (_repClave == null || _repClave.length == 0 || /^\s+$/.test(_repClave)) {
 
@@ -94,8 +95,8 @@
 					alert (mensaje);
 					return false;
 				}
-				 else if (Rut(_rutEncargado)) {
-
+				 else if (!Rut(_rutEncargado)) {
+				 	$('#rutEncargado').focus();
 					return false;
 				}
 				//validacion email
@@ -104,77 +105,101 @@
 					mensaje = "El email es obligatorio";
 					alert (mensaje);
 					return false;
-				}
+				 }
+				 
+				  else if(!/^\w+([\.\+\-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(_email)) {
+				  	$('#email').focus();
+					mensaje = "El formato de email es incorrecto";
+					alert (mensaje);
+					return false;
+				 }
 				//validacion telefono
 				 else if (_telefono == null || _telefono.length == 0 || /^\s+$/.test(_telefono)) {
 					$('#telefono').focus();
 					mensaje = "El telefono es obligatorio";
 					alert (mensaje);
 					return false;
-				}
+				 }
+
+				 else if (/^([0-9]{5})+(-){0,1}([0-9]{6})$/.test(_telefono)) {
+				 	$('#telefono').focus();
+					mensaje = "El formato del telefono es incorrecto";
+					alert (mensaje);
+					return false;
+				 }
 				//validacion celular
 				 else if (_celular == null || _celular.length == 0 || /^\s+$/.test(_celular)) {
 					$('#celular').focus();
 					mensaje = "El celular es obligatorio";
 					alert (mensaje);
 					return false;
-				}
+				 }
+				
+				 else if ( !/^\+?56(\s?)(0?9)(\s?)[98765]\d{7}$/.test(_celular)) 
+				 {
+					$('#celular').focus();
+					mensaje = "El formato de celular no corresponde";
+					alert (mensaje);
+					return false;
+				 }
+
 				//validacion nombre Fantasia
 				 else if (_nombreFantasia == null || _nombreFantasia.length == 0 || /^\s+$/.test(_nombreFantasia)) {
 					$('#nombreFantasia').focus();
 					mensaje = "El nombre de fantasia es obligatorio";
 					alert (mensaje);
 					return false;
-				}
+				 }
 				//validacion Rut empresa
 				
-				 else if (_rutEmpresa == null || _rutEmpresa.length == 0 || /^\s+$/.test(_rutEmpresa)) {
+				 else if (_rutEmpresa == null || _rutEmpresa.length == 0 || /^\s+$/.test(_rutEmpresa))
+				 {
 					$('#rutEmpresa').focus();
 					mensaje = "El rut empresa es obligatorio";
 					alert (mensaje);
 					return false;
-				}
-				else if (!Rut(_rutEmpresa)) {
+				 }
+				 else if (!Rut(_rutEmpresa)) {
 					$('#rutEmpresa').focus();
 					mensaje = "El rut empresa es obligatoriooooo";
 					alert (mensaje);
 					return false;
-				}
+				 }
 				//validacion reazón social
 				 else if (_razonSocial == null || _razonSocial.length == 0 || /^\s+$/.test(_razonSocial)) {
 					$('#razonSocial').focus();
 					mensaje = "El nombre oficial de la empresa es obligatorio";
 					alert (mensaje);
 					return false;
-				}
+				 }
 				//validacion descripción
 				 else if (_descripcion == null || _descripcion.length == 0 || /^\s+$/.test(_descripcion)) {
 					$('#descripcion').focus();
 					mensaje = "El campo descripción es obligatorio";
 					alert (mensaje);
 					return false;
-				}
+				 }
 				//validacion region 
 				 else if (_region == null || _region == 0 ) {
 					$('#cboRegion').focus();
 					mensaje = "No a seleccionado una ragion";
 					alert (mensaje);
 					return false;
-				}
+				 }
 				//validacion provincia
 				 else if (_provincia == null || _provincia == 0 ) {
 					$('#cboProvinacia').focus();
 					mensaje = "No a seleccionado una provincia";
 					alert (mensaje);
 					return false;
-				}
+				 }
 				//validacion comuna
 				 else if (_comuna == null || _comuna == 0 ) {
 					$('#cboComuna').focus();
 					mensaje = "No a seleccionado una comuna";
 					alert (mensaje);
 					return false;
-				}
+				 }
 				//validacion dirección
 				else if (_direccion == null || _direccion.length == 0 || /^\s+$/.test(_direccion)) {
 					
@@ -182,14 +207,14 @@
 					mensaje = "dirección";
 					alert (mensaje);
 					return false;
-				}
+				 }
 				//validacion _terminos
-				else if (!_terminos.checked) {
+				else if (!$('#terminos').checked) {
 					$('#terminos').focus();
 					mensaje = "No a aceptado los termino y condiciones";
 					alert (mensaje);
 					return false;
-				}
+				 }
 				 
 				return true;
 		}

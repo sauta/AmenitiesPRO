@@ -12,18 +12,16 @@
                 <table id="tblProductoEncargo" class="table table-bordered table-hover">
                     <thead>
 	                  	<tr>
-	                  		<th style="width: 10%"></th>
-		                    <th style="width: 10px">SKU</th>
-		                    <th style="width: 35%" >Nombre</th>
-		                    <th style="width: 15%">Precio CLP</th>
+	                  	  	<th></th>
+		                    <th>Nombre</th>
+		                    <th>Precio CLP</th>
                     	</tr>
                     </thead>
                     <tfoot>
 	                    <tr>
-	                    	<th style="width: 10%"></th>
-		                    <th style="width: 10px">SKU</th>
-		                    <th style="width: 35%" >Nombre</th>
-		                    <th style="width: 15%">Precio CLP</th>
+	                    	<th></th>
+		                    <th>Nombre</th>
+		                    <th>Precio CLP</th>
 	                    </tr>
                     </tfoot> 
                 </table>

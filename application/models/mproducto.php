@@ -10,6 +10,14 @@ class Mproducto extends CI_Model
 		}
 		
 	  /******************************** Buscar y Listar productos ***********************************/		
+	  	public function buscarId($id) //busca el producto por el codigo SKU
+	    {
+	    	$parametro = $this->db->get_where('producto',array('idProductos'=>$id));
+
+	        return $parametro->result();
+	    }
+
+
 	    public function buscarSKU($sku) //busca el producto por el codigo SKU
 	    {
 	    	$parametro = $this->db->get_where('producto',array('sku'=>$sku));
