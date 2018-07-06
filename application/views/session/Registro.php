@@ -240,7 +240,8 @@
     $('#rutEmpresa').mask('99.999.999-A');
     $('#rutEncargado').mask('99.999.999-A');
     $('#celular').mask('+56 9 99999999');
-    $('#telefono').mask('99999-999999');
+    $('#telefono').mask('02 999-9999');
+    // $('#').mask('#AAAAAAAAAAA');
   </script>
 
 <script>

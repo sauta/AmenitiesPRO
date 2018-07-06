@@ -16,65 +16,43 @@ function format ( d ) {
         '</tr>'+
         '<tr>'+
             '<td>foto:</td>'+
-            '<td><img src="'+item.url_imagen+'" style="width: 100px"></td>'+
+            '<td><img src="'+d.url_imagen+'" style="width: 100px"></td>'+
         '</tr>'+
     '</table>';
  }
 
 var t = $('#tblProductoEncargo').DataTable({
 
-	  //    language: { 
-
-	  //    	url: '../includes/datatable_ptbr.json' 
-
-			// }, 
-
-	  //   responsive: true,
-	  //   ajax: {
-	  //               type: 'POST',
-	  //               url: site_url+"/Producto/getProducto",
-	  //               data: {idstatus: opRadio},
-	  //               success: function (msg) 
-	  //               {
-	  //                   return JSON.stringify(msg);
-	  //                  // msg = $.parseJSON(msg);
-	  //               }
-	  //        }
-
+		"lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+		"order": [[1, 'asc']],
+		// "ajax": 
+		
 	});
 
-$.post(site_url+"/Producto/getProducto",
-	    {/*parametro en este caso no se necesita ninguna parametro por que traemos las productos directamente de la BDD*/},
-	    function(data){
-	    	//alert(data);
-		      var c = JSON.parse(data);
-		       $.each(c,function(i,item){
-		       	t.row.add([
-		       			 '<button id="'+item.idProductos+'" type="button" class="btn btn-block btn-success"><i class="fa fa-check" ></i></button>',
-			             item.Nombre,
-		                 item.Precio,
-		                 // item.Descripcion,
-		                 // item.Disponibilidad,
-		       		]).draw(false);
-			 });
-		});
+	$.post(site_url+"/Producto/getProducto",
+		    {/*parametro en este caso no se necesita ninguna parametro por que traemos las productos directamente de la BDD*/},
+		    function(data){
+		    	// alert(data);
+			       var c = JSON.parse(data);
+			       $.each(c,function(i,item){
+			       	t.row.add([
+			       			 '<button id="'+item.idProductos+'" type="button" class="btn btn-block btn-success"><i class="fa fa-info" ></i></button>',
+				             item.Nombre,
+			                 item.Precio,
+			                 item.Descripcion,
+			                 item.Disponibilidad,
+			       		]).draw(false);
+				 });
+			});
 
  $('#tblProductoEncargo tbody').on('click', 'button.btn', function () {
 
- 		var tr = $(this).closest('tr');
-        var row = t.row( tr );
-       	var id = this.id;
+ 		var tr  = $(this).closest('tr');
+        var row = t.row(tr);
+       	var id  = this.id;
 
-		 	 $.post(site_url+"/Producto/getProductoById",
-			 {
-			 	// parametro para llamadas directamente de la BDD
-			    "idProductos": id
-			 },
-			    function(data){
-
-		    });
-
-
+       		// busqueda de producto por la id del producto seleccionado
+		 	 
 
         if ( row.child.isShown() ) {
             // This row is already open - close it
@@ -83,11 +61,15 @@ $.post(site_url+"/Producto/getProducto",
         }
         else {
             // Open this row
+
+			alert(row.data());
+
             row.child( format(row.data()) ).show();
+
             // tr.addClass('shown');
+            
         	}
 
 		  });
-
 
 
