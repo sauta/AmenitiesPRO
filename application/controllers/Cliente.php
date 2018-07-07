@@ -276,6 +276,15 @@ class Cliente extends CI_Controller {
 			}else{redirect('Login');}
 		}
 
+	public function getCliente()
+	{
+		echo json_encode($this->musuario->getClientes());
+	}
+	public function getPerfil()
+	{
+		echo json_encode($this->musuario->editarCliente());
+	}
+
 /********************************************Prueba************************************************/
 
 	public function prueba()

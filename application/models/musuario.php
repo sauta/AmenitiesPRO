@@ -79,20 +79,56 @@ class Musuario extends CI_Model
 			 return $query->result();
 		}
 
-	    public function listar()
-	    {
-	    	$this->db->select('u.NombreUsu, e.Nombre, m.NombreFantasia');
-	    	$this->db->from('usuario u');
-			$this->db->join('encargado e', 'e.PK_idUsuario = u.idUsuario');
-	   	 	$this->db->join('contacto c', 'c.PK_idEncargado = e.idEncargado');
-	   	 	$this->db->join('empresa m', 'm.idEmpresa = c.PK_idEmpresa');
-	   	 	$this->db->join('permiso p', 'p.idPermiso = u.PK_idPermiso');
-	    	$this->db->where('p.idPermiso',2);
+	  //   public function getClientes()
+	  //   {
 
-	    	$usuarios = $this->db->get();
+	  //   	<th>Usuario</th>
+   //          <th>Empresa</th>
+   //          <th>Contacto</th>
+   //          <th>Region</th>
 
-	    	return $usuarios;
-	    }
+
+
+
+//buenaaaaaaa
+				// select u.NombreUsu, u.Clave , en.Nombre, en.Rut, ca.Cargo,
+    //             cn.Telefono, cn.Email, cn.Celular, em.NombreFantasia, em.Rut, em.RazonSocial, em.Descripcion,
+    //             re.Region, pr.Provincia, cm.Comuna, pe.Permiso, td.Tipo
+
+    //             from usuario u
+    //             inner join encargado         en on en.PK_idUsuario = u.idUsuario
+    //             inner join permiso             pe on pe.idPermiso = u.PK_idPermiso
+    //             inner join cargo             ca on ca.idCargo = en.PK_idCargo
+    //             inner join contacto         cn on cn.PK_idEncargado = en.idEncargado
+    //             inner join empresa             em on cn.PK_idEmpresa = em.idEmpresa
+    //             inner join asignar_direccion ad on ad.PK_idEmpresa = em.idEmpresa
+    //             inner join tipo_direccion     td on td.idTipoDireccion = ad.PK_idTipoDireccion
+    //             inner join direccion         d on d.idDireccion  = ad.PK_idDireccion
+    //             inner join comuna             cm on cm.idComuna = d.PK_idComuna
+    //             inner join provincia         pr on pr.idProvincia = cm.PK_idProvincia
+    //             inner join region             re on re.idRegion = pr.PK_idRegion
+
+    //             where pe.idPermiso = 2;
+
+
+
+
+
+
+	  // //   	$this->db->select('u.NombreUsu, e.Nombre, m.NombreFantasia',
+	  // //   '','','','','');
+
+	 	//  //   	$this->db->from('usuario u');
+			// // $this->db->join('encargado e', 'e.PK_idUsuario = u.idUsuario');
+	  // //  	 	$this->db->join('contacto c', 'c.PK_idEncargado = e.idEncargado');
+	  // //  	 	$this->db->join('empresa m', 'm.idEmpresa = c.PK_idEmpresa');						
+	  // //  	 	$this->db->join('permiso p', 'p.idPermiso = u.PK_idPermiso');
+	  // 	//   	$this->db->where('p.idPermiso',2);
+
+	  // //   	$usuarios = $this->db->get();
+
+	  // //   	return $usuarios;
+	  //   }
 	    /********************************************Guardar*****************************************/
 	    public function guardar($parametro) //guarda un usuario en la BDD retornando la ID para darsela al encargado
 	    {
@@ -110,14 +146,18 @@ class Musuario extends CI_Model
 	    {
 	         $this->db->delete('usuario', array('idUsuario' => $idUsuario));
 	    }
+
 	    public function editarCliente($parametro) // funcion que edita los parametros de un mismo cliente
 	    {
 	    	$campos = array(
 					'NombreUsu'=> $parametro['NombreUsuario'],
 					'Clave'=> $parametro['Clave'],
+					'Foto'=> $parametro['url_foto_perfil'],
+
 					 );
 		 	$this->db->update('usuario', $campos, array('idUsuario' => $parametro['idUsuario']));
 	    }
+
 	    /********************************************Editadores*****************************************/
 	    public function editarAdmin($parametro) //funcion que edita los parametros del usuario seleccionado por el administrador
 	    {
@@ -128,4 +168,6 @@ class Musuario extends CI_Model
 					 );
 			$this->db->update('usuario', $campos, array('idUsuario' => $parametro['idUsuario']));
 	    }
+	    /********************************************Extraer Clientes*****************************************/
+	 
   }

@@ -1,30 +1,49 @@
 <section class="content">
 
       <div class="row">
-        <div class="col-md-3">
+  <!-- Main content -->
+    <section class="content">
+
+      <div class="row">
+        <div class="col-md-5">
 
           <!-- Profile Image -->
           <div class="box box-primary">
-            <div class="box-body box-profile">
-              <img class="profile-user-img img-responsive img-circle" src="<?=base_url()?>/dist/img/user4-128x128.jpg" alt="User profile picture">
+            <form action="<?=site_url()?>/Producto/deleteProducto" method="post">
+              <div class="box-body">
 
-              <h3 class="profile-username text-center"><?php echo $this->session->userdata('s_nombreEncargado');?></h3>
-              <p class="text-muted text-center"><?php echo $this->session->userdata('s_cargo');?></p>
+                  <img class="profile-user-img img-responsive img-circle"
+                  src="<?=base_url()?>js/clases/Cliente/getPerfil" alt="User profile picture">
 
-              <ul class="list-group list-group-unbordered">
-                <li class="list-group-item">
-                  <b>Pedidos</b> <a class="pull-right">1,322</a>
-                </li>
-                <li class="list-group-item">
-                  <b>faturaciones</b> <a class="pull-right">543</a>
-                </li>
-                <li class="list-group-item">
-                  <b>Consumo de empresa</b> <a class="pull-right">13,287</a>
-                </li>
-              </ul>
+                  <h3 class="profile-username text-center"><?=$nombre?></h3>
 
-              <a href="#" class="btn btn-primary btn-block"><b>Editar Perfil</b></a>
-            </div>
+                  <p class="text-muted text-center">Trabajador de <?=$empresa?></p>
+
+                  <ul class="list-group list-group-unbordered">
+                    <li class="list-group-item">
+                      <label><b>Nombre: </b></label><a class="pull-right">
+                        <input  type="text" class="form-control" name="clave" placeholder=""/></a>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="form-group">
+                        <label><b>Contraseña: </b></label><a class="pull-right">
+                        <input  type="text" class="form-control" name="clave" placeholder="$$$"/> </a>
+                      </div>
+                       
+                    </li>
+                    <li class="list-group-item">
+                      <div class="form-group">
+                        <label><b>Agregar Nueva Imagen</b></label>
+                        <input type="file" id="InputFile">
+                        <p class="help-block" style="width: 30px;">Seleccione una Imagen en su equipo.</p>
+                      </div>                     
+                    </li>
+                  </ul>
+
+                  <button type="submit" class="btn btn-primary"><b>Editar</b></button>
+     
+              </div>
+            </form>
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
@@ -32,7 +51,7 @@
           <!-- About Me Box -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Sobre mi me</h3>
+              <h3 class="box-title">About Me</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -71,7 +90,7 @@
           <!-- /.box -->
         </div>
         <!-- /.col -->
-        <div class="col-md-9">
+        <div class="col-md-7">
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
               <li class="active"><a href="#activity" data-toggle="tab">Activity</a></li>
@@ -351,5 +370,10 @@
         </div>
         <!-- /.col -->
       </div>
+      <!-- /.row -->
+
+    </section>
+
+</div>
       <!-- /.row -->
 </section>

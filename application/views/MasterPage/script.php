@@ -53,7 +53,7 @@
   <?php }?>
   <?php if($this->uri->segment(2)=='perfil'){?>
 <!-- asignar el JS de perfil correspondiente -->
-<script src="<?=base_url()?>js/clases/????????.js"></script>
+<script src="<?=base_url()?>js/clases/Cliente/.js"></script>
 
   <?php }?>
 
@@ -138,10 +138,16 @@
 	<script src="<?=base_url()?>js/clases/categorias.js"></script>
 
   <?php } ?>
+
   <?php if($this->uri->segment(2)=='estadisticas_de_facturas'){?>
   	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
-
+    
+    <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/chart.js/Chart.js"></script>
+    <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="<?=base_url()?>js/estadisticas/facturas.js"></script>
+    
   <?php }?>
+
   <?php if($this->uri->segment(2)=='estadisticas_de_pedidos'){?>
   	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
 
@@ -153,7 +159,13 @@
   <?php if($this->uri->segment(2)=='clientes'){?>
   	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
 
+    <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript">var site_url = '<?=site_url()?>';</script>
+    <script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
+    <script src="<?=base_url()?>js/clases/Pedidos.js"></script>
   <?php }?>
+  
   <?php if($this->uri->segment(2)=='facturas'){?>
   	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
 

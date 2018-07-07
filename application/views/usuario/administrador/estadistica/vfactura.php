@@ -31,10 +31,10 @@
           <p class="text-center">
             <strong>Facturas de ??</strong>
           </p>
-
+          
           <div class="chart">
             <!-- Sales Chart Canvas -->
-            <canvas id="estadisticas" style="height: 126px; width: 476px;" width="476" height="126"></canvas>
+            <canvas id="lineChart" style="height: 126px; width: 476px;" width="476" height="126"></canvas>
           </div>
           <!-- /.chart-responsive -->
         </div>
