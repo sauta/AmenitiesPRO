@@ -13,7 +13,7 @@ class Musuario extends CI_Model
 	/********************************************Login*****************************************/
 		public function login($parametro)
 	   	 {  
-	   	 	$this->db->select('u.idUsuario, u.NombreUsu, e.Nombre, c.Telefono, c.Email, c.Celular, m.NombreFantasia, p.Permiso, a.Cargo');
+	   	 	$this->db->select('u.idUsuario, u.NombreUsu, u.Clave, u.url_foto_perfil, e.Nombre, c.Telefono, c.Email, c.Celular, m.NombreFantasia, p.Permiso, a.Cargo');
 	   	 	$this->db->from('usuario u');
 	   	 	$this->db->join('encargado e', 'e.PK_idUsuario = u.idUsuario');
 	   	 	$this->db->join('cargo a', 'e.PK_idCargo = a.idCargo');
@@ -37,7 +37,6 @@ class Musuario extends CI_Model
 				$s_usuario = array(
 					's_idUsuario' => $r->idUsuario,
 					's_nombreUsuario' => ''+$r->NombreUsu,
-					's_nombreUsuarioSaludo' => 'Bienvenido '+$r->NombreUsu,
 					's_nombreEncargado' => $r->Nombre,
 					's_permiso' => $r->Permiso,
 					's_cargo' => $r->Cargo,
@@ -46,7 +45,11 @@ class Musuario extends CI_Model
 					's_nombreFantasia' => $r->NombreFantasia,
 					's_email' => $r->Email,
 					's_telefono' => $r->Telefono,
-					's_celular' => $r->Celular);
+					's_celular' => $r->Celular,
+					's_foto' => $r->url_foto_perfil,
+
+//ojo arreglar vulneravilidad
+					's_clave' => $r->Clave);
 
 				$this->session->set_userdata($s_usuario);
 				return true;
@@ -60,7 +63,7 @@ class Musuario extends CI_Model
 	    public function validarExistencia($parametro) //valida si el usuario existe
 	    {
 	       $query = $this->db->get_where('usuario',array('NombreUsu'=>$parametro['NombreUsuario']));
-
+	     //  $query = $this->db->get();
 			if ($query->num_rows() == 1)
 			{
 				return true; //el usuario existe :D
@@ -69,6 +72,10 @@ class Musuario extends CI_Model
 
 				return false; //el usuario no existe D:
 			}
+			///
+			// $parametro = $this->db->get_where('provincia',array('PK_idRegion'=>$parametro));
+
+	  //       return $parametro->result();
 	    }
 
 	    /********************************************Buscadores*****************************************/
@@ -77,6 +84,16 @@ class Musuario extends CI_Model
 			 $query = $this->db->get_where('usuario',array('NombreUsuario'=>$parametro));
 
 			 return $query->result();
+		}
+
+		public function guardarPerfil($perfil)
+		{
+			$campos = array(
+					'NombreUsu'=> $parametro['NombreUsuario'],
+					'Clave'=> $parametro['Clave'],
+					'PK_idPermiso'=> $parametro['idPremiso']
+					 );
+			$this->db->update('usuario', $campos, array('idUsuario' => $parametro['idUsuario']));
 		}
 
 	  //   public function getClientes()
@@ -151,14 +168,24 @@ class Musuario extends CI_Model
 	    }
 
 	    public function editarCliente($parametro) // funcion que edita los parametros de un mismo cliente
-	    {
-	    	$campos = array(
-					'NombreUsu'=> $parametro['NombreUsuario'],
-					'Clave'=> $parametro['Clave'],
-					'Foto'=> $parametro['url_foto_perfil'],
+	    {  	
 
-					 );
-		 	$this->db->update('usuario', $campos, array('idUsuario' => $parametro['idUsuario']));
+	    	$campos = array(
+	    		'NombreUsu'=> $parametro['NombreUsuario'],
+				'Clave'=> $parametro['Clave'],
+				'idUsuario'=>$parametro['idUsuario']
+	    			);
+
+	    	// if($campos['NombreUsu'] != $this->session->userdata("s_nombreUsuario") && $this->validarExistencia($parametro))
+	    	// {
+	    	// 	echo "wea 1";
+	    	// 	return true;
+	    	// }else{
+	    		$this->db->update('usuario', array('idUsuario' => $campos['idUsuario']));
+	    	// 	return false;
+	    	// 	echo "wea 2";
+	    	// }
+
 	    }
 
 	    /********************************************Editadores*****************************************/

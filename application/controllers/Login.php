@@ -26,7 +26,7 @@ class Login extends CI_Controller {
 		// $titulo = array('titulo' => 'Amenities PRO');
 		// $this->load->view('MasterPage/head');
 		$data = array('titulo' => 'Amenities PRO',
-					  'mensaje' => 'Bien venido a Amenities PRO');
+					  'mensaje' => 'Bienvenido a Amenities PRO');
 		$this->load->view('session/login',$data);
 		}
 		 

@@ -27,10 +27,19 @@ class Cliente extends CI_Controller {
 			if(isset($_SESSION['s_idUsuario'])){
 				if($this->session->userdata('s_permiso')=='Cliente')
 				{
-					$data = array('empresa' => $this->session->userdata('s_nombreFantsia'),
-									'nombre' => $this->session->userdata('s_nombreEncargado'),
-									 'permiso' => $this->session->userdata('s_permiso')
-										);
+					// $data = array('empresa' => $this->session->userdata('s_nombreFantsia'),
+					// 				'nombre' => $this->session->userdata('s_nombreEncargado'),
+					// 				 'permiso' => $this->session->userdata('s_permiso')
+					// 					);
+
+					$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
+							'nombre' => $this->session->userdata('s_nombreEncargado'),
+							 'permiso' => $this->session->userdata('s_permiso'),
+							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
+								 'clave' => $this->session->userdata('s_clave'),
+								  'email' => $this->session->userdata('s_email'),
+								   'foto' => $this->session->userdata('s_foto'));
+
 					$this->load->view('MasterPage/head');
 					$this->load->view('MasterPage/header',$data);
 					$this->load->view('MasterPage/asideLeft',$data);
@@ -52,12 +61,16 @@ class Cliente extends CI_Controller {
 				{
 			$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
 							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'));
+							 'permiso' => $this->session->userdata('s_permiso'),
+							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
+								 'clave' => $this->session->userdata('s_clave'),
+								 'email' => $this->session->userdata('s_email'),
+								   'foto' => $this->session->userdata('s_foto'));
 
 			$this->load->view('MasterPage/head');
 			$this->load->view('MasterPage/header',$data);
 			$this->load->view('MasterPage/asideLeft',$data);
-			$this->load->view('usuario/vperfil');
+			$this->load->view('usuario/vperfil',$data);
 			$this->load->view('MasterPage/footer');
 			$this->load->view('MasterPage/asideRight');
 			$this->load->view('MasterPage/script');
@@ -73,8 +86,12 @@ class Cliente extends CI_Controller {
 				if($this->session->userdata('s_permiso')=='Cliente')
 				{
 					$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
-									'nombre' => $this->session->userdata('s_nombreEncargado'),
-									 'permiso' => $this->session->userdata('s_permiso'));
+							'nombre' => $this->session->userdata('s_nombreEncargado'),
+							 'permiso' => $this->session->userdata('s_permiso'),
+							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
+								 'clave' => $this->session->userdata('s_clave'),
+								 'email' => $this->session->userdata('s_email'),
+								   'foto' => $this->session->userdata('s_foto'));
 
 					$this->load->view('MasterPage/head');
 					$this->load->view('MasterPage/header',$data);
@@ -93,8 +110,12 @@ class Cliente extends CI_Controller {
   		   	if($this->session->userdata('s_permiso')=='Cliente')
 				{
 					$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
-									'nombre' => $this->session->userdata('s_nombreEncargado'),
-									 'permiso' => $this->session->userdata('s_permiso'));
+							'nombre' => $this->session->userdata('s_nombreEncargado'),
+							 'permiso' => $this->session->userdata('s_permiso'),
+							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
+								 'clave' => $this->session->userdata('s_clave'),
+								 'email' => $this->session->userdata('s_email'),
+								   'foto' => $this->session->userdata('s_foto'));
 
 					$this->load->view('MasterPage/head');
 					$this->load->view('MasterPage/header',$data);
@@ -114,7 +135,11 @@ class Cliente extends CI_Controller {
 				{
 					$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
 							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'));
+							 'permiso' => $this->session->userdata('s_permiso'),
+							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
+								 'clave' => $this->session->userdata('s_clave'),
+								 'email' => $this->session->userdata('s_email'),
+								   'foto' => $this->session->userdata('s_foto'));
 
 						$this->load->view('MasterPage/head');
 						$this->load->view('MasterPage/header',$data);
@@ -136,7 +161,11 @@ class Cliente extends CI_Controller {
 				{
 			$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
 							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'));
+							 'permiso' => $this->session->userdata('s_permiso'),
+							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
+								 'clave' => $this->session->userdata('s_clave'),
+								 'email' => $this->session->userdata('s_email'),
+								   'foto' => $this->session->userdata('s_foto'));
 
 					$this->load->view('MasterPage/head');
 					$this->load->view('MasterPage/header',$data);
@@ -157,7 +186,11 @@ class Cliente extends CI_Controller {
 				{
 			$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
 							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'));
+							 'permiso' => $this->session->userdata('s_permiso'),
+							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
+								 'clave' => $this->session->userdata('s_clave'),
+								 'email' => $this->session->userdata('s_email'),
+								   'foto' => $this->session->userdata('s_foto'));
 
 					$this->load->view('MasterPage/head');
 					$this->load->view('MasterPage/header',$data);
@@ -178,7 +211,11 @@ class Cliente extends CI_Controller {
 				{
 			$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
 							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'));
+							 'permiso' => $this->session->userdata('s_permiso'),
+							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
+								 'clave' => $this->session->userdata('s_clave'),
+								 'email' => $this->session->userdata('s_email'),
+								   'foto' => $this->session->userdata('s_foto'));
 
 					$this->load->view('MasterPage/head');
 					$this->load->view('MasterPage/header',$data);
@@ -200,7 +237,11 @@ class Cliente extends CI_Controller {
 				{
 			$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
 							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'));
+							 'permiso' => $this->session->userdata('s_permiso'),
+							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
+								 'clave' => $this->session->userdata('s_clave'),
+								 'email' => $this->session->userdata('s_email'),
+								   'foto' => $this->session->userdata('s_foto'));
 
 					$this->load->view('MasterPage/head');
 					$this->load->view('MasterPage/header',$data);
@@ -221,7 +262,11 @@ class Cliente extends CI_Controller {
 				{
 			$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
 							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'));
+							 'permiso' => $this->session->userdata('s_permiso'),
+							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
+								 'clave' => $this->session->userdata('s_clave'),
+								 'email' => $this->session->userdata('s_email'),
+								   'foto' => $this->session->userdata('s_foto'));
 
 					$this->load->view('MasterPage/head');
 					$this->load->view('MasterPage/header',$data);
@@ -242,7 +287,11 @@ class Cliente extends CI_Controller {
 				{
 			$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
 							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'));
+							 'permiso' => $this->session->userdata('s_permiso'),
+							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
+								 'clave' => $this->session->userdata('s_clave'),
+								 'email' => $this->session->userdata('s_email'),
+								   'foto' => $this->session->userdata('s_foto'));
 
 					$this->load->view('MasterPage/head');
 					$this->load->view('MasterPage/header',$data);
@@ -263,7 +312,11 @@ class Cliente extends CI_Controller {
 				{
 			$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
 							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'));
+							 'permiso' => $this->session->userdata('s_permiso'),
+							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
+								 'clave' => $this->session->userdata('s_clave'),
+								 'email' => $this->session->userdata('s_email'),
+								   'foto' => $this->session->userdata('s_foto'));
 
 					$this->load->view('MasterPage/head');
 					$this->load->view('MasterPage/header',$data);
@@ -276,14 +329,12 @@ class Cliente extends CI_Controller {
 			}else{redirect('Login');}
 		}
 
+////Cambiar al controlador correspondiente
 	public function getCliente()
 	{
 		echo json_encode($this->musuario->getClientes());
 	}
-	public function getPerfil()
-	{
-		echo json_encode($this->musuario->editarCliente());
-	}
+
 
 /********************************************Prueba************************************************/
 

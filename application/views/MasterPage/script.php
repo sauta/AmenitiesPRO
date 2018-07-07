@@ -48,9 +48,19 @@
 
   <?php }?>
   <?php if($this->uri->segment(2)=='perfil'){?>
+    
 <!-- asignar el JS de perfil correspondiente -->
+<<<<<<< HEAD
   
   <script src="<?=base_url()?>js/clases/perfil.js"></script>
+=======
+<script type="text/javascript">
+         var site_url = '<?=site_url()?>'; 
+</script>
+
+<script src="<?=base_url()?>js/clases/Perfil.js"></script>
+
+>>>>>>> ae4aef184a4a6c14cb2c94622fc103681b73b7fe
   <?php }?>
 
 <?php if($this->uri->segment(2)=='productos'){?>
