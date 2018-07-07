@@ -48,8 +48,13 @@
 
   <?php }?>
   <?php if($this->uri->segment(2)=='perfil'){?>
+    
 <!-- asignar el JS de perfil correspondiente -->
-<script src="<?=base_url()?>js/clases/Cliente/.js"></script>
+<script type="text/javascript">
+         var site_url = '<?=site_url()?>'; 
+</script>
+
+<script src="<?=base_url()?>js/clases/Perfil.js"></script>
 
   <?php }?>
 
