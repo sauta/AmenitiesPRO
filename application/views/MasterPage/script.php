@@ -49,8 +49,8 @@
   <?php }?>
   <?php if($this->uri->segment(2)=='perfil'){?>
 <!-- asignar el JS de perfil correspondiente -->
-<script src="<?=base_url()?>js/clases/Cliente/.js"></script>
-
+  
+  <script src="<?=base_url()?>js/clases/perfil.js"></script>
   <?php }?>
 
 <?php if($this->uri->segment(2)=='productos'){?>
