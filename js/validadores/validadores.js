@@ -33,7 +33,7 @@
 					_descripcion     = $("#descripcion").val(),
 
 					_region          = $("#cboRegion").val(),
-					_provincia       = $("#cboProvinacia").val(),
+					_provincia       = $("#cboProvincia").val(),
 					_comuna          = $("#cboComuna").val(),
 					_direccion	     = $("#direccion").val(),
 					_terminos 		 = $("#terminos").val();
@@ -94,10 +94,18 @@
 					alert (mensaje);
 					return false;
 				}
+				 // else if (!Rut(_rutEmpresa)) {
+					// $('#rutEmpresa').focus();
+					// mensaje = "El rut empresa es obligatoriooooo";
+					// alert (mensaje);
+					// return false;
+				 // }
 				 else if (!Rut(_rutEncargado)) {
 				 	$('#rutEncargado').focus();
+				 	mensaje = "El rut encargado esta malooooo";
 					return false;
 				}
+
 				//validacion email
 				 else if (_email == null || _email.length == 0 || /^\s+$/.test(_email)) {
 					$('#email').focus();
@@ -160,10 +168,15 @@
 				 }
 				 else if (!Rut(_rutEmpresa)) {
 					$('#rutEmpresa').focus();
-					mensaje = "El rut empresa es obligatoriooooo";
-					alert (mensaje);
+						mensaje = "El rut empresa es obligatoriooooo";
+						alert (mensaje);
 					return false;
 				 }
+				 // else if (!Rut(_rutEncargado)) {
+				//  	$('#rutEncargado').focus();
+				//  	mensaje = "El rut encargado esta malooooo";
+				// 	return false;
+				// }
 				//validacion reazón social
 				 else if (_razonSocial == null || _razonSocial.length == 0 || /^\s+$/.test(_razonSocial)) {
 					$('#razonSocial').focus();
@@ -187,7 +200,7 @@
 				 }
 				//validacion provincia
 				 else if (_provincia == null || _provincia == 0 ) {
-					$('#cboProvinacia').focus();
+					$('#cboProvincia').focus();
 					mensaje = "No a seleccionado una provincia";
 					alert (mensaje);
 					return false;
@@ -207,7 +220,21 @@
 					alert (mensaje);
 					return false;
 				 }
-				//validacion _terminos
+				//validacion 
+				// function myFunction() {
+				//     var checkBox = document.getElementById("terminos");
+				//     var text = document.getElementById("text");
+				//     if (checkBox.checked == true){
+				//         mensaje = "exito check";
+				// 	alert (mensaje);
+				// 	return false;
+				//     } else {
+				//        mensaje = "No a aceptado los termino y condiciones";
+				// 	alert (mensaje);
+				// 	return false;
+				//     }
+				// }
+
 				else if (!$('#terminos').checked) {
 					$('#terminos').focus();
 					mensaje = "No a aceptado los termino y condiciones";
@@ -349,7 +376,7 @@ function permite(elEvento, permitidos)
 {
 	// Variables que definen los caracteres permitidos
 	var numeros = "0123456789";
-	var rut = ".-";
+	var rut = "99.999.999-9";
 	var caracteres = " abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
 	var numeros_caracteres = numeros + caracteres;
 	var teclas_especiales = [8, 37, 39, 46];

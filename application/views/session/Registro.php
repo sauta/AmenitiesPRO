@@ -194,7 +194,7 @@
           <div class="col-xs-8">
          <div class="checkbox icheck">
             <label>
-              <input id="terminos" name="terminos" type="checkbox"> Estoy de acuerdo con los <a href="#">Terminos de uso</a>
+              <input id="terminos" name="btnterminos" type="checkbox"> Estoy de acuerdo con los <a href="#">Terminos de uso</a>
             </label>
           </div>
          </div>
