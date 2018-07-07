@@ -3,15 +3,15 @@
 <!-- jQuery UI 1.11.4 -->
 <!-- <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/jquery-ui/jquery-ui.min.js"></script> -->
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<!-- <script>
-  $.widget.bridge('uibutton', $.ui.button);
-</script> -->
+<!-- <script> -->
+<!-- // $.widget.bridge('uibutton', $.ui.button); -->
+<!-- </script> -->
 <!-- Bootstrap 3.3.7 -->
 <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Morris.js charts -->
-<!-- <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/raphael/raphael.min.js"></script>
+<!-- <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/raphael/raphael.min.js"></script> -->
 
-<script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/morris.js/morris.min.js"></script> -->
+<!-- <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/morris.js/morris.min.js"></script> -->
 <!-- Sparkline -->
 <!-- <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script> -->
 <!-- jvectormap -->
@@ -45,10 +45,6 @@
 
 <!-- generico -->
   <?php if($this->uri->segment(2)=='cpanel'){?>
-
-
-
-
 
   <?php }?>
   <?php if($this->uri->segment(2)=='perfil'){?>

@@ -23,10 +23,10 @@ class Mempresa extends CI_Model
 	    {
 	    	$campos = array(
 					'NombreFantasia'     => $parametro['NombreFantasia'],
-					'Rut'         => $parametro['RutEmpresa'],
-					'RazonSocial'=> $parametro['RazonSocial'],
-					'Descripcion' => $parametro['Descripcion'],
-					'PK_idTipoCliente' => $parametro['idTipoCliente']
+					'Rut'       	     => $parametro['RutEmpresa'],
+					'RazonSocial'		 => $parametro['RazonSocial'],
+					'Descripcion' 		 => $parametro['Descripcion'],
+					'PK_idTipoCliente' 	 => $parametro['idTipoCliente']
 					 );
 
 			$this->db->insert('empresa',$campos);

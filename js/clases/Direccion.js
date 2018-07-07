@@ -10,8 +10,8 @@ $.post(site_url+"Direccion/getRegion",
 
 $( "#cboRegion" ).change(function (){
   	/*Se limpia las provincias y la comunas si se selecciona otra region*/
-  	 $('#cboProvincia').html('<option>Selecciones la provincia</option>');
-  	 $('#cboComuna').html('<option>Selecciones la comuna</option>');
+  	 $('#cboProvincia').html('<option value="0" >Selecciones la provincia</option>');
+  	 $('#cboComuna').html('<option value="0" >Selecciones la comuna</option>');
 
 		var id = $('#cboRegion').val();
 		$.post(site_url+"Direccion/getProvincia",
@@ -25,12 +25,12 @@ $( "#cboRegion" ).change(function (){
 			       	/*Se crea una lista de las provincias de la region seleccionada*/
 			       	 $('#cboProvincia').append('<option value="'+item.idProvincia+'">'+item.Provincia+'</option>');
 			    });
-			});
+			});	
 		});
 
 $('#cboProvincia').change(function(){
  /*Se limpia las comunas si se selecciona otra region*/
-	$('#cboComuna').html('<option>Selecciones la comuna</option>');
+	$('#cboComuna').html('<option value="0" > Selecciones la comuna</option>');
 
 			var id = $('#cboProvincia').val();
 				$.post(site_url+"Direccion/getComuna",
