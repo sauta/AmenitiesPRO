@@ -91,29 +91,32 @@ class Musuario extends CI_Model
 
 
 //buenaaaaaaa
-				// select u.NombreUsu, u.Clave , en.Nombre, en.Rut, ca.Cargo,
-    //             cn.Telefono, cn.Email, cn.Celular, em.NombreFantasia, em.Rut, em.RazonSocial, em.Descripcion,
-    //             re.Region, pr.Provincia, cm.Comuna, pe.Permiso, td.Tipo
 
-    //             from usuario u
-    //             inner join encargado         en on en.PK_idUsuario = u.idUsuario
-    //             inner join permiso             pe on pe.idPermiso = u.PK_idPermiso
-    //             inner join cargo             ca on ca.idCargo = en.PK_idCargo
-    //             inner join contacto         cn on cn.PK_idEncargado = en.idEncargado
-    //             inner join empresa             em on cn.PK_idEmpresa = em.idEmpresa
-    //             inner join asignar_direccion ad on ad.PK_idEmpresa = em.idEmpresa
-    //             inner join tipo_direccion     td on td.idTipoDireccion = ad.PK_idTipoDireccion
-    //             inner join direccion         d on d.idDireccion  = ad.PK_idDireccion
-    //             inner join comuna             cm on cm.idComuna = d.PK_idComuna
-    //             inner join provincia         pr on pr.idProvincia = cm.PK_idProvincia
-    //             inner join region             re on re.idRegion = pr.PK_idRegion
+		public function getCliente()
+		{
+				$this->db->select(' u.NombreUsu, u.Clave , en.Nombre, en.Rut, ca.Cargo, cn.Telefono, cn.Email, cn.Celular, em.NombreFantasia, em.Rut, em.RazonSocial, em.Descripcion, re.Region, pr.Provincia, cm.Comuna, pe.Permiso, td.Tipo');
 
-    //             where pe.idPermiso = 2;
+                $this->db->from('usuario u');
+                $this->db->join('encargado en ', 'en.PK_idUsuario = u.idUsuario');
+                $this->db->join('permiso pe ', ' pe.idPermiso = u.PK_idPermiso');
+                $this->db->join('cargo ca ', ' ca.idCargo = en.PK_idCargo');
+                $this->db->join('contacto cn ', ' cn.PK_idEncargado = en.idEncargado');
+                $this->db->join('empresa em', ' cn.PK_idEmpresa = em.idEmpresa');
+                $this->db->join('asignar_direccion ad ', ' ad.PK_idEmpresa = em.idEmpresa');
+                $this->db->join('tipo_direccion td ', ' td.idTipoDireccion = ad.PK_idTipoDireccion');
+                $this->db->join('direccion d ', ' d.idDireccion  = ad.PK_idDireccion');
+                $this->db->join('comuna cm ', ' cm.idComuna = d.PK_idComuna');
+                $this->db->join('provincia pr ', ' pr.idProvincia = cm.PK_idProvincia');
+                $this->db->join('region re ', ' re.idRegion = pr.PK_idRegion');
+                $this->db->where('pe.idPermiso', 2);
+
+                $query = $this->db->get();
+
+               	return $query->result();
 
 
-
-
-
+		}
+				
 
 	  // //   	$this->db->select('u.NombreUsu, e.Nombre, m.NombreFantasia',
 	  // //   '','','','','');

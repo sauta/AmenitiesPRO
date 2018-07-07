@@ -80,7 +80,8 @@
     
   <?php }?>
   <?php if($this->uri->segment(2)=='clientes'){?>
-    
+   <!--    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"> -->
+   <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net-bs/css/jquery.dataTables.min.css">
   <?php }?>
   <?php if($this->uri->segment(2)=='facturas'){?>
     

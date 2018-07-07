@@ -6,7 +6,7 @@ class Usuario extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('musuarios');
+		$this->load->model('musuario');
 		$this->load->library('session');
 	}
 
@@ -15,17 +15,23 @@ class Usuario extends CI_Controller {
 		
 	}
 	
-	public function Eliminar($value='')
+	public function Eliminar()
 	{
 		# code...
 	}
 
-	public function Buscar($value='')
+	public function getUsuario()
 	{
 		# code...
 	}
 
-	public function Modificar($value='')
+	public function getCliente()
+	{
+		$parametro = $this->musuario->getCliente();
+		echo json_encode($parametro);
+	}
+
+	public function Modificar()
 	{
 		# code...
 	}

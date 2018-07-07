@@ -157,9 +157,9 @@
 
     <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-    <script type="text/javascript">var site_url = '<?=site_url()?>';</script>
-    <script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
-    <script src="<?=base_url()?>js/clases/Pedidos.js"></script>
+
+
+    <script src="<?=base_url()?>js/clases/clientes.js"></script>
   <?php }?>
   
   <?php if($this->uri->segment(2)=='facturas'){?>

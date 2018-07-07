@@ -71,16 +71,13 @@ class Producto extends CI_Controller
 
             $this->mproducto->guardar($producto);
 
-            redirect('Adminitrador','refresh');
-
+            redirect('/Adminitrador/','refresh');
            
         }
     }
 
-    
-    
-
-    function crearMiniatura($filename){
+    function crearMiniatura($filename)
+    {
         $config['image_library'] = 'gd2';
         $config['source_image'] = 'imagenes/miniatura/'.$filename;
         $config['create_thumb'] = TRUE;
@@ -93,7 +90,7 @@ class Producto extends CI_Controller
         $this->image_lib->resize();
     }
 
-	    public function subirArchivo(){
+	   public function subirArchivo(){
 		$config['upload_path'] = './uploads/archivos/';
         $config['allowed_types'] = 'pdf|xlsx|docx';
         $config['max_size'] = '20048';

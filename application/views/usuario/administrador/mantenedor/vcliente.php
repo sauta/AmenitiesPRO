@@ -1,9 +1,14 @@
 <section class="content">
       <!-- Small boxes (Stat box) -->
     <div class="row">
-      <div class="col-md-4">
+      
+      <div class="col-md-12">
       <div class="box box-primary">
-         <table width="100%" class="display" id="tblClientes" cellspacing="0">
+        <div class="box-header">
+              <h3 class="box-title">Tabla de Clientes</h3>
+        </div>
+        <div class="box-body">
+         <table id="tblClientes" width="100%" class="display"  cellspacing="0">
             <thead>
                 <tr>
                     <th>Usuario</th>
@@ -21,8 +26,10 @@
                 </tr>
             </tfoot>
         </table>
+        </div>
       </div>
       </div>
+
     </div>
       <!-- fin del Row -->
 </section>

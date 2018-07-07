@@ -9,12 +9,6 @@ class Mreporte extends CI_Model
 			parent::__construct();
 			$this->load->library('session');
 		}
-<<<<<<< HEAD
-
-
-
-
-=======
 		
 		
 		public function guardar($parametro)
@@ -36,7 +30,7 @@ class Mreporte extends CI_Model
 	        return $parametro->result();
 		}
 		
->>>>>>> 9d96a9a6815155b69869bdff92d3050290a36699
+
 	}
 
 ?>
