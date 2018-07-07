@@ -159,8 +159,8 @@
         <!--Region-->
          <div class="form-group">
                 <label>Region</label>
-                    <select id="cboRegion" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" name="txtRegion" aria-hidden="true" >
-                    <option>Selecciones la Region</option>
+                <select id="cboRegion" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" name="txtRegion" aria-hidden="true" >
+                    <option value="" >Selecciones la Region</option>
                 </select>
          </div>
         <!--Provincia-->
@@ -168,7 +168,7 @@
                 <label>Provincia</label>
                 <select id="cboProvincia" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" name="txtProvincia" aria-hidden="true">
 
-                    <option> Selecciones la provincia</option>
+                    <option value="" > Selecciones la provincia</option>
 
                 </select>
          </div>
@@ -177,7 +177,7 @@
                       <label>Comuna</label>
                       <select id="cboComuna" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" name="txtComuna" aria-hidden="true">
 
-                      <option>Selecciones la comuna</option>
+                      <option value="" >Selecciones la comuna</option>
 
                       </select>
                </div>
@@ -200,7 +200,9 @@
          </div>
         <!-- /.col -->
          <div class="col-xs-4">
-           <input name="registro" value="Registrarse" type="button" onClick="validacion()" class="btn btn-primary btn-block btn-flat">
+          <input id="boton" name="registro" value="Registrarse" type="button" onclick="validacion();" class="btn btn-primary btn-block btn-flat"/>
+           <!-- <input type="button" value="Enviar" onclick="this.disabled=true; this.value=’Enviando...’; this.form1.submit()" /> -->
+
            <!-- <button name="registro" onClick="validacion()" class="btn btn-primary btn-block btn-flat">Registrarse</button> -->
          </div>
         <!-- /.col -->

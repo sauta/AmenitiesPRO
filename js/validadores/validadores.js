@@ -10,6 +10,19 @@
 
 		}
 
+
+
+	function ejecucion(){
+		
+		if(validacion()){
+
+		}else{
+
+		}
+
+
+	}
+
 	function validacion()
 		{
 
@@ -32,11 +45,15 @@
 					_razonSocial     = $("#razonSocial").val(),
 					_descripcion     = $("#descripcion").val(),
 
-					_region          = $("#cboRegion").val(),
-					_provincia       = $("#cboProvincia").val(),
-					_comuna          = $("#cboComuna").val(),
+					_region          = document.getElementById("cboRegion"),
+					_provincia       = document.getElementById("cboProvincia"),
+					_comuna          = document.getElementById("cboComuna"),
 					_direccion	     = $("#direccion").val(),
-					_terminos 		 = $("#terminos").val();
+					_terminos 		 = document.getElementById("terminos").value;
+
+					var _region     = _region.options[_region.selectedIndex].value;
+					var _provincia  = _provincia.options[_provincia.selectedIndex].value;
+					var _comuna     = _comuna.options[_comuna.selectedIndex].value;
 
 				//Nombre _usuario
 				if (_nombre == null || _nombre.length == 0 || /^\s+$/.test(_nombre)) {
@@ -168,15 +185,11 @@
 				 }
 				 else if (!Rut(_rutEmpresa)) {
 					$('#rutEmpresa').focus();
-						mensaje = "El rut empresa es obligatoriooooo";
+						mensaje = "vuelva a intentarlo";
 						alert (mensaje);
 					return false;
 				 }
-				 // else if (!Rut(_rutEncargado)) {
-				//  	$('#rutEncargado').focus();
-				//  	mensaje = "El rut encargado esta malooooo";
-				// 	return false;
-				// }
+			
 				//validacion reazón social
 				 else if (_razonSocial == null || _razonSocial.length == 0 || /^\s+$/.test(_razonSocial)) {
 					$('#razonSocial').focus();
@@ -199,14 +212,14 @@
 					return false;
 				 }
 				//validacion provincia
-				 else if (_provincia == null || _provincia == 0 ) {
+				 else if (_provincia == null || _provincia == 0 || _provincia == "" ) {
 					$('#cboProvincia').focus();
 					mensaje = "No a seleccionado una provincia";
 					alert (mensaje);
 					return false;
 				 }
 				//validacion comuna
-				 else if (_comuna == null || _comuna == 0 ) {
+				 else if (_comuna == null || _comuna == 0 || _comuna == "") {
 					$('#cboComuna').focus();
 					mensaje = "No a seleccionado una comuna";
 					alert (mensaje);
@@ -216,33 +229,24 @@
 				else if (_direccion == null || _direccion.length == 0 || /^\s+$/.test(_direccion)) {
 					
 					$('#direccion').focus();
-					mensaje = "dirección";
+					mensaje = "la dirección es obligatoria";
 					alert (mensaje);
 					return false;
 				 }
-				//validacion 
-				// function myFunction() {
-				//     var checkBox = document.getElementById("terminos");
-				//     var text = document.getElementById("text");
-				//     if (checkBox.checked == true){
-				//         mensaje = "exito check";
-				// 	alert (mensaje);
-				// 	return false;
-				//     } else {
-				//        mensaje = "No a aceptado los termino y condiciones";
-				// 	alert (mensaje);
-				// 	return false;
-				//     }
-				// }
 
-				else if (!$('#terminos').checked) {
+				//validacion terminos y condiciones
+				 else if (!document.getElementById("terminos").checked) 
+				 {
+
 					$('#terminos').focus();
 					mensaje = "No a aceptado los termino y condiciones";
 					alert (mensaje);
 					return false;
 				 }
-				 
+
+				document.getElementById('boton').type = 'submit'; 
 				return true;
+
 		}
 		
 //Fin validaciones normales, sigue Rut
