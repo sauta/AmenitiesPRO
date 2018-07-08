@@ -23,7 +23,7 @@ class Mreporte extends CI_Model
 	   		return $this->db->insert_id();
 		}
 		
-		public funcion listarNombre($nombre)
+		public function listarNombre($nombre)
 		{
 			$parametro = $this->db->get_where('reporte',array('FK_usuario'=>$nombre));
 

@@ -111,7 +111,8 @@ class Musuario extends CI_Model
 
 		public function getCliente()
 		{
-				$this->db->select(' u.NombreUsu, u.Clave , en.Nombre, en.Rut, ca.Cargo, cn.Telefono, cn.Email, cn.Celular, em.NombreFantasia, em.Rut, em.RazonSocial, em.Descripcion, re.Region, pr.Provincia, cm.Comuna, pe.Permiso, td.Tipo');
+				$this->db->select(' u.NombreUsu, u.Clave , en.Nombre, en.Rut, ca.Cargo, cn.Telefono, cn.Email, cn.Celular, em.NombreFantasia, em.Rut, em.RazonSocial, em.Descripcion, re.Region, pr.Provincia, cm.Comuna, pe.Permiso, 
+					td.Tipo, pr.Provincia, cm.Comuna');
 
                 $this->db->from('usuario u');
                 $this->db->join('encargado en ', 'en.PK_idUsuario = u.idUsuario');
@@ -172,32 +173,58 @@ class Musuario extends CI_Model
 
 	    	$campos = array(
 	    		'NombreUsu'=> $parametro['NombreUsuario'],
-				'Clave'=> $parametro['Clave'],
-				'idUsuario'=>$parametro['idUsuario']
+				'Clave'=> $parametro['Clave']
 	    			);
+	    
+		    	if(!$this->validarExistencia($parametro))
+		    	{
+		    		echo "wea 1";
+		    		return true;
 
-	    	// if($campos['NombreUsu'] != $this->session->userdata("s_nombreUsuario") && $this->validarExistencia($parametro))
-	    	// {
-	    	// 	echo "wea 1";
-	    	// 	return true;
-	    	// }else{
-	    		$this->db->update('usuario', array('idUsuario' => $campos['idUsuario']));
-	    	// 	return false;
-	    	// 	echo "wea 2";
-	    	// }
-
+	    		}else{
+	    		echo '<script type="text/javascript">alert("'+print_r(array_values($parametro));+'");</script>';
+	    		$this->db->update('usuario', $campos, array('idUsuario' => $parametro['idUsuario']));
+	   			return false;
+	    		echo "wea 2";
+	    	}
 	    }
 
 	    /********************************************Editadores*****************************************/
 	    public function editarAdmin($parametro) //funcion que edita los parametros del usuario seleccionado por el administrador
 	    {
 	    	$campos = array(
-					'NombreUsu'=> $parametro['NombreUsuario'],
-					'Clave'=> $parametro['Clave'],
+					'NombreUsu'   => $parametro['NombreUsuario'],
+					'Clave'		  => $parametro['Clave'],
 					'PK_idPermiso'=> $parametro['idPremiso']
 					 );
 			$this->db->update('usuario', $campos, array('idUsuario' => $parametro['idUsuario']));
 	    }
 	    /********************************************Extraer Clientes*****************************************/
+
+	    public function recuperarClave()
+	    {
+	    	
+	    }
+		//recuperar contraseña econtrado por ahí a ver si funciona 
+	    public function invia_password($mail){
+			    $data = array();
+			    $query = $this->db->get('impostazioni');
+			    if ($query->num_rows() > 0) {
+			        $data = $query->result_array();
+			        $this->send_email('xxxxxxxxxxxx@hotmail.it', $data[0]['admin_password']);
+			    }
+
+			    return 1;
+		}
+
+	    public function ingreoUsuario() //cuando ingrsó el usuario
+	    {
+	    	# code...
+	    }
+
+	    public function salidaUsuario() //cuando salió el usuario 
+	    {
+	    	# code...
+	    }
 	 
   }

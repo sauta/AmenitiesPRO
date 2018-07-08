@@ -12,8 +12,8 @@ $.post(site_url+"/Usuario/getCliente",
 
 					     item.NombreUsu,
 			             item.RazonSocial,
-		                 item.Celular+' '+item.Email,
-						 item.Region,
+		                 item.Celular+'-'+item.Email,
+						 item.Region+', '+item.Provincia+'-'+item.Comuna
 		                 // item.Disponibilidad,
 		       		]).draw(false);
 

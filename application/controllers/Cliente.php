@@ -8,306 +8,121 @@ class Cliente extends CI_Controller {
 		parent::__construct();
 		$this->load->model('musuario');
 		$this->load->library('session');
+		
 	}
 
     public function index()
 		{
-			if($this->session->userdata() != null){
-	    	$data = array('empresa' => $this->session->userdata('s_nombreFantasia'));
 
-	    	$this->load->view('MasterPage/head');
-	    	$this->load->view('usuario/cliente/vpanel',$data);
+	    	$pagina = 'usuario/cliente/vpanel';
+			$this->cargarPagina($pagina);
 
-	    	}else{redirect('Login');}
 		}
 
     public function cpanel()
 		{
 
-			if(isset($_SESSION['s_idUsuario'])){
-				if($this->session->userdata('s_permiso')=='Cliente')
-				{
-					// $data = array('empresa' => $this->session->userdata('s_nombreFantsia'),
-					// 				'nombre' => $this->session->userdata('s_nombreEncargado'),
-					// 				 'permiso' => $this->session->userdata('s_permiso')
-					// 					);
-
-					$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
-							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'),
-							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
-								 'clave' => $this->session->userdata('s_clave'),
-								  'email' => $this->session->userdata('s_email'),
-								   'foto' => $this->session->userdata('s_foto'));
-
-					$this->load->view('MasterPage/head');
-					$this->load->view('MasterPage/header',$data);
-					$this->load->view('MasterPage/asideLeft',$data);
-					$this->load->view('usuario/cliente/vpanel'); //cambiar solamente esto  para cambiar de pagina
-					$this->load->view('MasterPage/footer');
-					$this->load->view('MasterPage/asideRight');
-					$this->load->view('MasterPage/script');
-
-				}else{redirect('Administrador/cpanel');}
-			}else{redirect('Login');}
+			$pagina = 'usuario/cliente/vpanel';
+			$this->cargarPagina($pagina);
 		}
 
 	public function perfil()
 		//perfil del usuario ya sea administrador o cliente de cualquier tipo
 		{
 		   
-		   if(isset($_SESSION['s_idUsuario'])){
-		   		if($this->session->userdata('s_permiso')=='Cliente')
-				{
-			$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
-							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'),
-							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
-								 'clave' => $this->session->userdata('s_clave'),
-								 'email' => $this->session->userdata('s_email'),
-								   'foto' => $this->session->userdata('s_foto'));
-
-			$this->load->view('MasterPage/head');
-			$this->load->view('MasterPage/header',$data);
-			$this->load->view('MasterPage/asideLeft',$data);
-			$this->load->view('usuario/vperfil',$data);
-			$this->load->view('MasterPage/footer');
-			$this->load->view('MasterPage/asideRight');
-			$this->load->view('MasterPage/script');
-			}else{redirect('Administrador/cpanel');}
-			}else{redirect('Login');}
+			$pagina = 'usuario/vperfil';
+			$this->cargarPagina($pagina);
 		}
 
 /*****************************************Estadisticas*********************************************/
     public function consumo()
 		{
-			if(isset($_SESSION['s_idUsuario'])){
-
-				if($this->session->userdata('s_permiso')=='Cliente')
-				{
-					$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
-							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'),
-							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
-								 'clave' => $this->session->userdata('s_clave'),
-								 'email' => $this->session->userdata('s_email'),
-								   'foto' => $this->session->userdata('s_foto'));
-
-					$this->load->view('MasterPage/head');
-					$this->load->view('MasterPage/header',$data);
-					$this->load->view('MasterPage/asideLeft',$data);
-					$this->load->view('usuario/cliente/estadistica/vconsumo');
-					$this->load->view('MasterPage/footer');
-					$this->load->view('MasterPage/asideRight');
-					$this->load->view('MasterPage/script');
-					}else{redirect('Administrador/cpanel');}
-			}else{redirect('Login');}
+			$pagina = 'usuario/cliente/estadistica/vconsumo';
+			$this->cargarPagina($pagina);
 		}
 
 	public function facturas()
 		{
-  		   if(isset($_SESSION['s_idUsuario'])){
-  		   	if($this->session->userdata('s_permiso')=='Cliente')
-				{
-					$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
-							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'),
-							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
-								 'clave' => $this->session->userdata('s_clave'),
-								 'email' => $this->session->userdata('s_email'),
-								   'foto' => $this->session->userdata('s_foto'));
+		    $pagina = 'usuario/cliente/estadistica/vfactura';
+			$this->cargarPagina($pagina);
 
-					$this->load->view('MasterPage/head');
-					$this->load->view('MasterPage/header',$data);
-					$this->load->view('MasterPage/asideLeft',$data);
-					$this->load->view('usuario/cliente/estadistica/vfactura');
-					$this->load->view('MasterPage/footer');
-					$this->load->view('MasterPage/asideRight');
-					$this->load->view('MasterPage/script');
-				}else{redirect('Administrador/cpanel');}
-		    }else{redirect('Login');}
 		}
 
 	public function estadisticas_de_pedidos()
 		{
-  		   if(isset($_SESSION['s_idUsuario'])){
-			if($this->session->userdata('s_permiso')=='Cliente')
-				{
-					$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
-							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'),
-							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
-								 'clave' => $this->session->userdata('s_clave'),
-								 'email' => $this->session->userdata('s_email'),
-								   'foto' => $this->session->userdata('s_foto'));
-
-						$this->load->view('MasterPage/head');
-						$this->load->view('MasterPage/header',$data);
-						$this->load->view('MasterPage/asideLeft',$data);
-						$this->load->view('usuario/cliente/estadistica/vpedido');
-						$this->load->view('MasterPage/footer');
-						$this->load->view('MasterPage/asideRight');
-						$this->load->view('MasterPage/script');
-					}else{redirect('Administrador/cpanel');}	
-			}else{redirect('Login');}
+			$pagina = 'usuario/cliente/estadistica/vpedido';
+			$this->cargarPagina($pagina);
 		}
 
 /*****************************************Mantenedores*********************************************/
 	public function encargadado()
 		{
 
-  		   if(isset($_SESSION['s_idUsuario'])){
-  		   		if($this->session->userdata('s_permiso')=='Cliente')
-				{
-			$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
-							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'),
-							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
-								 'clave' => $this->session->userdata('s_clave'),
-								 'email' => $this->session->userdata('s_email'),
-								   'foto' => $this->session->userdata('s_foto'));
+			$pagina = 'usuario/cliente/mantenedor/vencargado';
+			$this->cargarPagina($pagina);
 
-					$this->load->view('MasterPage/head');
-					$this->load->view('MasterPage/header',$data);
-					$this->load->view('MasterPage/asideLeft',$data);
-					$this->load->view('usuario/cliente/mantenedor/vencargado');
-					$this->load->view('MasterPage/footer');
-					$this->load->view('MasterPage/asideRight');
-					$this->load->view('MasterPage/script');
-				}else{redirect('Administrador/cpanel');}
-			}else{redirect('Login');}
 		}
 
 	public function encargar()
 		{
 
-  		   if(isset($_SESSION['s_idUsuario'])){
-  		   		if($this->session->userdata('s_permiso')=='Cliente')
-				{
-			$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
-							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'),
-							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
-								 'clave' => $this->session->userdata('s_clave'),
-								 'email' => $this->session->userdata('s_email'),
-								   'foto' => $this->session->userdata('s_foto'));
+				$pagina = 'usuario/cliente/mantenedor/vencargar';
+				$this->cargarPagina($pagina);
 
-					$this->load->view('MasterPage/head');
-					$this->load->view('MasterPage/header',$data);
-					$this->load->view('MasterPage/asideLeft',$data);
-					$this->load->view('usuario/cliente/mantenedor/vencargar');
-					$this->load->view('MasterPage/footer');
-					$this->load->view('MasterPage/asideRight');
-					$this->load->view('MasterPage/script');
-				}else{redirect('Administrador/cpanel');}
-			}else{redirect('Login');}
 		}
 
 	public function productos()
 		{
 
-  		   if(isset($_SESSION['s_idUsuario'])){
-  		   		if($this->session->userdata('s_permiso')=='Cliente')
-				{
-			$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
-							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'),
-							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
-								 'clave' => $this->session->userdata('s_clave'),
-								 'email' => $this->session->userdata('s_email'),
-								   'foto' => $this->session->userdata('s_foto'));
+				$pagina = 'usuario/cliente/mantenedor/vproducto';
+				$this->cargarPagina($pagina);
 
-					$this->load->view('MasterPage/head');
-					$this->load->view('MasterPage/header',$data);
-					$this->load->view('MasterPage/asideLeft',$data);
-					$this->load->view('usuario/cliente/mantenedor/vproducto');
-					$this->load->view('MasterPage/footer');
-					$this->load->view('MasterPage/asideRight');
-					$this->load->view('MasterPage/script');
-				}else{redirect('Administrador/cpanel');}
-			}else{redirect('Login');}
 		}
 
 /*****************************************Mensajeria***********************************************/
 	public function compra()
 		{
 
-  		   if(isset($_SESSION['s_idUsuario'])){
-  		   		if($this->session->userdata('s_permiso')=='Cliente')
-				{
-			$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
-							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'),
-							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
-								 'clave' => $this->session->userdata('s_clave'),
-								 'email' => $this->session->userdata('s_email'),
-								   'foto' => $this->session->userdata('s_foto'));
+				$pagina = 'usuario/cliente/mensajeria/vcompra';
+				$this->cargarPagina($pagina);
 
-					$this->load->view('MasterPage/head');
-					$this->load->view('MasterPage/header',$data);
-					$this->load->view('MasterPage/asideLeft',$data);
-					$this->load->view('usuario/cliente/mensajeria/vcompra');
-					$this->load->view('MasterPage/footer');
-					$this->load->view('MasterPage/asideRight');
-					$this->load->view('MasterPage/script');
-				}else{redirect('Administrador/cpanel');}
-			}else{redirect('Login');}
 		}
 
 	public function factura()
 		{
 
-  		   if(isset($_SESSION['s_idUsuario'])){
-  		   		if($this->session->userdata('s_permiso')=='Cliente')
-				{
-			$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
-							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'),
-							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
-								 'clave' => $this->session->userdata('s_clave'),
-								 'email' => $this->session->userdata('s_email'),
-								   'foto' => $this->session->userdata('s_foto'));
+				$pagina = 'usuario/cliente/mensajeria/vfactura';
+				$this->cargarPagina($pagina);
+					
 
-					$this->load->view('MasterPage/head');
-					$this->load->view('MasterPage/header',$data);
-					$this->load->view('MasterPage/asideLeft',$data);
-					$this->load->view('usuario/cliente/mensajeria/vfactura');
-					$this->load->view('MasterPage/footer');
-					$this->load->view('MasterPage/asideRight');
-					$this->load->view('MasterPage/script');
-				}else{redirect('Administrador/cpanel');}
-			}else{redirect('Login');}
 		}
 
 	public function ofertas()
-		{
+		{					
 
-  		   if(isset($_SESSION['s_idUsuario'])){
-  		   		if($this->session->userdata('s_permiso')=='Cliente')
-				{
-			$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
-							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'),
-							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
-								 'clave' => $this->session->userdata('s_clave'),
-								 'email' => $this->session->userdata('s_email'),
-								   'foto' => $this->session->userdata('s_foto'));
+					$pagina = 'usuario/cliente/mensajeria/voferta';
+					$this->cargarPagina($pagina);
 
-					$this->load->view('MasterPage/head');
-					$this->load->view('MasterPage/header',$data);
-					$this->load->view('MasterPage/asideLeft',$data);
-					$this->load->view('usuario/cliente/mensajeria/voferta');
-					$this->load->view('MasterPage/footer');
-					$this->load->view('MasterPage/asideRight');
-					$this->load->view('MasterPage/script');
-				}else{redirect('Administrador/cpanel');}
-			}else{redirect('Login');}
 		}
 
 	public function pedidos()
 		{
 
-  		   if(isset($_SESSION['s_idUsuario'])){
+					$pagina = 'usuario/cliente/mensajeria/vpedido';
+					$this->cargarPagina($pagina);
+					
+		}
+
+////Cambiar al controlador correspondiente
+	
+
+
+/********************************************Prueba************************************************/
+
+
+	function cargarPagina($pagina)
+	{
+		 if(isset($_SESSION['s_idUsuario'])){
   		   		if($this->session->userdata('s_permiso')=='Cliente')
 				{
 			$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
@@ -321,7 +136,7 @@ class Cliente extends CI_Controller {
 					$this->load->view('MasterPage/head');
 					$this->load->view('MasterPage/header',$data);
 					$this->load->view('MasterPage/asideLeft',$data);
-					$this->load->view('usuario/cliente/mensajeria/vpedido');
+					$this->load->view($pagina,$data);
 					$this->load->view('MasterPage/footer');
 					$this->load->view('MasterPage/asideRight');
 					$this->load->view('MasterPage/script');
@@ -329,15 +144,7 @@ class Cliente extends CI_Controller {
 			}else{redirect('Login');}
 		}
 
-////Cambiar al controlador correspondiente
-	public function getCliente()
-	{
-		echo json_encode($this->musuario->getClientes());
-	}
-
-
-/********************************************Prueba************************************************/
-
+	
 	public function prueba()
 		{
 

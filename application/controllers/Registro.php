@@ -94,6 +94,9 @@ class Registro extends CI_Controller
 					 			$this->mdireccion->generarAsociacion($asociacion); //guardar asociacion
 						 			if ($idContacto > 0) {
 						 				//se guardó correctamente todo el formulario
+
+						 				echo '<script type="text/javascript">alert("Bienvenido ya está registrado para iniciar secion :D");</script>';
+				
 						 				$data = array('$mensaje' => 'Se guardó correctamente todo el formulario, puede ingresar');
 						 				redirect('login',$data);
 						 			} else {

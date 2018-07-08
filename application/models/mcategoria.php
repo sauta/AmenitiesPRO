@@ -19,7 +19,7 @@ class Mcategoria extends CI_Model
     
     public function buscarId($idCategoria)
     {
-		$_categoria $this->db->select('categoria', array('idCategoria' => $idCategoria));
+		$_categoria = $this->db->select('categoria', array('idCategoria' => $idCategoria));
 		 return $_categoria;
     }
 
