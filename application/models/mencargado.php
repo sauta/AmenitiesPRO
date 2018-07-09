@@ -40,7 +40,21 @@ class Mencargado extends CI_Model
 	    	# code...
 	    }
 
-	    
+	    public function validarRut($rut) //valida si ya existe el rut
+	    {
+
+	       $query = $this->db->get_where('encargado',array('Rut'=>$rut));
+	     //  $query = $this->db->get();
+			if ($query->num_rows() == 1)
+			{
+				return true; //alguien ya tiene este rut existe :D
+
+			}else{
+
+				return false; //el rut está disponible
+			}
+	        	
+	    }
 		public function ValidarDatos($encargado)
 		{
 			if($encargado['NombreEncargado'] == null || $encargado['NombreEncargado'] == '' )

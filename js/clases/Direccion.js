@@ -1,4 +1,4 @@
-$.post(site_url+"Direccion/getRegion",
+$.post(base_url+"Direccion/getRegion",
     {/*parametro en este caso no se necesita ninguna parametro por que traemos las regiones directamente de la BDD*/},
     function(data){
     	//alert(data);
@@ -14,7 +14,7 @@ $( "#cboRegion" ).change(function (){
   	 $('#cboComuna').html('<option value="0" >Selecciones la comuna</option>');
 
 		var id = $('#cboRegion').val();
-		$.post(site_url+"Direccion/getProvincia",
+		$.post(base_url+"Direccion/getProvincia",
 		    {
 		    	/*Aqui se envia la id de la region para buscar las provincias*/
 		        "PK_idRegion": id 
@@ -33,7 +33,7 @@ $('#cboProvincia').change(function(){
 	$('#cboComuna').html('<option value="0" > Selecciones la comuna</option>');
 
 			var id = $('#cboProvincia').val();
-				$.post(site_url+"Direccion/getComuna",
+				$.post(base_url+"Direccion/getComuna",
 			    {
 			        /*Aqui se envia la id de la provincia para buscar las comunas*/
 					"PK_idProvincia": id

@@ -7,27 +7,26 @@
                          <h3 class="box-title">Lista de productos</h3>
                     </div>
                    <div class="box-body no-padding">
-                        <table id="tblProducto" class="table table-bordered table-hover">
-                   <thead>
+              <table id="tblProducto" class="table table-bordered table-hover">
+                <thead>
                   <tr>
-                    <th style="width: 10px">SKU</th>
-                    <th style="width: 35%" >Nombre</th>
-                    <th style="width: 15%">Precio CLP</th>
+                    <th style="width: 10px"></th>
+                    <th style="width: 5%">SKU</th>
+                    <th style="width: 34%">Nombre</th>
+                    <th style="width: 10%">Precio CLP</th>
                     <th style="width: 40%">Descripción</th>
                     <!-- <th style="width: 40%">Disponibilidad</th> -->
-                    <th style="width: 60px">Imagen</th>
                     </tr>
                   </thead>
 
                   <tfoot>
                     <tr>
-                    <th style="width: 10px">SKU</th>
-                    <th style="width: 35%" >Nombre</th>
+                    <th style="width: 10px"></th>
+                    <th style="width: 5%">SKU</th>
+                    <th style="width: 34%" >Nombre</th>
                     <th style="width: 15%">Precio CLP</th>
                     <th style="width: 40%">Descripción</th>
                     <!-- <th style="width: 40%">Disponibilidad</th> -->
-                    <th style="width: 60px">Imagen</th>
-                    </tr>
                   </tfoot> 
                            </table>
                     </div>

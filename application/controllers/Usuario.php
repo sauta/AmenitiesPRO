@@ -31,7 +31,7 @@ class Usuario extends CI_Controller {
 		$parametro = $this->musuario->getCliente();
 		echo json_encode($parametro);
 	}
-
+	
 	public function Modificar(){
 
 	}

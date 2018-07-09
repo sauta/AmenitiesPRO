@@ -37,10 +37,13 @@
 <script src="<?=base_url()?>AdminLTE-2.4.2/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
 <script src="<?=base_url()?>AdminLTE-2.4.2/plugins/input-mask/jquery.inputmask.extensions.js"></script>
 
-<script type="text/javascript">
-		
-			 var site_url = '<?=site_url()?>';
+<script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/sweet-alert/sweetalert.min.js"></script>
 
+
+<script type="text/javascript">
+       // sweet('funciona');
+			 var base_url = '<?=base_url()?>';
+       var base_url = '<?=base_url()?>'
 </script>
 
 <!-- generico -->
@@ -50,17 +53,13 @@
   <?php if($this->uri->segment(2)=='perfil'){?>
     
 <!-- asignar el JS de perfil correspondiente -->
-<<<<<<< HEAD
-  
-  <script src="<?=base_url()?>js/clases/perfil.js"></script>
-=======
+
 <script type="text/javascript">
-         var site_url = '<?=site_url()?>'; 
+         var base_url = '<?=base_url()?>'; 
 </script>
 
 <script src="<?=base_url()?>js/clases/Perfil.js"></script>
 
->>>>>>> ae4aef184a4a6c14cb2c94622fc103681b73b7fe
   <?php }?>
 
 <?php if($this->uri->segment(2)=='productos'){?>
@@ -72,9 +71,10 @@
 
 
 
-<script src="<?=base_url()?>js/clases/Productos.js"></script>
+<script src="<?=base_url()?>js/clases/Producto.js"></script>
+<script src="<?=base_url()?>js/datatable/Producto.js"></script>
 
-<script src="<?=base_url()?>js/clases/Categorias.js"></script>
+<script src="<?=base_url()?>js/clases/Categoria.js"></script>
 
 <?php } ?>
 
@@ -107,7 +107,7 @@
     <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 
     <script type="text/javascript">
-         var site_url = '<?=site_url()?>'; 
+         var base_url = '<?=base_url()?>'; 
     </script>
 
   	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
@@ -192,7 +192,7 @@
   <?php if($this->uri->segment(1)=='Registro'){?>
 
      <script type="text/javascript">
-                 var site_url = '<?=site_url()?>/'; 
+                 var base_url = '<?=base_url()?>/'; 
       </script>
       <script type="text/javascript" src="js/clases/Direccion" ></script>>
 
@@ -200,7 +200,7 @@
 
   <?php if($this->uri->segment(2)=='facturas'){?>
       <script type="text/javascript">
-                 var site_url = '<?=site_url()?>/'; 
+                 var base_url = '<?=base_url()?>/'; 
       </script>
         <script src="<?=base_url()?>js/clases/Facturas.js"></script>
         <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/jquery-1.11.1.min.js"></script>

@@ -44,42 +44,22 @@ class Mempresa extends CI_Model
 	    	# code...
 	    }
 	    /********************************************Validadores******************************************/
-		public function ValidarDatos($empresa)
-		{
-			if($empresa['NombreFantasia']      == null && $empresa['NombreFantasia']  == '')
+
+	    public function validarRut($rut) //valida si ya existe el rut
+	    {
+
+	        	$query = $this->db->get_where('empresa',array('Rut'=>$rut));
+	     //  $query = $this->db->get();
+			if ($query->num_rows() == 1)
 			{
-				$mensaje = "No ingresó un nombre de Fantasia";
-				return $mensaje;
-			}
-			elseif($empresa['RutEmpresa']      == null && $empresa['RutEmpresa']      == '')
-			{
-				$mensaje = "No ingresó el rut de la empresa";
-				return $mensaje;
-			}
-			elseif($empresa['RazonSocial']     == null && $empresa['RazonSocial']     == '')
-			{
-				$mensaje = "No ingresó la razón social de la empresa";
-				return $mensaje;
-			}
-			elseif($empresa['Descripcion']     == null && $empresa['Descripcion']     == '')
-			{
-				$mensaje = "La descripción de la emresa es obligatoria";
-				return $mensaje;
-			}
-			elseif($empresa['idTipoCliente']   == null && $empresa['idTipoCliente']   == '')
-			{
-				$mensaje = "hubo un problema con listar el tipo de Cliente";
-				return $mensaje;
+				return true; //el rut existe :D
+
 			}else{
 
-				return 1;
+				return false; //el rut no existe D:
 			}
-		}
-
-		public function validarRut($rut)
-		{
-			
-		}
+	        	
+	    }
 
 	}
 ?>

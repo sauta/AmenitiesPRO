@@ -20,5 +20,8 @@
     RewriteCond $1 !^(index\.php|images|AdminLTE-2.4.2|js|imagenes)
 
     # Si el archivo/directorio no existe, redireccionamos
-    RewriteRule ^(.*) index.php/$1 [L]
+    RewriteRule ^(.*)$/AmenitiesPRO/index.php/$1 [L]
+</IfModule>
+<IfModule !mod_rewrite.c>
+    ErrorDocument 404 /AmenitiesPRO/index.php 
 </IfModule>

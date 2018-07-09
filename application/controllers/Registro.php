@@ -63,7 +63,20 @@ class Registro extends CI_Controller
 		 $direccion['Direccion'] = $this->input->post('txtDireccion');
 
 	/********************************validadores****************************************/	
-	
+	$value = '';
+	$determinador = true; //determina si la variable de algun campo está vacio
+
+	foreach ($usuario as $value) {
+		if($value == '' || $value == 0 || $value == null){
+
+			$determinador = false;
+
+		}else{
+
+			$determinador;
+		}
+	 }
+
 		 if($usuario['Clave'] == $usuario['RepClave']) {
 
 		 	if(!$this->musuario->validarExistencia($usuario)){
@@ -94,46 +107,54 @@ class Registro extends CI_Controller
 					 			$this->mdireccion->generarAsociacion($asociacion); //guardar asociacion
 						 			if ($idContacto > 0) {
 						 				//se guardó correctamente todo el formulario
-
-						 				echo '<script type="text/javascript">alert("Bienvenido ya está registrado para iniciar secion :D");</script>';
 				
-						 				$data = array('$mensaje' => 'Se guardó correctamente todo el formulario, puede ingresar');
+						 				$data = array('mensaje' => 'Se guardó correctamente todo el formulario, puede ingresar '+$encargado['NombreEncargado']);
+
+						 				echo '<script>alert("'+$data['mensaje']+'");</script>"';
+						 				
 						 				redirect('login',$data);
 						 			} else {
 						 				//el contacto no se pudo guardar correctamente
-						 				$data = array('$mensaje' => 'El contacto no se pudo guardar');
+						 				$data = array('mensaje' => 'El contacto no se pudo guardar');
+						 				echo '<script>alert("'+$data['mensaje']+'");</script>"';
 						 				redirect('Registro','refresh', $data);
 						 			}
 					 		 } else {
-					 			$data = array('$mensaje' => 'No se pudo guardar el encargado');
+					 			$data = array('mensaje' => 'No se pudo guardar el encargado');
+					 			echo '<script>alert("'+$data['mensaje']+'");</script>"';
 					 			redirect('Registro','refresh', $data);
 			 				}
 			 			} else {
-			 			  	$data = array('$mensaje' => 'No se pudo guardar la direcion');
+			 			  	$data = array('mensaje' => 'No se pudo guardar la direcion');
+			 			  	echo '<script>alert("'+$data['mensaje']+'");</script>"';
 			 				redirect('Registro','refresh', $data);
 			 			}
 			 		} else {
 			 			//No se pudo guardar la empresa ni/o el encargardo ni/o la direccion
-			 			$data = array('$mensaje' => 'No se pudo guardar la empresa');
+			 			$data = array('mensaje' => 'No se pudo guardar la empresa');
+			 			echo '<script>alert("'+$data['mensaje']+'");</script>"';
 			 			redirect('Registro','refresh', $data);
 			 		}
 
 			 	} else  {
 			 		//enviar mensaje de que no las clave y repclave son inocrrectas	
-			 		$data = array('$mensaje' => 'No se logró registrar el usuario correctamente');
+			 		$data = array('mensaje' => 'No se logró registrar el usuario correctamente');
+			 		echo '<script>alert("'+$data['mensaje']+'");</script>"';
 			 		redirect('Registro','refresh', $data);
 			 	}
 
 	 		  } else  {
 			 		//enviar mensaje de que no las clave y repclave son inocrrectas	
-			 		$data = array('$mensaje' => 'No se logró registrar el usuario correctamente por que ya existe uno igual');
+			 		$data = array('mensaje' => 'No se logró registrar el usuario correctamente por que ya existe uno igual');
+			 		echo '<script>alert("'+$data['mensaje']+'");</script>"';
 			 		redirect('Registro','refresh', $data);
 			 	}
 
 
 			 } else {
 		 		//enviar mensaje de que la clave y la reclave son diferentes
-		 		$data = array('$mensaje' => 'Clave y reclave diferentes');
+		 		$data = array('mensaje' => 'Clave y reclave diferentes');
+		 		echo '<script>alert("'+$data['mensaje']+'");</script>"';
 		 		redirect('Registro','refresh', $data);
 		 	}
 
