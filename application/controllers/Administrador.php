@@ -49,12 +49,10 @@ class Administrador extends CI_Controller
 	public function estadisticas_de_ventas()
 		{
 
+			$links = array('' => , );
+
 			$pagina = 'usuario/administrador/estadistica/vventa';
 					$this->cargarPagina($pagina);
-
-	 
-				
-				
 		}
 
 /*****************************************Mantenedores*********************************************/
@@ -97,9 +95,6 @@ class Administrador extends CI_Controller
 
 			$pagina = 'usuario/administrador/mantenedor/vproducto';
 					$this->cargarPagina($pagina);
-
-	  		  
-				
 				
 		}
 
@@ -121,9 +116,6 @@ class Administrador extends CI_Controller
 
 			$pagina = 'usuario/administrador/mensajeria/vdemanda';
 					$this->cargarPagina($pagina);
-
-	  		
-				
 				
 		}
 
@@ -151,12 +143,15 @@ class Administrador extends CI_Controller
 
 		}
 
+		public function pedido()
+		{
+				$pagina = 'usuario/cliente/mensajeria/vpedido';
+					$this->cargarPagina($pagina);
+		}
+
 
 		function cargarPagina($pagina)
 		{
-
-			$pagina = 'usuario/cliente/mensajeria/vpedido';
-					$this->cargarPagina($pagina);
 
 		 if(isset($_SESSION['s_idUsuario'])){
   		   		if($this->session->userdata('s_permiso')=='Administrador')

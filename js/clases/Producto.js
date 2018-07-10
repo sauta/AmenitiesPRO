@@ -7,7 +7,7 @@ $( "#cboCategoria1" ).change(function (){
   	/*Se limpia las provincias y se selecciona otro producto*/
   	 $('#cboProducto1').html('<option>Selecciones un prodcuto</option>');
 		
-		$.post(base_url+"/Producto/getProductoCategoria",
+		$.post(site_url+"/Producto/getProductoCategoria",
 		    {
 		    	/*Aqui se envia la id de la categoria para buscar los productos*/
 		        "PK_idCategoria": id 
@@ -28,7 +28,7 @@ $( "#cboCategoria2" ).change(function (){
 
 		var id = $('#cboCategoria2').val();
 
-		$.post(base_url+"/Producto/getProductoCategoria",
+		$.post(site_url+"/Producto/getProductoCategoria",
 		    {
 		    	/*Aqui se envia la id de la categoria para buscar los productos*/
 		        "PK_idCategoria": id

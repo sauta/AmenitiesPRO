@@ -35,8 +35,11 @@
 
   <?php if($this->uri->segment(2)=='consumo'){?>
 
+
   <?php }?>
+
   <?php if($this->uri->segment(2)=='productos'){?>
+
     <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net-bs/css/jquery.dataTables.min.css">
 
   <?php }?>
