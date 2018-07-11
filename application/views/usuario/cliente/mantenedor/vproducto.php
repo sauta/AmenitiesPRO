@@ -7,6 +7,7 @@
                          <h3 class="box-title">Lista de productos</h3>
                     </div>
                    <div class="box-body no-padding">
+                    <div class="col-lg-12">
               <table id="tblProducto" class="table table-bordered table-hover">
                 <thead>
                   <tr>
@@ -27,8 +28,10 @@
                     <th style="width: 15%">Precio CLP</th>
                     <th style="width: 40%">Descripción</th>
                     <!-- <th style="width: 40%">Disponibilidad</th> -->
+                  </tr>
                   </tfoot> 
-                           </table>
+                 </table>
+                    </div>
                     </div>
                     <!-- /.box-body -->
                   </div>

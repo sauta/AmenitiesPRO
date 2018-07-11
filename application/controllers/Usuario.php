@@ -39,6 +39,9 @@ class Usuario extends CI_Controller {
 	public function updatePerfil()
 
 	{
+
+		$arrayName = array('velocidad' => 100);
+
 		$parametro['idUsuario']     = $this->session->userdata('s_idUsuario');
 		$parametro['repNombre']     = $this->session->userdata('s_nombreUsuario');
 		$parametro['NombreUsuario'] = $this->input->post('nombre');
@@ -82,9 +85,7 @@ class Usuario extends CI_Controller {
 							}
 						}
 
-
 			}else{
-				
 				
 				if($this->session->userdata('s_permiso')=='Cliente'){
 					echo '<script type="text/javascript">alert("Las claves no coinsiden");</script>';
@@ -98,7 +99,6 @@ class Usuario extends CI_Controller {
 
 			}
 		}else{
-
 		
 				if($this->session->userdata('s_permiso')=='Cliente'){
 

@@ -88,9 +88,32 @@ $db['default'] = array(
 	'char_set' => 'utf8',
 	'dbcollat' => 'utf8_general_ci',
 	'swap_pre' => '',
-	'encrypt' => TRUE,
+	'encrypt'  => TRUE,
 	'compress' => FALSE,
 	'stricton' => FALSE,
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+
+// $db['default'] = array(
+// 	'dsn'	=> '',
+// 	'hostname' => 'https://www.amenitiespro.org',
+// 	'username' => 'amenitie_juan',
+// 	'password' => '(4,ojp-asM@9',
+// 	'database' => 'amenitie_amenitiespro',
+// 	'dbdriver' => 'mysql',
+// 	'dbprefix' => '',
+// 	'pconnect' => TRUE,
+// 	'db_debug' => (ENVIRONMENT !== 'production'),
+// 	'cache_on' => FALSE,
+// 	'cachedir' => '',
+// 	'char_set' => 'utf8',
+// 	'dbcollat' => 'utf8_general_ci',
+// 	'swap_pre' => '',
+// 	'encrypt'  => TRUE,
+// 	'compress' => FALSE,
+// 	'stricton' => FALSE,
+// 	'failover' => array(),
+// 	'save_queries' => TRUE
+// );
