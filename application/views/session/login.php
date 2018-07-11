@@ -60,10 +60,6 @@
       </div>
     </form>
 
-    <!-- Imagenes -->
-
-      
-
    <!-- <div class="social-auth-links text-center">
       <p>- O -</p>
       <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Ingresar usando
@@ -77,9 +73,6 @@
     <a href="<?=site_url()?>/Registro" class="text-center">Regitrarse en Amenities PRO</a>
 
   </div>
-
-
-
   <!-- /.login-box-body -->
 </div>
 <!-- /.login-box -->
