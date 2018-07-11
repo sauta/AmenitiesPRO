@@ -1,4 +1,4 @@
-$.post(site_url+"/Categoria/getCategorias",
+$.post(base_url+"/Categoria/getCategorias",
     {/*parametro en este caso no se necesita ninguna parametro por que traemos las Categoria directamente de la BDD*/},
     function(data){
     	//alert(data);
@@ -8,7 +8,7 @@ $.post(site_url+"/Categoria/getCategorias",
 	    });
 	});
 
-	$.post(site_url+"/Categoria/getCategorias",
+	$.post(base_url+"/Categoria/getCategorias",
     {/*parametro en este caso no se necesita ninguna parametro por que traemos las Categoria directamente de la BDD*/},
     function(data){
     	//alert(data);
@@ -18,7 +18,7 @@ $.post(site_url+"/Categoria/getCategorias",
 	    });
 	});
 
-	$.post(site_url+"/Categoria/getCategorias",
+	$.post(base_url+"/Categoria/getCategorias",
     {/*parametro en este caso no se necesita ninguna parametro por que traemos las Categoria directamente de la BDD*/},
     function(data){
     	//alert(data);
@@ -28,7 +28,7 @@ $.post(site_url+"/Categoria/getCategorias",
 	    });
 	});
 
-	$.post(site_url+"/Categoria/getCategorias",
+	$.post(base_url+"/Categoria/getCategorias",
     {/*parametro en este caso no se necesita ninguna parametro por que traemos las Categoria directamente de la BDD*/},
     function(data){
     	//alert(data);
@@ -38,7 +38,7 @@ $.post(site_url+"/Categoria/getCategorias",
 	    });
 	});
 
-	$.post(site_url+"/Categoria/getCategorias",
+	$.post(base_url+"/Categoria/getCategorias",
     {/*parametro en este caso no se necesita ninguna parametro por que traemos las Categoria directamente de la BDD*/},
     function(data){
     	//alert(data);

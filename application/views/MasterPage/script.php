@@ -1,7 +1,7 @@
 <!-- jQuery 3 -->
 <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
-<script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<!-- <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/jquery-ui/jquery-ui.min.js"></script> -->
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <!-- <script> -->
 <!-- // $.widget.bridge('uibutton', $.ui.button); -->
@@ -42,7 +42,8 @@
 
 <script type="text/javascript">
        // sweet('funciona');
-			 var site_url = '<?=site_url()?>';
+			 var base_url = '<?=base_url()?>';
+       var base_url = '<?=base_url()?>'
 </script>
 
 <!-- generico -->
@@ -50,6 +51,12 @@
 
   <?php }?>
   <?php if($this->uri->segment(2)=='perfil'){?>
+    
+<!-- asignar el JS de perfil correspondiente -->
+
+<script type="text/javascript">
+         var base_url = '<?=base_url()?>'; 
+</script>
 
 <script src="<?=base_url()?>js/clases/Perfil.js"></script>
 
@@ -98,6 +105,10 @@
     <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 
     <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+         var base_url = '<?=base_url()?>'; 
+    </script>
 
   	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
     <script src="<?=base_url()?>js/clases/Pedidos.js"></script>
@@ -180,12 +191,17 @@
 
   <?php if($this->uri->segment(1)=='Registro'){?>
 
+     <script type="text/javascript">
+                 var base_url = '<?=base_url()?>/'; 
+      </script>
       <script type="text/javascript" src="js/clases/Direccion" ></script>>
 
   <?php }?>
 
   <?php if($this->uri->segment(2)=='facturas'){?>
-
+      <script type="text/javascript">
+                 var base_url = '<?=base_url()?>/'; 
+      </script>
         <script src="<?=base_url()?>js/clases/Facturas.js"></script>
         <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/jquery-1.11.1.min.js"></script>
         <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
