@@ -6,33 +6,35 @@
                   <div class="box-header with-border">
                          <h3 class="box-title">Lista de productos</h3>
                     </div>
+                  <div class="col-lg-12">
                    <div class="box-body no-padding">
-                    <div class="col-lg-12">
-              <table id="tblProducto" class="table table-bordered table-hover">
-                <thead>
-                  <tr>
-                    <th style="width: 10px"></th>
-                    <th style="width: 5%">SKU</th>
-                    <th style="width: 34%">Nombre</th>
-                    <th style="width: 10%">Precio CLP</th>
-                    <th style="width: 40%">Descripción</th>
-                    <!-- <th style="width: 40%">Disponibilidad</th> -->
-                    </tr>
-                  </thead>
+                    <table id="tblProducto" class="table table-bordered table-hover">
+                      <div class="col-lg-11">
+                      <thead>
+                        <tr>
+                          <th style="width: 10px"></th>
+                          <th style="width: 5%">SKU</th>
+                          <th style="width: 34%">Nombre</th>
+                          <th style="width: 10%">Precio CLP</th>
+                          <th style="width: 40%">Descripción</th>
+                          <!-- <th style="width: 40%">Disponibilidad</th> -->
+                          </tr>
+                        </thead>
 
-                  <tfoot>
-                    <tr>
-                    <th style="width: 10px"></th>
-                    <th style="width: 5%">SKU</th>
-                    <th style="width: 34%" >Nombre</th>
-                    <th style="width: 15%">Precio CLP</th>
-                    <th style="width: 40%">Descripción</th>
-                    <!-- <th style="width: 40%">Disponibilidad</th> -->
-                  </tr>
-                  </tfoot> 
-                 </table>
-                    </div>
-                    </div>
+                        <tfoot>
+                          <tr>
+                          <th style="width: 10px"></th>
+                          <th style="width: 5%">SKU</th>
+                          <th style="width: 34%" >Nombre</th>
+                          <th style="width: 15%">Precio CLP</th>
+                          <th style="width: 40%">Descripción</th>
+                          <!-- <th style="width: 40%">Disponibilidad</th> -->
+                        </tr>
+                        </tfoot>
+                        </div> 
+                      </table>
+                     </div>
+                  </div>
                     <!-- /.box-body -->
                   </div>
                   <!-- /.box -->

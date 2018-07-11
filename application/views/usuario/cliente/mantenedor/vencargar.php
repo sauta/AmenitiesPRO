@@ -3,7 +3,7 @@
       <!-- Small boxes (Stat box) -->
 		
       <div class="row">	
-		<div class="col-lg-5">
+		  <div class="col-lg-12">
                  <div class="box box-success">
                   <div class="box-header with-border">
                          <h3 class="box-title">Lista de productos</h3>

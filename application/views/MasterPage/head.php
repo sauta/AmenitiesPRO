@@ -86,7 +86,6 @@
     
   <?php }?>
   <?php if($this->uri->segment(2)=='facturas'){?>
-    <link id="themecss" rel="stylesheet" type="text/css" href="//www.shieldui.com/shared/components/latest/css/light/all.min.css" />
 
   <?php }?>
   <?php if($this->uri->segment(2)=='encargar'){?>

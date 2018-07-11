@@ -18,7 +18,7 @@ function format ( d ) {
 
 var t = $('#tblProducto').DataTable({
         "language": {
-            "url": site_url+"js/clases/IdiomaDT.json"
+            "url": base_url+"js/clases/idioma-es-dt.json"
         },
         "ajax":{
         	"url": site_url+"/Producto/getProducto/",
@@ -29,8 +29,8 @@ var t = $('#tblProducto').DataTable({
             {
                 "className":      'details-control',
                 "orderable":      false,
-                "data":           null,
-                "defaultContent": ''
+                "data": null,
+                "defaultContent": '<button type="button" class="btn btn-block btn-info btn-flat"><i></i>Info</button>'
             },
             { "data": "sku"    },
             { "data": "Nombre" },

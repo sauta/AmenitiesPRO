@@ -24,7 +24,7 @@
 <!-- Slimscroll -->
 <!-- <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script> -->
 <!-- FastClick -->
-<!-- <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/fastclick/lib/fastclick.js"></script> -->
+<script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="<?=base_url()?>AdminLTE-2.4.2/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
@@ -43,9 +43,9 @@
 <script type="text/javascript">
        // sweet('funciona');
 			 var site_url = '<?=site_url()?>';
+       var base_url = '<?=base_url()?>';
        
 </script>
-
 <!-- generico -->
 <?php if($this->uri->segment(2)=='cpanel'){?>
 
@@ -64,12 +64,11 @@
 
 
 
-<script src="<?=base_url()?>js/clases/Producto.js"></script>
-<script src="<?=base_url()?>js/datatable/Producto.js"></script>
+  <script src="<?=base_url()?>js/clases/Producto.js"></script>
+  <script src="<?=base_url()?>js/datatable/Producto.js"></script>
+  <script src="<?=base_url()?>js/clases/Categoria.js"></script>
 
-<script src="<?=base_url()?>js/clases/Categoria.js"></script>
-
-<?php } ?>
+  <?php } ?>
 
 <!-- cliente -->
   <?php if($this->uri->segment(2)=='consumo'){?>
@@ -77,10 +76,16 @@
 
   <?php }?>
   <?php if($this->uri->segment(2)=='facturas'){?>
-    <!-- chartJS -->
+
+    <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+
+    <!-- ChartJS -->
     <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/chart.js/Chart.js"></script>
+
+    
     <!-- FastClick -->
     <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/fastclick/lib/fastclick.js"></script>
+
 
   	<script src="<?=base_url()?>js/estadisticas/facturas.js"></script>
 
@@ -104,7 +109,7 @@
     </script>
 
   	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
-    <script src="<?=base_url()?>js/clases/Pedidos.js"></script>
+    <script src="<?=base_url()?>js/datatable/Pedidos.js"></script>
 
   <?php }?>
   <?php if($this->uri->segment(2)=='compra'){?>
@@ -164,11 +169,6 @@
 
     <script src="<?=base_url()?>js/clases/clientes.js"></script>
   <?php }?>
-  
-  <?php if($this->uri->segment(2)=='facturas'){?>
-  	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
-
-  <?php }?>
   <?php if($this->uri->segment(2)=='demanda'){?>
   	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
 
@@ -190,13 +190,6 @@
       <script type="text/javascript" src="js/clases/Direccion" ></script>>
 
   <?php }?>
-
-  <?php if($this->uri->segment(2)=='facturas'){?>
-
-        <script src="<?=base_url()?>js/clases/Facturas.js"></script>
-        <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/jquery-1.11.1.min.js"></script>
-        <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
-  <?php } ?>
 
   <?php if($this->uri->segment(2)=='encargar'){?>
     <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
