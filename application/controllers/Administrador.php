@@ -51,10 +51,6 @@ class Administrador extends CI_Controller
 
 			$pagina = 'usuario/administrador/estadistica/vventa';
 					$this->cargarPagina($pagina);
-
-	 
-				
-				
 		}
 
 /*****************************************Mantenedores*********************************************/
@@ -64,9 +60,6 @@ class Administrador extends CI_Controller
 
 			$pagina = 'usuario/administrador/mantenedor/vcliente';
 					$this->cargarPagina($pagina);
-
-				
-				
 		}
 
 	public function encargo()
@@ -75,10 +68,6 @@ class Administrador extends CI_Controller
 
 			$pagina = 'usuario/administrador/mantenedor/vencargo';
 					$this->cargarPagina($pagina);
-
-		
-				
-			
 		}
 
 	public function facturas()
@@ -86,10 +75,6 @@ class Administrador extends CI_Controller
 
 			$pagina = 'usuario/administrador/mantenedor/vfactura';
 					$this->cargarPagina($pagina);
-
-	  		 
-				
-				
 		}
 
 	public function productos()
@@ -97,10 +82,6 @@ class Administrador extends CI_Controller
 
 			$pagina = 'usuario/administrador/mantenedor/vproducto';
 					$this->cargarPagina($pagina);
-
-	  		  
-				
-				
 		}
 
 		public function categorias()
@@ -108,10 +89,6 @@ class Administrador extends CI_Controller
 
 			$pagina = 'usuario/administrador/mantenedor/vcategoria';
 					$this->cargarPagina($pagina);
-
-	  		
-				
-				
 		}
 
 /*****************************************Mensajeria***********************************************/
@@ -121,10 +98,6 @@ class Administrador extends CI_Controller
 
 			$pagina = 'usuario/administrador/mensajeria/vdemanda';
 					$this->cargarPagina($pagina);
-
-	  		
-				
-				
 		}
 
 	public function envio_de_ofertas()
@@ -132,10 +105,6 @@ class Administrador extends CI_Controller
 
 			$pagina = 'usuario/administrador/mensajeria/voferta';
 					$this->cargarPagina($pagina);
-
-	  		  
-				
-				
 		}
 
 	public function reportes()
@@ -143,20 +112,16 @@ class Administrador extends CI_Controller
 
 			$pagina = 'usuario/administrador/mensajeria/vreporte';
 					$this->cargarPagina($pagina);
-
-	  		   
-				
-				
-
-
 		}
 
+		public function pedido()
+		{
+			$pagina = 'usuario/cliente/mensajeria/vpedido';
+			$this->cargarPagina($pagina);
+		}	
 
 		function cargarPagina($pagina)
 		{
-
-			$pagina = 'usuario/cliente/mensajeria/vpedido';
-					$this->cargarPagina($pagina);
 
 		 if(isset($_SESSION['s_idUsuario'])){
   		   		if($this->session->userdata('s_permiso')=='Administrador')

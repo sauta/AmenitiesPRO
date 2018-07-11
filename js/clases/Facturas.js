@@ -1,4 +1,4 @@
-// $.post(base_url+"cfacturas/getFaturas",
+// $.post(site_url+"cfacturas/getFaturas",
 //     {/*parametro en este caso no se necesita ninguna parametro por que traemos las regiones directamente de la BDD*/},
 //     function(data){
 //     	//alert(data);

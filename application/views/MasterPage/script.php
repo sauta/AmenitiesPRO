@@ -42,25 +42,18 @@
 
 <script type="text/javascript">
        // sweet('funciona');
-			 var base_url = '<?=base_url()?>';
-       var base_url = '<?=base_url()?>'
+			 var site_url = '<?=site_url()?>';
+       
 </script>
 
 <!-- generico -->
-  <?php if($this->uri->segment(2)=='cpanel'){?>
+<?php if($this->uri->segment(2)=='cpanel'){?>
 
-  <?php }?>
-  <?php if($this->uri->segment(2)=='perfil'){?>
+<?php }?>
+<?php if($this->uri->segment(2)=='perfil'){?>
     
-<!-- asignar el JS de perfil correspondiente -->
-
-<script type="text/javascript">
-         var base_url = '<?=base_url()?>'; 
-</script>
-
 <script src="<?=base_url()?>js/clases/Perfil.js"></script>
-
-  <?php }?>
+<?php }?>
 
 <?php if($this->uri->segment(2)=='productos'){?>
 
@@ -199,9 +192,7 @@
   <?php }?>
 
   <?php if($this->uri->segment(2)=='facturas'){?>
-      <script type="text/javascript">
-                 var base_url = '<?=base_url()?>/'; 
-      </script>
+
         <script src="<?=base_url()?>js/clases/Facturas.js"></script>
         <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/jquery-1.11.1.min.js"></script>
         <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
