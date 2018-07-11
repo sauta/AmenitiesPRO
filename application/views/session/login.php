@@ -37,7 +37,7 @@
   <div class="login-box-body">
     <p class="login-box-msg">Ingresa para comenzar tu sesión</p>
 
-    <form action="<?=site_url()?>/Login/logearse/" method="post">
+    <form action="<?=site_url()?>/Login/logearse" method="post">
       <div class="form-group has-feedback">
 
         <input type="text" name="nombre" class="form-control" placeholder="Nombre">

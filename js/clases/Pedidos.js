@@ -29,7 +29,7 @@ var t = $('#tblProductoEncargo').DataTable({
 		
 	});
 
-	$.post(site_url+"/Producto/getProducto",
+	$.post(base_url+"/Producto/getProducto",
 		    {/*parametro en este caso no se necesita ninguna parametro por que traemos las productos directamente de la BDD*/},
 		    function(data){
 		    	// alert(data);
