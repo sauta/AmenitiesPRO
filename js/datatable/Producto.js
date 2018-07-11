@@ -18,10 +18,10 @@ function format ( d ) {
 
 var t = $('#tblProducto').DataTable({
         "language": {
-            "url": base_url+"js/clases/IdiomaDT.json"
+            "url": site_url+"js/clases/IdiomaDT.json"
         },
         "ajax":{
-        	"url": base_url+"/Producto/getProducto/",
+        	"url": site_url+"/Producto/getProducto/",
         	"type": "POST",
         	dataSrc: ''
     			},
