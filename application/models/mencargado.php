@@ -18,6 +18,7 @@ class Mencargado extends CI_Model
 
 	        return $parametro->result();
 	    }
+
 	    public function guardar($parametro)
 	    {
 	    	 $campos = array(
@@ -47,14 +48,15 @@ class Mencargado extends CI_Model
 	     //  $query = $this->db->get();
 			if ($query->num_rows() == 1)
 			{
-				return true; //alguien ya tiene este rut existe :D
+				return false; //alguien ya tiene este rut existe D:
 
 			}else{
 
-				return false; //el rut está disponible
+				return true; //el rut está disponible :D
 			}
 	        	
 	    }
+
 		public function ValidarDatos($encargado)
 		{
 			if($encargado['NombreEncargado'] == null || $encargado['NombreEncargado'] == '' )
