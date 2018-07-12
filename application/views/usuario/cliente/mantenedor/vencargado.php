@@ -1,75 +1,58 @@
 <section>
   <div class="row">
-    <div class="col-md-3">
-    </div>
+
     <div class="col-md-6">
-      <div class="box box-info">
+      
+    </div>
+
+    <div class="col-md-3">
+      <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Pedido</h3>
+              <h3 class="box-title">Crear Encargado</h3>
             </div>
+          <form action="<?=site_url()?>/Encargado/setEncargado" method="post">   
             <div class="box-body">
-              <div class="input-group">
-                <span class="input-group-addon"></span>
-                <input type="text" class="form-control" placeholder="Username">
+              <label>Nombre de Encargado</label>
+              <div class="input-group">      
+                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                <input type="text" class="form-control" name="" placeholder="Nombre" required>
               </div>
               <br>
-              <div class="input-group">
-                <input type="text" class="form-control">
-                <span class="input-group-addon">.00</span>
-              </div>
-              <br>
-              <div class="input-group">
-                <span class="input-group-addon">$</span>
-                <input type="text" class="form-control">
-                <span class="input-group-addon">.00</span>
-              </div>
-              <h4>With icons</h4>
+
+              <label>Rut del Encargado</label>
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                <input type="email" class="form-control" placeholder="Email">
+                <input type="text" class="form-control" name="rut" placeholder="Rut" required>
               </div>
-              <br>
+            </div>
 
-              <div class="input-group">
-                <input type="text" class="form-control">
-                <span class="input-group-addon"><i class="fa fa-check"></i></span>
+            <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Agregar</button>
               </div>
-              <br>
-
-              <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-                <input type="text" class="form-control">
-                <span class="input-group-addon"><i class="fa fa-ambulance"></i></span>
-              </div>
-
-              <h4>With checkbox and radio inputs</h4>
-
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="input-group">
-                      <span class="input-group-addon">
-                        <input type="checkbox">
-                      </span>
-                     <input type="text" class="form-control">
-                  </div>
-                  <!-- /input-group -->
-                </div>
-                <!-- /.col-lg-6 -->
-                <div class="col-lg-6">
-                  <div class="input-group">
-                        <span class="input-group-addon">
-                          <input type="radio">
-                        </span>
-                    <input type="text" class="form-control">
-                  </div>
-                  <!-- /input-group -->
-                </div>
-                <!-- /.col-lg-6 -->
-              </div>
-              <!-- /.row -->
-            <!-- /.box-body -->
-          </div>
-        </div>
+          </form>
+     </div>
     </div>
+
+    <div class="col-md-3">
+      <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Eliminar Encargado</h3>
+            </div>
+          <form action="<?=site_url()?>/Encargado/deleteEncargado" method="post">   
+            <div class="box-body">
+              <label>Seleccione Encargado</label>
+              <select id="cboEncargados" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" name="cual_encargado" aria-hidden="true" required>
+              <option> Seleccione un Encargado</option>
+              </select>
+            </div>
+
+            <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Eliminar</button>
+              </div>
+          </form>
+     </div>
+    </div>
+
+
   </div>
 </section>
