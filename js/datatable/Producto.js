@@ -2,16 +2,20 @@ function format ( d ) {
     // `d` is the original data object for the row
     return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
         '<tr>'+
-            '<td>Full name:</td>'+
+            '<td>Nombre del producto:</td>'+
             '<td>'+d.Nombre+'</td>'+
         '</tr>'+
         '<tr>'+
-            '<td>Extension number:</td>'+
+            '<td>Stock Disponible:</td>'+
             '<td>'+d.stock+'</td>'+
         '</tr>'+
         '<tr>'+
-            '<td>Extra info:</td>'+
-            '<td><img src="'+d.url_imagen+'"></td>'+
+            '<td>Descripcion:</td>'+
+            '<td>'+d.Descripcion+'</td>'+
+        '</tr>'+
+        '<tr>'+ 
+            '<td>Foto:</td>'+
+            '<td><img src="'+d.url_imagen+'"  class="rounded float-right"  width="100" height="100" ></td>'+
         '</tr>'+
     '</table>';
 }

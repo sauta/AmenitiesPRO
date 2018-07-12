@@ -1,4 +1,3 @@
-
 //buscador productos
 
 $( "#cboCategoria1" ).change(function (){

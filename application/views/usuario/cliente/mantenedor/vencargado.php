@@ -36,7 +36,7 @@
                 <!-- /.box-body -->
               </div>
               <!-- /.box -->
-            </div>
+    </div>
         <!-- /.box-body -->
         <div class="box-footer text-center">
           <a href="javascript:void(0)" class="uppercase">Ver Todos los Encargados</a>

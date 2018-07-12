@@ -13,13 +13,21 @@ class Musuario extends CI_Model
 	/********************************************Login*****************************************/
 		public function login($parametro)
 	   	 {  
-	   	 	$this->db->select('u.idUsuario, u.NombreUsu, u.Clave, u.url_foto_perfil, e.Nombre, c.Telefono, c.Email, c.Celular, m.NombreFantasia, p.Permiso, a.Cargo');
+	   	 	$this->db->select('u.idUsuario, u.NombreUsu, u.Clave, u.url_foto_perfil, e.Nombre, c.Telefono, c.Email, c.Celular, em.NombreFantasia, p.Permiso, a.Cargo, em.Rut, em.RazonSocial, em.Descripcion, re.Region,
+	   	 		d.Direccion, pr.Provincia, cm.Comuna, td.Tipo, pr.Provincia');
+	   	 	
 	   	 	$this->db->from('usuario u');
 	   	 	$this->db->join('encargado e', 'e.PK_idUsuario = u.idUsuario');
 	   	 	$this->db->join('cargo a', 'e.PK_idCargo = a.idCargo');
 	   	 	$this->db->join('contacto c', 'c.PK_idEncargado = e.idEncargado');
-	   	 	$this->db->join('empresa m', 'm.idEmpresa = c.PK_idEmpresa');
+	   	 	$this->db->join('empresa em', 'em.idEmpresa = c.PK_idEmpresa');
 	   	 	$this->db->join('permiso p', 'p.idPermiso = u.PK_idPermiso');
+	   	 	$this->db->join('asignar_direccion ad ', ' ad.PK_idEmpresa = em.idEmpresa');
+            $this->db->join('tipo_direccion td ', ' td.idTipoDireccion = ad.PK_idTipoDireccion');
+            $this->db->join('direccion d ', ' d.idDireccion  = ad.PK_idDireccion');
+            $this->db->join('comuna cm ', ' cm.idComuna = d.PK_idComuna');
+            $this->db->join('provincia pr ', ' pr.idProvincia = cm.PK_idProvincia');
+            $this->db->join('region re ', ' re.idRegion = pr.PK_idRegion');
 			$this->db->where('NombreUsu',$parametro['nombre']);
 			$this->db->where('Clave',$parametro['clave']);
 
@@ -40,6 +48,11 @@ class Musuario extends CI_Model
 					's_nombreEncargado' => $r->Nombre,
 					's_permiso' => $r->Permiso,
 					's_cargo' => $r->Cargo,
+					's_direccion' => $r->Direccion,
+					's_region' => $r->Region,
+					's_provincia' => $r->Provincia,
+					's_comuna' => $r->Comuna,
+					's_rut' => $r->Rut,
 					// 's_idTipoCliente' => $r->PK_idTipoCliente,
 					// 's_idCargo' => $r->PK_idCargo,
 					's_nombreFantasia' => $r->NombreFantasia,

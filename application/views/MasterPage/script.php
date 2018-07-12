@@ -3,32 +3,15 @@
 <!-- jQuery UI 1.11.4 -->
 <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/jquery-ui/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<!-- <script> -->
-<!-- // $.widget.bridge('uibutton', $.ui.button); -->
-<!-- </script> -->
+    <script>
+      $.widget.bridge('uibutton', $.ui.button);
+    </script>
 <!-- Bootstrap 3.3.7 -->
 <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- Morris.js charts -->
-<!-- <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/raphael/raphael.min.js"></script> -->
-
-<!-- <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/morris.js/morris.min.js"></script> -->
-<!-- Sparkline -->
-<!-- <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script> -->
-<!-- jvectormap -->
-<!-- <script src="<?=base_url()?>AdminLTE-2.4.2/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script> -->
-<!-- <script src="<?=base_url()?>AdminLTE-2.4.2/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script> -->
-<!-- jQuery Knob Chart -->
-<!-- <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/jquery-knob/dist/jquery.knob.min.js"></script> -->
-<!-- Bootstrap WYSIHTML5 -->
-<script src="<?=base_url()?>AdminLTE-2.4.2/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-<!-- Slimscroll -->
-<script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="<?=base_url()?>AdminLTE-2.4.2/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?=base_url()?>AdminLTE-2.4.2/dist/js/pages/dashboard.js"></script>
+<!-- <script src="<?=base_url()?>AdminLTE-2.4.2/dist/js/pages/dashboard.js"></script> -->
 <!-- AdminLTE for demo purposes -->
 <script src="<?=base_url()?>AdminLTE-2.4.2/dist/js/demo.js"></script>
 
@@ -36,6 +19,7 @@
 <script src="<?=base_url()?>AdminLTE-2.4.2/plugins/input-mask/jquery.inputmask.js"></script>
 <script src="<?=base_url()?>AdminLTE-2.4.2/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
 <script src="<?=base_url()?>AdminLTE-2.4.2/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
 
 <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/sweet-alert/sweetalert.min.js"></script>
 
@@ -62,8 +46,6 @@
 
 <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 
-
-
   <script src="<?=base_url()?>js/clases/Producto.js"></script>
   <script src="<?=base_url()?>js/datatable/Producto.js"></script>
   <script src="<?=base_url()?>js/clases/Categoria.js"></script>
@@ -72,7 +54,9 @@
 
 <!-- cliente -->
   <?php if($this->uri->segment(2)=='consumo'){?>
-  	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
+  	<script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/chart.js/Chart.js"></script>
+    <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="<?=base_url()?>js/estadisticas/consumo.js"></script>
 
   <?php }?>
   <?php if($this->uri->segment(2)=='facturas'){?>
@@ -81,11 +65,8 @@
 
     <!-- ChartJS -->
     <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/chart.js/Chart.js"></script>
-
-    
     <!-- FastClick -->
     <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/fastclick/lib/fastclick.js"></script>
-
 
   	<script src="<?=base_url()?>js/estadisticas/facturas.js"></script>
 
@@ -99,17 +80,16 @@
 
   <?php }?>
   <?php if($this->uri->segment(2)=='encargar'){?>
-
+    <!-- DataTable -->
     <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-
+    <!-- datatableBoostrap -->
     <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-
-    <script type="text/javascript">
-         var base_url = '<?=base_url()?>'; 
-    </script>
-
-  	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
+    <!--  -->
+    <script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
+    <!-- tabla de productos formato pedidos -->
     <script src="<?=base_url()?>js/datatable/Pedidos.js"></script>
+
+    <script src="<?=base_url()?>js/clases/pedidos.js"></script>
 
   <?php }?>
   <?php if($this->uri->segment(2)=='compra'){?>
@@ -167,7 +147,7 @@
     <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 
 
-    <script src="<?=base_url()?>js/clases/clientes.js"></script>
+    <script src="<?=base_url()?>js/datatable/clientes.js"></script>
   <?php }?>
   <?php if($this->uri->segment(2)=='demanda'){?>
   	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
@@ -190,11 +170,6 @@
       <script type="text/javascript" src="js/clases/Direccion" ></script>>
 
   <?php }?>
-
-  <?php if($this->uri->segment(2)=='encargar'){?>
-    <link rel="stylesheet" href="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
-  <?php }?>
-
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>

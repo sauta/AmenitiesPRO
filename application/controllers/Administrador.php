@@ -127,12 +127,22 @@ class Administrador extends CI_Controller
   		   		if($this->session->userdata('s_permiso')=='Administrador')
 				{
 			$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
-							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'),
-							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
-								 'clave' => $this->session->userdata('s_clave'),
-								 'email' => $this->session->userdata('s_email'),
-								   'foto' => $this->session->userdata('s_foto'));
+						  'nombre' => $this->session->userdata('s_nombreEncargado'),
+						  'permiso' => $this->session->userdata('s_permiso'),
+						  'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
+						  // 'clave' => $this->session->userdata('s_clave'),
+
+						  'email' => $this->session->userdata('s_email'),
+						  'direccion' => $this->session->userdata('s_direccion'),
+						  'region' => $this->session->userdata('s_region'),
+						  'provincia' => $this->session->userdata('s_provincia'),
+						  'comuna' => $this->session->userdata('s_comuna'),
+
+						  'foto' => $this->session->userdata('s_foto'),
+						  'rut' => $this->session->userdata('s_rut'),
+						  'celular' => $this->session->userdata('s_celular'),
+						  'telefono' => $this->session->userdata('s_telefono'));
+
 
 					$this->load->view('MasterPage/head');
 					$this->load->view('MasterPage/header',$data);
