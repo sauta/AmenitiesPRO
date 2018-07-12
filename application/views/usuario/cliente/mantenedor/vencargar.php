@@ -62,7 +62,6 @@
 	                  	alt="Product Image" style="width: 100%">
 	                  </td>
 	                </tr> -->
-      	</div>
 
       	<!--  -->
 

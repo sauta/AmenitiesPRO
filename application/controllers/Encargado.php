@@ -19,13 +19,18 @@ class Encargado extends CI_Controller {
 	public function deleteEncargado()
 	{
 		$c = $this->input->post('cboEncargados');
-		echo json_encode($this->mencargado->deleteEncargadosId($c));
+		if($this->mencargado->deleteEncargadosId($c))
+		{
+			redirect('Cliente/encargadado');
+		}
 	}
 
 	public function setEncargado()
 	{
-		$encargado['Nombre'] = $this->input->post('nombre');
-		$encargado['Rut']    = $this->input->post('rut');
+		$encargado['Nombre']  = $this->input->post('nombre');
+		$encargado['Rut']     = $this->input->post('rut');
+		$encargado['idCargo'] = 1;
+		
 
 		$encargado = $this->mencargado->guardar($encargado);
 	}

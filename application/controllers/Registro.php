@@ -43,7 +43,7 @@ class Registro extends CI_Controller
 		 $usuario['NombreUsuario'] = $this->input->post('txtNombreUsuario');
 		 $usuario['Clave']         = md5($this->input->post('txtClave'));
 		 $usuario['RepClave']      = md5($this->input->post('txtRepClave'));
-		 $usuario['idPremiso']     = 2; //usuario
+		 $usuario['idPermiso']     = 2; //usuario
 		//Encargado ; entrega de los datos de la vista Rgistro
 		 $encargado['NombreEncargado'] = $this->input->post('txtNombreEncargado');
 		 $encargado['RutEncargado']    = $this->input->post('txtRutEncargado');

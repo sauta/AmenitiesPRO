@@ -2,7 +2,46 @@
   <div class="row">
 
     <div class="col-md-6">
-      
+    
+             <div class="col-lg-12">
+             <div class="box box-success">
+              <div class="box-header with-border">
+                     <h3 class="box-title">Lista de Encargados</h3>
+                </div>
+
+              <div class="col-lg-12">
+                
+               <div class="box-body no-padding">
+
+                <table id="tblEncargados" class="table table-bordered table-hover">
+                  <div class="col-lg-11">
+                  <thead>
+                    <tr>
+                      <th style="width: 70%">Nombre</th>
+                      <th style="width: 30%">Rut</th>
+                      </tr>
+                    </thead>
+
+                    <tfoot>
+                      <tr>
+                      <th style="width: 70%">Nombre</th>
+                      <th style="width: 30%">Rut</th>
+                    </tr>
+                    </tfoot>
+                    </div> 
+                  </table>
+
+                 </div>
+              </div>
+                <!-- /.box-body -->
+              </div>
+              <!-- /.box -->
+            </div>
+        <!-- /.box-body -->
+        <div class="box-footer text-center">
+          <a href="javascript:void(0)" class="uppercase">Ver Todos los Encargados</a>
+        </div>
+
     </div>
 
     <div class="col-md-3">

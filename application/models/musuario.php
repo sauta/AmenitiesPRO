@@ -156,8 +156,7 @@ class Musuario extends CI_Model
 		 $campos = array(
 					'NombreUsu'=> $parametro['NombreUsuario'],
 					'Clave'=> $parametro['Clave'],
-					'fechaRegistro' => '',
-					'PK_idPermiso'=> $parametro['idPremiso']
+					'PK_idPermiso'=> $parametro['idPermiso']
 					 );
 		 	$this->db->insert('usuario',$campos);
 
