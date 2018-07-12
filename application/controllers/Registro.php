@@ -81,81 +81,97 @@ class Registro extends CI_Controller
 
 		 	if(!$this->musuario->validarExistencia($usuario)){
 
-		 		$idUsuario = $this->musuario->guardar($usuario); //guardar Usuario
+		 	$idUsuario = $this->musuario->guardar($usuario); //guardar Usuario
 		 		
-		 	 if ($idUsuario > 0) 
-		 	 { 
+		 	if ($idUsuario > 0) 
+		 	{ 
 		 	 //se valida que la se haya traido la Id del usuario
-			 		$encargado['idUsuario'] = $idUsuario;
-			 		$idEncargado = $this->mencargado->guardar($encargado); //guardar Encargado
-			 		$idEmpresa   = $this->mempresa->guardar($empresa); //guardar Empresa
-			 		$idDireccion = $this->mdireccion->guardar($direccion); //guardar Direccion
+			$encargado['idUsuario'] = $idUsuario;
 
-			 		if ($idEmpresa > 0)
-			 			{ if ($idDireccion > 0)
-			 				{ if ($idEncargado > 0)
-			 					{
-					 			//se guarda en un array las Id's empresa y encargado que necesita contacto
-					 			$contacto['idEmpresa'] = $idEmpresa;
-					 			$contacto['idEncargado'] = $idEncargado;
-					 			//se guarda en un array las Id's empresa, direccion y tipo de direccion que necesita la asociación de la direccion especifica que existe.
-					 			$asociacion['idEmpresa'] = $idEmpresa;
-					 			$asociacion['idDireccion']= $idDireccion;
-					 			$asociacion['idTipoDireccion'] = 2; // Facturacion por defecto
+			if($this->mencargado->valudarRut($encargado['RutEncargado']))
+			{
 
-					 			$idContacto = $this->mcontacto->guardar($contacto); //guardar contacto
-					 			$this->mdireccion->generarAsociacion($asociacion); //guardar asociacion
-						 			if ($idContacto > 0) {
-						 				//se guardó correctamente todo el formulario
+			$idEncargado = $this->mencargado->guardar($encargado); //guardar Encargado
+
+			if($this->mempresa->valudarRut($encargado['RutEmpresa']))
+			 		{
+			$idEmpresa   = $this->mempresa->guardar($empresa); 	   //guardar Empresa
+			$idDireccion = $this->mdireccion->guardar($direccion); //guardar Direccion
+
+			if ($idEmpresa > 0)
+			 { if ($idDireccion > 0)
+			 { if ($idEncargado > 0)
+			 {
+			 //se guarda en un array las Id's empresa y encargado que necesita contacto
+			$contacto['idEmpresa'] = $idEmpresa;
+			$contacto['idEncargado'] = $idEncargado;
+			//se guarda en un array las Id's empresa, direccion y tipo de direccion que necesita la asociación de la direccion especifica que existe.
+			$asociacion['idEmpresa'] = $idEmpresa;
+			$asociacion['idDireccion']= $idDireccion;
+			$asociacion['idTipoDireccion'] = 2; // Facturacion por defecto
+
+			$idContacto = $this->mcontacto->guardar($contacto); //guardar contacto
+			$this->mdireccion->generarAsociacion($asociacion); //guardar asociacion
+			if ($idContacto > 0) {
+			//se guardó correctamente todo el formulario
 				
-						 				$data = array('mensaje' => 'Se guardó correctamente todo el formulario, puede ingresar '+$encargado['NombreEncargado']);
+			$data = array('mensaje' => 'Se guardó correctamente todo el formulario, puede ingresar '+$encargado['NombreEncargado']);
 
-						 				echo '<script>alert("'+$data['mensaje']+'");</script>"';
+			echo '<script>alert("'+$data['mensaje']+'");</script>"';
 						 				
-						 				redirect('login',$data);
-						 			} else {
-						 				//el contacto no se pudo guardar correctamente
-						 				$data = array('mensaje' => 'El contacto no se pudo guardar');
-						 				echo '<script>alert("'+$data['mensaje']+'");</script>"';
-						 				redirect('Registro','refresh', $data);
-						 			}
-					 		 } else {
-					 			$data = array('mensaje' => 'No se pudo guardar el encargado');
-					 			echo '<script>alert("'+$data['mensaje']+'");</script>"';
-					 			redirect('Registro','refresh', $data);
-			 				}
-			 			} else {
-			 			  	$data = array('mensaje' => 'No se pudo guardar la direcion');
-			 			  	echo '<script>alert("'+$data['mensaje']+'");</script>"';
-			 				redirect('Registro','refresh', $data);
-			 			}
-			 		} else {
-			 			//No se pudo guardar la empresa ni/o el encargardo ni/o la direccion
-			 			$data = array('mensaje' => 'No se pudo guardar la empresa');
-			 			echo '<script>alert("'+$data['mensaje']+'");</script>"';
-			 			redirect('Registro','refresh', $data);
-			 		}
+			redirect('login',$data);
+			} else {
+			//el contacto no se pudo guardar correctamente
+			$data = array('mensaje' => 'El contacto no se pudo guardar');
+			echo '<script>alert("'+$data['mensaje']+'");</script>"';
+			redirect('Registro','refresh', $data);
+			}
+			} else {
+			$data = array('mensaje' => 'No se pudo guardar el encargado');
+			echo '<script>alert("'+$data['mensaje']+'");</script>"';
+			redirect('Registro','refresh', $data);
+			}
+			} else {
+			$data = array('mensaje' => 'No se pudo guardar la direcion');
+			echo '<script>alert("'+$data['mensaje']+'");</script>"';
+			redirect('Registro','refresh', $data);
+			}
+			} else {
+			//No se pudo guardar la empresa ni/o el encargardo ni/o la direccion
+			$data = array('mensaje' => 'No se pudo guardar la empresa');
+			echo '<script>alert("'+$data['mensaje']+'");</script>"';
+			redirect('Registro','refresh', $data);
+			}
+			} else {
+			$data = array('mensaje' => 'El rut del empresa ya existe');
+			echo '<script>alert("'+$data['mensaje']+'");</script>"';
+			redirect('Registro','refresh', $data);
+			}
+			} else 
+			{
+			$data = array('mensaje' => 'El rut del encargado ya existe');
+			echo '<script>alert("'+$data['mensaje']+'");</script>"';
+			redirect('Registro','refresh', $data);
+			}
 
-			 	} else  {
-			 		//enviar mensaje de que no las clave y repclave son inocrrectas	
-			 		$data = array('mensaje' => 'No se logró registrar el usuario correctamente');
-			 		echo '<script>alert("'+$data['mensaje']+'");</script>"';
-			 		redirect('Registro','refresh', $data);
-			 	}
+			} else  {
+			//enviar mensaje de que no las clave y repclave son inocrrectas	
+			$data = array('mensaje' => 'No se logró registrar el usuario correctamente');
+			echo '<script>alert("'+$data['mensaje']+'");</script>"';
+			redirect('Registro','refresh', $data);
+			}
 
-	 		  } else  {
-			 		//enviar mensaje de que no las clave y repclave son inocrrectas	
-			 		$data = array('mensaje' => 'No se logró registrar el usuario correctamente por que ya existe uno igual');
-			 		echo '<script>alert("'+$data['mensaje']+'");</script>"';
-			 		redirect('Registro','refresh', $data);
-			 	}
-
-
-			 } else {
-		 		//enviar mensaje de que la clave y la reclave son diferentes
-		 		$data = array('mensaje' => 'Clave y reclave diferentes');
-		 		echo '<script>alert("'+$data['mensaje']+'");</script>"';
-		 		redirect('Registro','refresh', $data);
+	 		} else  {
+			//enviar mensaje de que no las clave y repclave son inocrrectas	
+			$data = array('mensaje' => 'No se logró registrar el usuario correctamente por que ya existe uno igual');
+			echo '<script>alert("'+$data['mensaje']+'");</script>"';
+			redirect('Registro','refresh', $data);
+			}
+			} else {
+		 	//enviar mensaje de que la clave y la reclave son diferentes
+		 	$data = array('mensaje' => 'Clave y reclave diferentes');
+		 	echo '<script>alert("'+$data['mensaje']+'");</script>"';
+		 	redirect('Registro','refresh', $data);
 		 	}
 
 	}
