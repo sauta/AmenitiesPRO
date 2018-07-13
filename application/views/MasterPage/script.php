@@ -20,7 +20,6 @@
 <script src="<?=base_url()?>AdminLTE-2.4.2/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
 <script src="<?=base_url()?>AdminLTE-2.4.2/plugins/input-mask/jquery.inputmask.extensions.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
-
 <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/sweet-alert/sweetalert.min.js"></script>
 
 
@@ -145,9 +144,21 @@
 
     <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="<?=base_url()?>AdminLTE-2.4.2/plugins/iCheck/icheck.min.js"></script>
 
-
+    <script src="<?=base_url()?>js/clases/Direccion.js"></script>
+    <script src="<?=base_url()?>js/validadores/validadores.js"></script>
     <script src="<?=base_url()?>js/datatable/clientes.js"></script>
+      <script>
+        $(function () {
+          $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' /* optional */
+          });
+        });
+      </script>
+
   <?php }?>
   <?php if($this->uri->segment(2)=='demanda'){?>
   	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>

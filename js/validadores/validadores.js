@@ -1,5 +1,10 @@
 
-
+    $('#rutEmpresa').mask('99.999.999-A');
+    $('#rutEncargado').mask('99.999.999-A');
+    $('#celular').mask('+56 9 99999999');
+    $('#telefono').mask('02 999-9999');
+    // $('#').mask('#AAAAAAAAAAA');
+  
  	(function(){
         var formulario = document.getElemetsByName('form1')[0]
 	 })
@@ -10,17 +15,11 @@
 
 		}
 
-
-
 	function ejecucion(){
 		
 		if(validacion()){
-
 		}else{
-
 		}
-
-
 	}
 
 	function validacion()

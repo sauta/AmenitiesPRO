@@ -41,18 +41,18 @@ class Mencargado extends CI_Model
 	    	# code...
 	    }
 
-	    public function validarRut($rut) //valida si ya existe el rut
+	    public function valudarRut($rut) //valida si ya existe el rut
 	    {
 
 	       $query = $this->db->get_where('encargado',array('Rut'=>$rut));
 	     //  $query = $this->db->get();
 			if ($query->num_rows() == 1)
 			{
-				return false; //alguien ya tiene este rut existe D:
+				return true; // el rut existe :D
 
 			}else{
 
-				return true; //el rut está disponible :D
+				return false; //no existe D:
 			}
 	        	
 	    }
