@@ -41,6 +41,18 @@ var t = $('#tblProducto').DataTable({
             { "data": "Precio" },
             { "data": "Descripcion" }
         ],
+
+         "columnDefs": [
+        {
+          "targets": [3], 
+          "data": "Precio", 
+          "render": function(data, type, row) {
+            return '$ '+data;              
+              }
+           }
+        ],
+
+
         "order": [[1, 'asc']]
 	});
 
