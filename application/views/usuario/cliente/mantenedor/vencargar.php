@@ -164,7 +164,7 @@
                                          <h4 class="col-md-3"><strong class="">Comentario</strong></h4>
 
                                         <div class="col-md-12">
-                                            <textarea class="form-control" style="height:60px" id="textarea" name="textarea">Describa aquí las observaciones necesarias / sector</textarea>
+                                            <textarea class="form-control" style="height:60px" id="descripcion" name="descripcion">Describa aquí las observaciones necesarias / sector</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -174,21 +174,21 @@
                   </div>
                 </div>
               </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-12">
-     <div class="box box-success">
-
-          <div class="box-header with-border">
-              <h3 class="box-title">Lista de productos</h3>
           </div>
 
-          <div class="box-body">
-            <div class="row">
-                <div class="col-lg-12">    
-                  <table id="tblProductoEncargo" class="table table-bordered table-hover">
-                      <thead>
+        <div class="row">
+          <div class="col-lg-12">
+           <div class="box box-success">
+
+                <div class="box-header with-border">
+                    <h3 class="box-title">Lista de productos</h3>
+                </div>
+
+              <div class="box-body">
+                  <div class="row">
+                      <div class="col-lg-12">    
+                        <table id="tblProductoEncargo" class="table table-bordered table-hover">
+                          <thead>
                         <tr>
                           <th></th>
                           <th>Nombre</th>

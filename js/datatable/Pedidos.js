@@ -88,7 +88,7 @@ var t = $('#tblProductoEncargo').DataTable({
 		  });
     
       $(document).on('click', '.btn-success', function(){
-
+        
         
         } );
             // var t = $('#tablaPedido').DataTable();

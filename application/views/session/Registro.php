@@ -234,17 +234,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
   <!-- delcaro la direccion del post de javaScrip-->
 <script type="text/javascript">
-        var site_url = '<?=site_url()?>/'; 
+        var site_url = '<?=site_url()?>'; 
 </script>
 <script src="<?=base_url()?>js/clases/Direccion.js"></script> 
 <script src="<?=base_url()?>js/validadores/validadores.js"></script> 
-  <script>
-    $('#rutEmpresa').mask('99.999.999-A');
-    $('#rutEncargado').mask('99.999.999-A');
-    $('#celular').mask('+56 9 99999999');
-    $('#telefono').mask('02 999-9999');
-    // $('#').mask('#AAAAAAAAAAA');
-  </script>
+
 
 <script>
   $(function () {

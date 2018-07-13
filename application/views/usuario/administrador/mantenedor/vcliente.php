@@ -2,12 +2,26 @@
       <!-- Small boxes (Stat box) -->
 
       <div class="row">
-          <div class="col-md-12">
+    <div class="col-md-12">
     <div class="box box-primary">
-    <p class="login-box-msg">Registro en Amenities PRO</p>
+
+    <div class="box-header with-border">
+      <div class="row justify-content-center"">
+        <div class="col-md-4 col-md-offset-4">
+          <h3>Registro en Amenities PRO</h3>    
+        </div>
+      </div>
+    </div>
          <div class="box-body">
+
             <form name="form1"  action="<?=site_url()?>/Registro/registro" method="POST" >
                 <!--***********************************Registro Usuario************************************-->
+          
+                <div class="row justify-content-center">
+                  <div class="col-md-4 ">
+                    <h3>Cuenta de Usuario</h3>
+                   </div>
+                 </div>
                 <!--Nombre Usuario-->
                   <div class="row">
                   <div class="col-xs-4">
@@ -39,7 +53,7 @@
                 <!--****************************************Encargado****************************************-->
                 
                  <div class="form-group">
-                    Encargado
+                    <h3>Encargado</h3>
                  </div> 
                 <!--Nombre Encargado-->
                 <div class="row">
@@ -59,23 +73,29 @@
                       <div class="input-group">
                           <div class="input-group-addon">
                             <i class="fa fa-briefcase"></i>
-                          </div>
-                                <input id="rutEncargado" data-mask name="txtRutEncargado"  maxlength="12" type="text" class="form-control" placeholder="RUT"  >
-                          
+                             </div>
+                              <input id="rutEncargado" data-mask name="txtRutEncargado"  maxlength="12" type="text" class="form-control" placeholder="RUT"  >
                       </div>
                     </div>
                    </div>
                  </div>
                 <!--****************************************Contacto*****************************************-->
+                
+
                  <div class="form-group">
-                    Contacto
+                  <h3>  Contacto </h3>
                  </div>  
+                 <div class="row">
+
                 <!--Email-->
-                 <div class="form-group has-feedback">
+                <div class="col-md-4">
+                    <div class="form-group has-feedback">
                           <input id="email" name="txtEmail" type="email" class="form-control" placeholder="Email" >
                           <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                  </div>
+                </div>
                 <!--Telefono-->
+                <div class="col-md-4">
                   <div class="form-group">
                       <div class="input-group">
                           <div class="input-group-addon">
@@ -85,7 +105,9 @@
 
                       </div>
                   </div>
+                </div>
                 <!--Celular-->
+                <div class="col-md-4">
                  <div class="form-group">
                       <div class="input-group">
                           <div class="input-group-addon">
@@ -94,11 +116,15 @@
                           <input id="celular" name="txtCelular" type="text" class="form-control" placeholder="Celular" maxlength="15" data-mask  >
                       </div>
                  </div>
+               </div>
+                </div>
                 <!--*****************************************Empresa*****************************************-->
                  <div class="form-group">
-                    Empresa
+                    <h3>Empresa</h3>
                  </div>
+                 <div class="row">
                 <!--Nombre de fantasia-->
+                <div class="col-md-4">
                  <div class="form-group">
                       <div class="input-group">
                           <div class="input-group-addon">
@@ -107,19 +133,23 @@
                           <input id="nombreFantasia" name="txtNombreFantasia" type="text" class="form-control" placeholder="Nombre de Fantasia"   >
                       </div>
                  </div>
+                </div>
                 <!--Rut Empresa-->
+                <div class="col-md-4">
                  <div class="form-group">
                       <div class="input-group">
                           <div class="input-group-addon">
                             <i class="fa fa-briefcase"></i>
                           </div>
-                          <input id="rutEmpresa" onchange=""  data-mask name="txtRutEmpresa" type="text" class="form-control" 
+                          <input id="rutEmpresa" onchange="" data-mask name="txtRutEmpresa" type="text" class="form-control" 
                           placeholder="RUT Empresa"  
                           onchange="return function RutEmpresa(document.getElementById('#Rut2').value()" 
                           min=13>
                       </div>
                  </div>
+               </div>
                 <!--Razon Social-->
+                <div class="col-md-4">
                  <div class="form-group">
                       <div class="input-group">
                           <div class="input-group-addon">
@@ -128,7 +158,9 @@
                           <input id="razonSocial" name="txtRazonSocial" type="text" class="form-control" placeholder="Razon social"  >
                       </div>
                  </div>
+               </div>
                 <!--Descripción-->
+                <div class="col-md-8">
                  <div class="form-group">
                       <div class="input-group">
                           <div class="input-group-addon">
@@ -138,18 +170,24 @@
                           
                       </div>
                  </div>
+                 </div>
+               </div>
                  <!--***********************************Dirección de facturación********************************--> 
                   <div class="form-group">
-                    Dirección de faturación
+                    <h3>Dirección de faturación</h3>
                  </div>
+                 <div class="row">
                 <!--Region-->
+                <div class="col-md-4">
                  <div class="form-group">
                         <label>Region</label>
                         <select id="cboRegion" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" name="txtRegion" aria-hidden="true" >
                             <option value="" >Selecciones la Region</option>
                         </select>
-                 </div>
+                  </div>
+                  </div>
                 <!--Provincia-->
+                <div class="col-md-4">
                  <div class="form-group">
                         <label>Provincia</label>
                         <select id="cboProvincia" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" name="txtProvincia" aria-hidden="true">
@@ -157,8 +195,10 @@
                             <option value="" > Selecciones la provincia</option>
 
                         </select>
-                 </div>
+                   </div>
+                  </div>
                 <!--Comuna-->
+                  <div class="col-md-4">
                        <div class="form-group">
                               <label>Comuna</label>
                               <select id="cboComuna" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" name="txtComuna" aria-hidden="true">
@@ -167,18 +207,20 @@
 
                               </select>
                        </div>
+                     </div>
+                   </div>
                 <!--Direccion-->
-                 <div class="form-group">
+                  <div class="form-group">
                       <div class="input-group">
                           <div class="input-group-addon">
                             <i class="fa fa-briefcase"></i>
                           </div>
                           <input maxlength="45" id="direccion" name="txtDireccion" type="text" class="form-control" placeholder="Direccion">
                       </div>
-                 </div>
-                     <div class="row">
+                  </div>
+                  <div class="row">
                   <div class="col-xs-8">
-                 <div class="checkbox icheck">
+                  <div class="checkbox icheck">
                     <label>
                       <input id="terminos" name="btnterminos" type="checkbox"> Estoy de acuerdo con los <a href="#">Terminos de uso</a>
                     </label>
@@ -186,11 +228,8 @@
                  </div>
                 <!-- /.col -->
                  <div class="col-xs-4">
-                  <input id="boton" name="registro" value="Registrarse" type="button" onclick="validacion();" class="btn btn-primary btn-block btn-flat"/>
-                   <!-- <input type="button" value="Enviar" onclick="this.disabled=true; this.value=’Enviando...’; this.form1.submit()" /> -->
-
-                   <!-- <button name="registro" onClick="validacion()" class="btn btn-primary btn-block btn-flat">Registrarse</button> -->
-                 </div>
+                    <input id="boton" name="registro" value="Registrarse" type="button" onclick="validacion();" class="btn btn-primary btn-block btn-flat"/>
+                   </div>
                 <!-- /.col -->
                </div>
             </form>
@@ -215,15 +254,15 @@
                     <th>Usuario</th>
                     <th>Empresa</th>
                     <th>Contacto</th>
-                    <th>Region</th>
+                    <th>Direccion</th>
                 </tr>
             </thead>
             <tfoot>
                 <tr>
                     <th>Usuario</th>
                     <th>Empresa</th>
-                    <th>Contacto</th>
-                    <th>Region</th>
+                    <th>Contacto<w/th>
+                    <th>Direccion</th>
                 </tr>
             </tfoot>
         </table>
