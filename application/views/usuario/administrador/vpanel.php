@@ -4,7 +4,7 @@
       <!-- Small boxes (Stat box) -->
 
       <div class="row">
-
+        
       <div class="col-lg-6 col-xs-12">
           <div id="myCarousel" class="carousel slide homCar">
               <div class="carousel-inner" style="border-top:18px solid #222; border-bottom:1px solid #222; border-radius:4px;">

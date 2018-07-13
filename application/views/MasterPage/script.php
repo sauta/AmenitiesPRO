@@ -33,6 +33,12 @@
 <?php if($this->uri->segment(2)=='cpanel'){?>
 
 <?php }?>
+
+<?php if($this->uri->segment(2)=='nota_credito'){?>
+
+<script src="<?=base_url()?>js/clases/notacredito.js"></script>
+
+<?php }?>
 <?php if($this->uri->segment(2)=='perfil'){?>
     
 <script src="<?=base_url()?>js/clases/Perfil.js"></script>
@@ -193,8 +199,9 @@
 
 
 <!--********************************   Faturas ****************************** -->
-
-
+<?php if(isset($mensaje)){ ?>
+      <script> $('#alerta').modal('show');</script>
+<?php } ?>
 </body>
 
 

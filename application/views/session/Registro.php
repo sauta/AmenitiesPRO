@@ -216,6 +216,34 @@
 </div>
 <!-- /.login-box -->
 
+<div class="modal fade" id="alerta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Modal title</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <label id="mensaje">
+            <?php 
+            $mensaje = 'funca';
+
+            if(isset($mensaje)){ ?>
+                  <?=$mensaje?> 
+              <?php } ?>
+            </label>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <!-- jQuery 3 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -239,6 +267,9 @@
 <script src="<?=base_url()?>js/clases/Direccion.js"></script> 
 <script src="<?=base_url()?>js/validadores/validadores.js"></script> 
 
+<?php if(isset($mensaje)){ ?>
+      <script> $('#alerta').modal('show');</script>
+<?php } ?>
 
 <script>
   $(function () {

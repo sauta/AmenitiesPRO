@@ -12,26 +12,27 @@
     </div>
     <strong>Copyright &copy; 2010-2018 <a href="https://admenitieschile.cl"></a>Amenities Chile</strong> Todos los derechos reservados
   </footer>
+  
 
-
-  <div class="modal fade" id="modal-default">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Default Modal</h4>
-              </div>
-              <div class="modal-body">
-                <p>One fine body&hellip;</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-           </div>
-            <!-- /.modal-content -->
-         </div>
-          <!-- /.modal-dialog -->
-     </div>
-        <!-- /.modal -->
+<div class="modal fade" id="alerta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Modal title</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <label id="mensaje">
+            <?php if(isset($mensaje)){ ?>
+                  <?=$mensaje?> 
+              <?php } ?>
+            </label>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
