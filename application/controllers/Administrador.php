@@ -91,6 +91,16 @@ class Administrador extends CI_Controller
 					$this->cargarPagina($pagina);
 		}
 
+
+		public function nota_credito()
+		{
+
+			$pagina = 'usuario/administrador/mantenedor/vnotacredito';
+					$this->cargarPagina($pagina);
+		}
+
+
+
 /*****************************************Mensajeria***********************************************/
 	
 	public function demanda()

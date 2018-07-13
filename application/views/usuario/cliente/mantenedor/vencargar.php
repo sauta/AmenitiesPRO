@@ -212,4 +212,5 @@
 
 </section>
 
+<script type="text/javascript" src="js/clases/Pedidos.js"></script>
 

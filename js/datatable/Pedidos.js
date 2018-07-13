@@ -45,10 +45,10 @@ var t = $('#tblProductoEncargo').DataTable({
                 },
         columns: [
             {
-                className:   'details-control',
+                className:   'informacion',
                 orderable:   false,
                 data:        null,
-                defaultContent: '<button type="button" class="btn btn-block btn-info btn-flat">Información</button>'
+                defaultContent: '<button type="button" name="informacion" class="btn btn-block btn-info btn-flat ">Información</button>'
 
             },
             { "data": "Nombre"    },
@@ -84,20 +84,23 @@ var t = $('#tblProductoEncargo').DataTable({
 
 		  });
 
+      $(document).on('click', '.informacion', function(){
 
-        // var t = $('#tablaFactura').DataTable();
-        //     var counter = 1;
-        //     $(".btn").click(function()
-        //     {
-        //         alert("The paragraph was clicked.");
-        //         t.row.add( [
-        //             ,
-        //             ,
-        //             ,
-        //             ,
+        alert('funca');
+            // var t = $('#tablaPedido').DataTable();
+            // var counter = 1;
+            // $(".btn").click(function()
+            // {
+            //     alert("The paragraph was clicked.");
+            //     t.row.add( [
+            //         ,
+            //         ,
+            //         ,
+            //         ,
                     
 
-        //         ] ).draw( false );
+            //     ] ).draw( false );
          
-        //         // counter++;
-        //     } );
+            //     // counter++;
+            // } );
+        } );
