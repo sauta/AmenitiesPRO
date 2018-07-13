@@ -186,13 +186,15 @@
 
           <div class="box-body">
             <div class="row">
-                <div class="col-lg-6">    
+                <div class="col-lg-12">    
                   <table id="tblProductoEncargo" class="table table-bordered table-hover">
                       <thead>
                         <tr>
                           <th></th>
                           <th>Nombre</th>
                           <th>Precio CLP</th>
+                          <th>Cantidad</th>
+                          <th></th>
                         </tr>
                       </thead>
                       <tfoot>
@@ -200,6 +202,8 @@
                           <th></th>
                           <th>Nombre</th>
                           <th>Precio CLP</th>
+                          <th>Cantidad</th>
+                          <th></th>
                         </tr>
                       </tfoot> 
                   </table>
@@ -212,5 +216,5 @@
 
 </section>
 
-<script type="text/javascript" src="js/clases/Pedidos.js"></script>
+<!-- <script type="text/javascript" src="js/clases/Pedidos.js"></script> -->
 

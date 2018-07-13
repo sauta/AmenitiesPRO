@@ -92,8 +92,7 @@ class Cliente extends CI_Controller {
 		{
 
 				$pagina = 'usuario/cliente/mensajeria/vfactura';
-				$this->cargarPagina($pagina);
-					
+				$this->cargarPagina($pagina);				
 
 		}
 
@@ -160,11 +159,11 @@ class Cliente extends CI_Controller {
   		   		if($this->session->userdata('s_permiso')=='Cliente')
 				{
 			$data = array('empresa' => $this->session->userdata('s_nombreFantasia'),
-							'nombre' => $this->session->userdata('s_nombreEncargado'),
-							 'permiso' => $this->session->userdata('s_permiso'),
-							   'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
-								 'clave' => $this->session->userdata('s_clave'),
-								 'email' => $this->session->userdata('s_email'),
+						  'nombre' => $this->session->userdata('s_nombreEncargado'),
+						  'permiso' => $this->session->userdata('s_permiso'),
+						  'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
+						  'clave' => $this->session->userdata('s_clave'),
+						  'email' => $this->session->userdata('s_email'),
 								   'foto' => $this->session->userdata('s_foto'));
 
 					$this->load->view('MasterPage/head');

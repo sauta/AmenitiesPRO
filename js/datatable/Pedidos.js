@@ -45,14 +45,17 @@ var t = $('#tblProductoEncargo').DataTable({
                 },
         columns: [
             {
-                className:   'informacion',
+                className:   'details-control',
                 orderable:   false,
                 data:        null,
-                defaultContent: '<button type="button" name="informacion" class="btn btn-block btn-info btn-flat ">Información</button>'
+                defaultContent: '<button type="button" name="asdas" class="btn btn-block btn-info btn-flat">Información</button>'
 
             },
-            { "data": "Nombre"    },
-            { "data": "Precio" }
+            { data: "Nombre" },
+            { data: "Precio" },
+            {   className:   'contenido',
+                defaultContent: 0 },
+            {defaultContent: '<button type="button" name="asdas" class="btn btn-block btn-success btn-flat">Aregar al Pedido</button>'}
 
         ],
         "order": [[1, 'asc']]
@@ -83,10 +86,11 @@ var t = $('#tblProductoEncargo').DataTable({
 
 
 		  });
+    
+      $(document).on('click', '.btn-success', function(){
 
-      $(document).on('click', '.informacion', function(){
-
-        alert('funca');
+        
+        } );
             // var t = $('#tablaPedido').DataTable();
             // var counter = 1;
             // $(".btn").click(function()
@@ -103,4 +107,4 @@ var t = $('#tblProductoEncargo').DataTable({
          
             //     // counter++;
             // } );
-        } );
+        

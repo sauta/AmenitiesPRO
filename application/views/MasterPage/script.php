@@ -89,7 +89,7 @@
     <!-- tabla de productos formato pedidos -->
     <script src="<?=base_url()?>js/datatable/Pedidos.js"></script>
 
-    <script src="<?=base_url()?>js/clases/pedidos.js"></script>
+    <script src="<?=base_url()?>js/clases/Pedidos.js"></script>
 
   <?php }?>
   <?php if($this->uri->segment(2)=='compra'){?>

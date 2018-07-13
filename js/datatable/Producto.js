@@ -31,9 +31,9 @@ var t = $('#tblProducto').DataTable({
     			},
         "columns": [
             {
-                "className":      'details-control',
-                "orderable":      false,
-                "data": null,
+                "className":  'details-control',
+                "orderable":  false,
+                "data"     :  null,
                 "defaultContent": '<button type="button" class="btn btn-block btn-info btn-flat"><i></i>Info</button>'
             },
             { "data": "sku"    },
