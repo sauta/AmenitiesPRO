@@ -45,4 +45,13 @@ class Mcontacto extends CI_Model
 	    {
 	    	# code...
 	    }
+	    /********************************************Recuperar Email******************************************/
+		public function recuperar($parametro)
+	    {
+	    	$campos = array('Email'=> $parametro['email']);
+			$this->db->select('contacto',$campos);
+
+			return true;
+	    }
+
   }

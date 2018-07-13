@@ -53,7 +53,7 @@
       <div class="row">
         
         <!-- /.col -->
-        <div class="col-xs-4">
+        <div class="col-xs-4 col-xs-offset-4">
           <button type="submit"  class="btn btn-primary btn-block btn-flat">Ingresar</button>
         </div>
         <!-- /.col -->
@@ -69,7 +69,7 @@
     </div>-->
     <!-- /.social-auth-links -->
 
-    <a href="#">Olvidé mi contraseña</a><br>
+    <a href="<?=site_url()?>/RecoverPass">Olvidé mi contraseña</a><br>
     <a href="<?=site_url()?>/Registro" class="text-center">Regitrarse en Amenities PRO</a>
 
   </div>
