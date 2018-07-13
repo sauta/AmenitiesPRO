@@ -64,13 +64,18 @@
                               
                               <div class="col-md-8">
                                 <h2 class="page-header">
-                                <i class="fa fa-globe"></i> 
-                                , Inc.
+                                <img src="http://img.fenixzone.net/i/IKtsGba.png" style="width: 180px; height: 70px;">
+                                <label>Sociedad Anonima.</label>
+                                <small>Nuestro sitio web pone a su disposición todos los productos correspondientes a nuestra área de amenidades, los cuales se muestran públicamente con descripción, foto y precio.  
+                                </small>
+                                <br>
+                                <small>FONO: +56982678755.</small>
+                                <small>CORREO: amenitie@gmail.com</small>
                                 </h2>
                                </div>
                                <div class="col-md-4"> 
                                 <h2 class="page-header">
-                                <small>
+                                <small style="color:green;">
                                 RUT: <?=$rut?><br>
                                 Factura Electronica<br>
                                 N° <?=rand(100000,999999)?><br>
