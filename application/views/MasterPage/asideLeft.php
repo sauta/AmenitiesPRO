@@ -167,6 +167,11 @@
                     </i>Facturas</a>
                   </li>
 
+                  <li><a href="<?=site_url()?>/Administrador/nota_credito">
+                    <i class="fa fa-circle-o">
+                    </i>Nota de Credito</a>
+                  </li>
+
                   <li><a href="<?=site_url()?>/Administrador/categorias">
                     <i class="fa fa-circle-o">
                     </i>Categorias de Productos</a>
