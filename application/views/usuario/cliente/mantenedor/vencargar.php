@@ -2,171 +2,180 @@
     <section class="content">
       <!-- Small boxes (Stat box) -->
 		
-      <div class="row">	
-      	<div class="col-lg-12">
-      	   <div class="box box-success">
-
-             
-            		  <div class="box-header with-border">
-                       <h3 class="box-title">Crear Pedido</h3>
-                 </div>
-                  <form name="formulario_producto"  action="<?=site_url()?>/Pedido/guardarPedidos" method="POST">
-
-                         <section class="invoice">
-                            <!-- title row -->
-                            <div class="row">
-                              <!-- <div class="col-md-8">
-                              <h2 class="page-header">
-                                  <i class="fa fa-globe"></i> 
-                                    <?=$empresa?>, Inc.
-                              </h2>
+       <div class="row">
+          <div class="col-lg-12">
+                 <div class="box box-success">
+                  <div class="box-header with-border">
+          <form class="form-horizontal col-md-12 center">
+          <!-- Form Name -->
+            <h3 style="text-align:center" class="">Orden de compra</h3>
+                <br class="">
+                  <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <div class="row ">
+                              <div class="col-md-6 form-group">
+                                  <label class="col-md-3 control-label" for="selectbasic">Proveedor</label>
+                                  <div class="col-md-4">  
+                                    <label class="col-md-12 control-label" for="selectbasic">Amenities PRO</label>
+                                  </div>
                               </div>
-                              <div class="col-md-4 ml-auto">
-                                <small class="" >
-                                RUT: <?=$rut?><br>
-                                Factura Electronica<br>
-                                N° <?=rand(100000,999999)?><br>
-                                </small>
-                              </div> -->
-                              
-                              <div class="col-md-8">
-                                <h2 class="page-header">
-                                <i class="fa fa-globe"></i> 
-                                , Inc.
-                                </h2>
-                               </div>
-                               <div class="col-md-4"> 
-                                <h2 class="page-header">
-                                <small>
-                                RUT: <?=$rut?><br>
-                                Factura Electronica<br>
-                                N° <?=rand(100000,999999)?><br>
-                                </small>
-                                </h2>
-                               </div>
-                            </div>
-                            <!-- info row -->
-                            <div class="row invoice-info">
-                              <div class="col-sm-4 invoice-col">
-                                De: <strong><?=$nombre?></strong><br>
-                                <address>
-                                  Empresa: <?=$empresa?>.<br>
-                                  RUT: <?=$rut?><br>
-                                  Encargado: <?=$nombre?><br>
-                                  Direccion: <?=$direccion?><br>
-                                  <?=$provincia?>, <?=$comuna?>, <?=$region?><br>
-                                  Celular: <?=$celular?><br>
-                                  Telefono <?=$telefono?><br>
-                                  Email: <?=$email?>
-                                </address>
+                              <div class="col-md-3">
+                                  <label class="col-md-12">RUT:</label>
+                                
+                                  <label class="col-md-12">Telefono:</label>
+                                
+                                  <label class="col-md-12">Contacto:</label>
                               </div>
-                              <!-- /.col -->
-                              <div class="col-sm-4 invoice-col">
-                                Para: <strong>Carlos Gaete</strong><br>
-                                <address>
-                                Empresa: Amenities Chile<br>
-                                Horus Promotion & Marketing Ltda.<br>
-                                RUT: 77.893.570-8<br>
-                                Dirección: Carretera General San Martín 6.000, Of. 207<br>
-                                Colina, Santiago. Chile<br>
-                                Telefono: +56 2 2 406 91 60 <br>
-                                Email:  postulaciones@horuschile.com
-                                  
-                                </address>
+                              <div class="col-md-3">
+                                  <label class="col-md-12">20-3937439-2</label>
+                                
+                                  <label class="col-md-12">4782912</label>
+                                
+                                  <label class="col-md-12">Ariel Rivas</label>
                               </div>
-                              <!-- /.col -->
-                              <div class="col-sm-4 invoice-col">
-                                <b>Invoice #007612</b><br>
-                                <br>
-                                <b>Order ID:</b> 4F3S8J<br>
-                                <b>Payment Due:</b> <?php echo strftime("%d/%m/%Y");?><br>
-                                <b>Account:</b> 968-34567
+                        </div>
+                        
+                      </div>
+                      <div class="panel-body">
+                          <div class="row col-md-12">
+                              <div class="checkbox">
+                                  <label class="col-md-2 control-label">
+                                      <input type="checkbox" id="acopio" value="" class=""><strong class="">Acopio</strong>
+                                  </label>
                               </div>
-                              <!-- /.col -->
-                            </div>
-                            <!-- /.row -->
-
-                            <!-- Table row -->
-                            <div class="row">
-                              <div class="col-xs-12 table-responsive">
-                                <table id="tablaFactura" class="table table-striped">
-                                  <thead>
-                                  <tr>
-                                    <th>cantidad</th>
-                                    <th>Producto</th>
-                                    <th>Serial SKU#</th>
-                                    <th>Descriptcion</th>
-                                    <th>Subtotal</th>
-                                  </tr>
-                                  </thead>
-                                </table>
+                              <div class="col-md-4 form-group">
+                                  <div class="col-md-9">
+                                      <select id="tacopio" name="selectbasic" class="form-control" disabled="">
+                                          <option class="">-Seleccione el tipo-</option>
+                                          <option class="">Consumo</option>
+                                          <option class="">Constitución</option>
+                                      </select>
+                                  </div>
                               </div>
-                              <!-- /.col -->
-                            </div>
-                            <!-- /.row -->
+                          </div>
+                      </div>
+                  </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                         <h4 class=""><strong class="">Destino</strong></h4>
 
-                            <div class="row">
-                              <!-- accepted payments column -->
-                              <div class="col-xs-6">
-                                <p class="lead">Medio de pago:</p>
-                                <img src="<?=base_url()?>AdminLTE-2.4.2/dist/img/credit/visa.png" alt="Visa">
-                                <img src="<?=base_url()?>AdminLTE-2.4.2/dist/img/credit/mastercard.png" alt="Mastercard">
-                                <img src="<?=base_url()?>AdminLTE-2.4.2/dist/img/credit/american-express.png" alt="American Express">
-                                <img src="<?=base_url()?>AdminLTE-2.4.2/dist/img/credit/paypal2.png" alt="Paypal">
-
-                                <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
-
-
-                                  Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg
-                                  dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
-                                </p>
-                              </div>
-                              <!-- /.col -->
-                              <div class="col-xs-6">
-                                <p class="lead">Amount Due 2/22/2014</p>
-
-                                <div class="table-responsive">
-                                  <table class="table">
-                                    <tbody><tr>
-                                      <th style="width:50%">Subtotal:</th>
-                                      <td id="Subtotal" >$250.30</td>
-                                    </tr>
-                                    <tr>
-                                      <th>Impuesto (19%)</th>
-                                      <td id="impuesto">$10.34</td>
-                                    </tr>
-                                    <tr>
-                                      <th>Envio:</th>
-                                      <td id="Envio">$5.80</td>
-                                    </tr>
-                                    <tr>
-                                      <th>Total:</th>
-                                      <td id="Total">$265.24</td>
-                                    </tr>
-                                  </tbody></table>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row col-md-12">
+                            <div class="col-md-6 form-group">
+                                <label class="col-md-3 control-label" for="selectbasic">Proyecto</label>
+                                <div class="col-md-9">
+                                    <select id="proveedores" name="selectbasic" class="form-control">
+                                        <option class="">-</option>
+                                        <option class="">Obra 1</option>
+                                        <option class="">Obra 2</option>
+                                        <option class="">Obra 3</option>
+                                    </select>
                                 </div>
-                              </div>
-                              <!-- /.col -->
                             </div>
-                            <!-- /.row -->
-
-                            <!-- this row will not appear when printing -->
-                            <div class="row no-print">
-                              <div class="col-xs-12">
-                                <a href="<?=base_url()?>AdminLTE-2.4.2/pages/examples/invoice-print.html" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
-                                <button type="button" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment
-                                </button>
-                                <button type="button" class="btn btn-primary pull-right" style="margin-right: 5px;">
-                                  <i class="fa fa-download"></i> Generate PDF
-                                </button>
-                              </div>
+                            <div class="col-md-6 form-group">
+                                <label class="col-md-2 control-label" for="selectbasic">Partida</label>
+                                <div class="col-md-10">
+                                    <select id="area" name="selectbasic" class="form-control">
+                                        <option class="">-</option>
+                                        <option class="">Excavación cava manual en tierras duras SC</option>
+                                        <option class="">Demolición material albanilería(manual)</option>
+                                        <option class="">Mov. material granel con carretilla y guinche</option>
+                                    </select>
+                                </div>
                             </div>
-                          </section>
-                 </form>
-      		 </div>
-           </div>
-        </div>
+                        </div>
+                      
+                      
+                        <div class="row col-md-12">
 
+                            <div class="col-md-6 form-group">
+                                <label class="col-md-3 control-label" for="selectbasic">Domicilio Entrega</label>
+                                <div class="col-md-9">   
+                                  <input class="form-control">
+                               </div>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                  <label class="col-md-2 control-label" for="selectbasic">Fecha Entrega</label>
+                                  <div class="col-md-4">   
+                                    <input class="form-control" type="date" text="10102010">
+                                   </div>
+                      </div>
+                      </div>     
+                      </div>
+                      </div>
+                          <div class="panel panel-default">
+                              <div class="panel-heading">
+                                   <h4 class=""><strong class="">Detalle</strong></h4>
+
+                              </div>
+                              <div class="panel-body">
+                                  <!-- Appended Input-->
+                                  <div class="col-md-12">
+                                      <table id="myTable" class="table table-bordered" data-toggle="table">
+                                          <thead>
+                                              <tr>
+                                                  <th class="">Codigo SKU</th>
+                                                  <th class="">Producto</th>
+                                                  <th class="">Cantidad/ Unidad</th>
+                                                  <th class="">Descripcion</th>
+                                                  <th class="">Precio unitario(CLP)</th>
+                                                  <th class="">Decuentos</th>
+                                                  <th class="">Cargos</th>
+                                                  <th class="">Subtotal</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody>
+                                              <tr id="trE1" style="">
+                                                  <td><div class="">Arena</div></td>
+                                                  <td><div align="right" class="">100</div></td>
+                                                  <td><div align="right" class="">m<sup class="">3</sup></div></td>
+                                                  <td><div align="right" class="">1.95</div></td>
+                                                  <td><div align="right">195</div></td>
+                                                  <td><div align="right">0</div></td>
+                                                  <td><div align="right">0</div></td>
+                                                  <td><div align="right">0</div></td>
+                                              </tr>
+                                              <tr id="trE1" style="">
+                                                  <td><div class=""></div></td>
+                                                  <td><div class=""></div></td>
+                                                  <td><div class=""></div></td>
+                                                  <td><div class=""></div></td>
+                                                  <td><div class=""></div></td>
+                                                  <td><div class=""></div></td>
+                                                  <td><div class=""></div></td>
+                                                  <td><div class=""></div></td>
+                                              </tr>
+                                              <tr id="trE1" style="background-color: whitesmoke;">
+                                                  <td style="border:none !important" class="text-center"><i class="glyphicon glyphicon-plus" title="Agregar fila" style="cursor:pointer"></i></td>
+                                                  <td style="border:none !important" colspan="7" class=""></td>
+                                              </tr>
+                                              <tr>
+                                                <td align="right" colspan="7"><strong>Total<strong></strong></strong></td>
+                                                <td align="right">195</td>
+                                              </tr>
+                                          </tbody>
+                                      </table>
+                                  </div>
+                                  <div class="col-md-12 form-group">
+                                       <h5 class="pull-right"><strong class="">Los precios no incluyen IVA.</strong></h5>
+
+                                  </div>
+                                  <div class="col-md-12 form-group">
+                                       <h4 class="col-md-3"><strong class="">Comentario</strong></h4>
+
+                                      <div class="col-md-12">
+                                          <textarea class="form-control" style="height:60px" id="textarea" name="textarea">Describa aquí las observaciones necesarias / sector</textarea>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <button type="button" class="btn btn-primary btn-block">Enviar</button>
+                      </form>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="row">
           <div class="col-lg-12">
                  <div class="box box-success">
@@ -202,22 +211,6 @@
                   <!-- /.box -->
           </div>
       </div>
-   				
-	                <!-- <tr>
-	                  <td>707425</td>
-	                  <td>Shampoo Acondicionador 2 en 1 de 20ml. </td>
-	                  <td>
-	                      <div class="label label-warning pull-right" style="width: 100%">
-	                      	<span class="">$1800</span>
-	                      </div>
-	                  </td>
-	                  <td>
-	                  	<img src="http://www.amenitieschile.cl/6558-large_default/shampoo-45ml-frutos-del-bosque.jpg" 
-	                  	alt="Product Image" style="width: 100%">
-	                  </td>
-	                </tr> -->
-
-      	<!--  -->
 
     </section>
 

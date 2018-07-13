@@ -63,23 +63,31 @@ class Registro extends CI_Controller
 		 $direccion['Direccion'] = $this->input->post('txtDireccion');
 
 	/********************************validadores****************************************/	
-	$value = '';
-	$determinador = true; //determina si la variable de algun campo está vacio
+				// $value = '';
+				// $determinador = true; //determina si la variable de algun campo está vacio
 
-	foreach ($usuario as $value) {
-		if($value == '' || $value == 0 || $value == null){
+				// foreach ($usuario as $value) {
+				// 	if($value == '' || $value == 0 || $value == null){
 
-			$determinador = false;
+				// 		$determinador = false;
 
-		}else{
+				// 	}else{
 
-			$determinador;
-		}
-	 }
+				// 		$determinador;
+				// 	}
+				//  }
+				
+		 	if($usuario['Clave'] == $usuario['RepClave']) 
+		 		{
 
-		 if($usuario['Clave'] == $usuario['RepClave']) {
+		 	if(!$this->musuario->validarExistencia($usuario))
+		 		{
 
-		 	if(!$this->musuario->validarExistencia($usuario)){
+			if($this->mencargado->valudarRut($encargado['RutEncargado']))
+				{
+
+			if($this->mempresa->valudarRut($encargado['RutEmpresa']))
+				{
 
 		 	$idUsuario = $this->musuario->guardar($usuario); //guardar Usuario
 		 		
@@ -88,20 +96,21 @@ class Registro extends CI_Controller
 		 	 //se valida que la se haya traido la Id del usuario
 			$encargado['idUsuario'] = $idUsuario;
 
-			if($this->mencargado->valudarRut($encargado['RutEncargado']))
-			{
-
 			$idEncargado = $this->mencargado->guardar($encargado); //guardar Encargado
 
-			if($this->mempresa->valudarRut($encargado['RutEmpresa']))
-			 		{
+				if ($idEncargado > 0)
+			 {
+
 			$idEmpresa   = $this->mempresa->guardar($empresa); 	   //guardar Empresa
+
+				if ($idEmpresa > 0)
+			 { 
+
 			$idDireccion = $this->mdireccion->guardar($direccion); //guardar Direccion
 
-			if ($idEmpresa > 0)
-			 { if ($idDireccion > 0)
-			 { if ($idEncargado > 0)
-			 {
+			 	if ($idDireccion > 0)
+			 { 
+			 
 			 //se guarda en un array las Id's empresa y encargado que necesita contacto
 			$contacto['idEmpresa'] = $idEmpresa;
 			$contacto['idEncargado'] = $idEncargado;
