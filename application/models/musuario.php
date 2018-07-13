@@ -124,7 +124,7 @@ class Musuario extends CI_Model
 
 		public function getCliente()
 		{
-				$this->db->select(' u.NombreUsu, u.Clave , en.Nombre, en.Rut, ca.Cargo, cn.Telefono, cn.Email, cn.Celular, em.NombreFantasia, em.Rut, em.RazonSocial, em.Descripcion, re.Region, pr.Provincia, cm.Comuna, pe.Permiso, 
+				$this->db->select('em.idEmpresa, u.NombreUsu, u.Clave , en.Nombre, en.Rut, ca.Cargo, cn.Telefono, cn.Email, cn.Celular, em.NombreFantasia, em.Rut, em.RazonSocial, em.Descripcion, re.Region, pr.Provincia, cm.Comuna, pe.Permiso, 
 					td.Tipo, pr.Provincia, cm.Comuna');
 
                 $this->db->from('usuario u');

@@ -47,8 +47,7 @@ class Mempresa extends CI_Model
 
 	    public function validarRut($rut) //valida si ya existe el rut
 	    {
-
-	        	$query = $this->db->get_where('empresa',array('Rut'=>$rut));
+	        $query = $this->db->get_where('empresa',array('Rut'=>$rut));
 	     //  $query = $this->db->get();
 			if ($query->num_rows() == 1)
 			{
