@@ -45,8 +45,7 @@ skin-blue
                 <img src="<?=base_url()?>AdminLTE-2.4.2/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  <?=$nombre?> - <?=$permiso?>
-                  <small>Mi since Nov. 2012</small>
+                  <?=$nombre?> - <?=$permiso?>                 
                 </p>
               </li>
               <!-- Menu Body -->

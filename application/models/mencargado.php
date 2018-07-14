@@ -8,14 +8,18 @@ class Mencargado extends CI_Model
 		{
 			parent::__construct();
 		}
+
+
 	    public function buscar()
 	    {
 	    	# code...
 	    }
+	    
 	    public function listar()
 	    {
 	    	$parametro = $this->db->get('encargado');
-
+	    	$this->db->where('PK_idUsuario',$this->session->userdata('s_idUsuario'));
+			
 	        return $parametro->result();
 	    }
 

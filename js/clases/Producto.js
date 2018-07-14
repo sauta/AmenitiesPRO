@@ -23,7 +23,7 @@ $( "#cboCategoria1" ).change(function (){
 
 $( "#cboCategoria2" ).change(function (){
   	/*Se limpia las provincias y se selecciona otro producto*/
-  	 $('#cboProducto2').html('<option>Selecciones un prodcuto</option>');
+  	 $('#cboProducto2').html('<option>Selecciones un producto</option>');
 
 		var id = $('#cboCategoria2').val();
 
