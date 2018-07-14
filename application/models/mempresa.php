@@ -45,6 +45,21 @@ class Mempresa extends CI_Model
 	    }
 	    /********************************************Validadores******************************************/
 
+	    public function validarExistencia($parametro) //valida si el usuario existe
+	    {
+	       $query = $this->db->get_where('empresa',array('NombreFantasia'=>$parametro['NombreFantasia']));
+	      //  $query = $this->db->get();
+			if ($query->num_rows() == 1)
+			{
+				return true; //la empresa existe :D
+
+			}else{
+
+				return false; //la empresa no existe D:
+			}
+	    }
+
+
 	    public function validarRut($rut) //valida si ya existe el rut
 	    {
 	        $query = $this->db->get_where('empresa',array('Rut'=>$rut));

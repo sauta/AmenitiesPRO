@@ -8,7 +8,9 @@
             </ul>
             <div class="tab-content">
               <div class="active tab-pane" id="op1">
-
+                <div class="box-header with-border">
+                        <h3 class="box-title">Acerca de Mi</h3>
+                      </div>
                       <div class="box-body">
                         <strong><i class="fa fa-book margin-r-5"></i> Trabajo en: </strong>
                         <p class="text-muted">Empresa Hostelera</p>
@@ -25,11 +27,10 @@
                         <strong><i class="fa fa-file-text-o margin-r-5"></i> Extras</strong>
                         <p>El cielo no ha sido nunca el límite, lo somos nosotros. Es momento entonces de romper nuestros límites personales y superarnos para vivir una vida mejor..</p>
                       </div>
-
               </div>
-
+              <!-- /.tab-pane -->
               <div class="tab-pane" id="op2">
-
+                <!-- The timeline -->
                 <form action="<?=site_url()?>/Usuario/updatePerfil" method="post">
                     <div class="box-body">
                         <img class="profile-user-img img-responsive img-circle"
@@ -56,10 +57,11 @@
                         </ul>
                         <button type="submit" class="btn btn-primary"><b>Editar</b></button>
                     </div>
-                </form>
-
+                 </form>
               </div>
+              <!-- /.tab-pane -->
             </div>
+            <!-- /.tab-content -->
           </div>
         </div>
       </div>

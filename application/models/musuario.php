@@ -75,7 +75,7 @@ class Musuario extends CI_Model
 			 }
 	     }
 		/********************************************Validadores*****************************************/
-	    public function validarExistencia($parametro) //valida si el usuario existe
+	    public function validarExistencia($parametro) //valida si la empresa existe
 	    {
 	       $query = $this->db->get_where('usuario',array('NombreUsu'=>$parametro['NombreUsuario']));
 	     //  $query = $this->db->get();

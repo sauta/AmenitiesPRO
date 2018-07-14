@@ -133,10 +133,15 @@
                     <i class="fa fa-circle-o">
                     </i>Pedidos</a>
                   </li>
-
+                  
                   <li><a href="<?=site_url()?>/Administrador/estadisticas_de_ventas">
                     <i class="fa fa-circle-o">
                     </i>Ventas</a>
+                  </li>
+
+                  <li><a href="<?=site_url()?>/Administrador/estadisticas_de_productos">
+                    <i class="fa fa-circle-o">
+                    </i>Productos</a>
                   </li>
 
                 </ul>
