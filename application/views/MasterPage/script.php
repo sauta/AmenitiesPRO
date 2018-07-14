@@ -97,9 +97,34 @@
     <script src="<?=base_url()?>js/clases/Pedidos.js"></script>
 
   <?php }?>
+
+<!-- JUAN -->
+
+  <?php if($this->uri->segment(2)=='encargadado'){?>
+    <!-- DataTable -->
+    <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <!-- datatableBoostrap -->
+    <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <!--  -->
+    <script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
+
+    <script src="<?=base_url()?>js/datatable/Encargados.js"></script>
+
+    <script src="<?=base_url()?>js/clases/Encargado.js"></script>
+
+  <?php }?>
+
+
   <?php if($this->uri->segment(2)=='compra'){?>
   	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
 
+    <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="<?=base_url()?>AdminLTE-2.4.2/plugins/iCheck/icheck.min.js"></script>
+
+    <script src="<?=base_url()?>js/clases/Compras.js"></script>
+    <script src="<?=base_url()?>js/datatable/Compras.js"></script>
+    
   <?php }?>
   <?php if($this->uri->segment(2)=='factura'){?>
 

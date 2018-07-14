@@ -53,7 +53,8 @@ class Mcontacto extends CI_Model
 
 			return true;
 	    }
-
+//ojoooo //$this->session->userdata('s_permiso') == 'Cliente'
+	    
 		public function generarLinkTemporal($idusuario, $username)
 		{
 		   // Se genera una cadena para validar el cambio de contraseña
