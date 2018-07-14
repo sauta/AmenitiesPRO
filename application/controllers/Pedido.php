@@ -6,7 +6,7 @@ class Pedido extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('mpedidos');
+		$this->load->model('mpedido');
 		$this->load->library('session');
 	}
 
@@ -32,14 +32,21 @@ class Pedido extends CI_Controller {
 	public function listarPedidos()
 	{
 
-		echo json_encode($this->mpedidos->listar());
+		echo json_encode($this->mpedido->listar());
 
 	}
 	public function buscarPedidos()
 	{
 		$p = $this->input->post('idPedido');
-		echo json_encode($this->mpedidos->busar($p));
+		echo json_encode($this->mpedido->busar($p));
 
+	}
+
+	public function getDetalle()
+	{
+		$pr = $this->input->post('idProducto');
+		$pe = $this->input->post('idPedido');
+		echo json_encode($this->mpedido->buscarDetalle($pr,$pe));
 	}
 
 	public function editarPedido()
@@ -49,7 +56,7 @@ class Pedido extends CI_Controller {
 		$p = $this->input->post('idPedido');
 		$p = $this->input->post('idPedido');
 
-		echo json_encode($this->mpedidos->editar($p));
+		echo json_encode($this->mpedido->editar($p));
 
 	}
  }

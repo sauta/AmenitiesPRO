@@ -30,6 +30,10 @@ function format ( d ) {
     '</table>';
  }
 
+
+
+
+
 var t = $('#tblProductoEncargo').DataTable({
 
 		lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
@@ -64,7 +68,7 @@ var t = $('#tblProductoEncargo').DataTable({
 	});
 
  $('#tblProductoEncargo tbody').on('click', 'td.details-control', function () {
-
+        
  		var tr = $(this).closest('tr');
         // var btn = $(this).closest('button');
         var row = t.row( tr );
@@ -89,6 +93,8 @@ var t = $('#tblProductoEncargo').DataTable({
     
       $(document).on('click', '.btn-success', function(){
         
+            $('#mensaje').val('alerta trucha');
+            $('#alerta').modal('show');
         
         } );
             // var t = $('#tablaPedido').DataTable();
@@ -108,3 +114,8 @@ var t = $('#tblProductoEncargo').DataTable({
             //     // counter++;
             // } );
         
+$('#compra').DataTable({
+
+
+
+})

@@ -16,7 +16,7 @@
                       <div class="col-xs-12">
                         <h2 class="page-header">
                           <i class="fa fa-globe"></i><?=$empresa?>
-                          <small class="pull-right">Date: 2/10/2014</small>
+                          <small class="pull-right">Fecha: <?=strftime("%d/%m/%Y");?></small>
                         </h2>
                       </div>
                       <!-- /.col -->
@@ -25,12 +25,12 @@
                     <div class="row invoice-info">
                       <div class="col-sm-12 invoice-col">
                        <div class="row">
-                          <div class="col-md-3">
+                          <div class="col-md-4">
                               <label class="col-md-12">SEÑOR(ES):</label>
                               <label class="col-md-12">DIRECCION:</label>
                               <label class="col-md-12">RUT:</label>
                           </div>
-                          <div class="col-md-3">
+                          <div class="col-md-2">
                               <label class="col-md-12"><?=$nombre?></label>
                               <label class="col-md-12"><?php echo $direccion+' '+$comuna+' '+ $provincia+' '+$region ?></label>
                               <label class="col-md-12"><?=$rut?></label>
@@ -43,23 +43,23 @@
                           <div class="col-md-3">
                               <label class="col-md-12">Carlos Gaete</label>
                               <label class="col-md-12"><?=$telefono?></label>
-                              <label class="col-md-12"></label>
+                              <label class="col-md-12">N/N</label>
                           </div>
                             </div>  
                          </div>
                       <!-- /.col -->
                       <div class="col-sm-12 invoice-col">
                        <div class="row">
-                      <div class="col-sm-3">
+                      <div class="col-sm-4">
                           <label class="col-sm-12">NOMBRE ORDEN DE COMPRA:   </label>
                           <label class="col-sm-12">FECHA DE ENTREGA PRODCUTOS:</label>
                           <label class="col-sm-12">DIRECCION DE ENVIO FACTURA:</label>
                           <label class="col-sm-12">CONTACTO:</label>
                       </div>
-                       <div class="col-sm-3">
+                       <div class="col-sm-2">
                           <input type="text" name="nomre orden de compra">
                           <input type="date" name="fecha de entrega">
-                          <label class="col-sm-12"><?php echo $direccion+' '+$comuna+' '+ $provincia+' '+$region ?></label>
+                          <label "><?php echo $direccion+' '+$comuna+' '+ $provincia+' '+$region ?></label>
                           <label class="col-sm-12"><?=$telefono?> <?=$celular?> <?=$email?></label>
                       </div>
                       <div class="col-sm-3">
@@ -82,7 +82,7 @@
                     <!-- Table row -->
                     <div class="row">
                       <div class="col-xs-12 table-responsive">
-                        <table class="table table-striped">
+                        <table id="compra" class="table table-striped">
                           <thead>
                               <tr>
                                   <th >Codigo SKU</th>
@@ -128,7 +128,7 @@
                       </div>
                       <!-- /.col -->
                       <div class="col-xs-6">
-                        <p class="lead">Amount Due 2/22/2014</p>
+                        <p class="lead">Monto <?=strftime("%d/%m/%Y");?></p>
 
                         <div class="table-responsive">
                           <table class="table">
@@ -137,11 +137,15 @@
                               <td>$250.30</td>
                             </tr>
                             <tr>
-                              <th>Tax (9.3%)</th>
+                              <th>IVA (19%)</th>
                               <td>$10.34</td>
                             </tr>
                             <tr>
-                              <th>Shipping:</th>
+                              <th>Descuento:</th>
+                              <td>$-1.210</td>
+                            </tr>
+                            <tr>
+                              <th>Cargo:</th>
                               <td>$5.80</td>
                             </tr>
                             <tr>
@@ -157,11 +161,11 @@
                     <!-- this row will not appear when printing -->
                     <div class="row no-print">
                       <div class="col-xs-12">
-                        <a href="invoice-print.html" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
-                        <button type="button" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment
+                        <a href="invoice-print.html" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Imprimir</a>
+                        <button type="button" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Confirmar pedido
                         </button>
                         <button type="button" class="btn btn-primary pull-right" style="margin-right: 5px;">
-                          <i class="fa fa-download"></i> Generate PDF
+                          <i class="fa fa-download"></i> Generr PDF
                         </button>
                       </div>
                     </div>

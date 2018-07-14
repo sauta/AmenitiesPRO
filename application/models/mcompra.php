@@ -29,4 +29,11 @@ class Mcompra extends CI_Model
 
 	   		return $this->db->insert_id();
 	    }
+
+	    public function FunctionName($value='')
+	    {
+	    	# code...
+	    }
+
+
 	}
