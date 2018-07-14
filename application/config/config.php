@@ -322,9 +322,9 @@ $config['cache_query_string'] = FALSE;
 | See the user guide for more info.
 |
 | https://codeigniter.com/user_guide/libraries/encryption.html
-|
+|	es la clave de sauta
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'e10adc3949ba59abbe56e057f20f883e';
 
 /*
 |--------------------------------------------------------------------------

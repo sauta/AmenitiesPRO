@@ -124,61 +124,63 @@ public function registro()
 			//se guardó correctamente todo el formulario
 			
 			$data = array('mensaje' => 'Se guardó correctamente todo el formulario, puede ingresar '+$encargado['NombreEncargado']);
-			
+			echo '<script> alert("'+$data['mensaje']+'"); </script>';
+
 			redirect('login',$data);
 			// 9.- valida si se guardó el contacto
 			} else {
 			//el contacto no se pudo guardar correctamente
 			$data = array('mensaje' => 'El contacto no se pudo guardar');
-			
+			echo '<script> alert("'+$data['mensaje']+'"); </script>';
+
 			redirect('Registro','refresh', $data);
 			}
 			// 8.- valida si se guardó la direccion
 			} else {
 			$data = array('mensaje' => 'ERROR! No se pudo guardar la direccion');
-			
+			echo '<script> alert("'+$data['mensaje']+'"); </script>';
 			redirect('Registro','refresh', $data);
 			}
 			// 7.- valida si se guardó la empresa
 			} else {
 			$data = array('mensaje' => 'ERROR! No se pudo guardar la empresa');
-			
+			echo '<script> alert("'+$data['mensaje']+'"); </script>';
 			redirect('Registro','refresh', $data);
 			}
 			// 6.- valida si se guardó el encargado
 			} else {
 			$data = array('mensaje' => 'ERROR! No se pudo guardar el encargado');
-			
+			echo '<script> alert("'+$data['mensaje']+'"); </script>';
 			redirect('Registro','refresh', $data);
 			}
 			// 5.- valida si se guardó el usuario
 			} else {
 			$data = array('mensaje' => 'ERROR! El Usuario no se pudo guardar');
-			
+			echo '<script> alert("'+$data['mensaje']+'"); </script>';
 			redirect('Registro','refresh', $data);
 			}
 			// 4.- valida el rut de la empresa
 			} else  {
 			$data = array('mensaje' => 'ERROR! El rut de la empresa ya existe');
-			
+			echo '<script> alert("'+$data['mensaje']+'"); </script>';
 			redirect('Registro','refresh', $data);
 			}
 			//3.- valida el rut del encargado
 			} else  {
 			$data = array('mensaje' => 'ERROR! El rut del encargado ya existe');
-
+			echo '<script> alert("'+$data['mensaje']+'"); </script>';
 			redirect('Registro','refresh', $data);
 			}
 			//2.- el usuario ya existe
 	 		} else  {
 			$data = array('mensaje' => 'ERROR! Ya existe un usuario con ese nombre');
-
+			echo '<script> alert("'+$data['mensaje']+'"); </script>';
 			redirect('Registro','refresh', $data);
 			}
 			//1.- la clave y reclave son diferentes
 			} else {
 		 	$data = array('mensaje' => 'ERROR! La clave y re clave no son iguales');
-		 	
+		 	echo '<script> alert("'+$data['mensaje']+'"); </script>';
 		 	redirect('Registro','refresh', $data);
 		 	}
 
@@ -278,67 +280,67 @@ public function registroAdmin()
 			//se guardó correctamente todo el formulario
 			
 			$data = array('mensaje' => 'Se guardó correctamente todo el formulario, puede ingresar '+$encargado['NombreEncargado']);
-			
+			echo '<script> alert("'+$data['mensaje']+'"); </script>';
 			redirect('Administrador/clientes','refresh',$data);
 			// 10.- valida si se guardó el contacto
 			} else {
 			//el contacto no se pudo guardar correctamente
 			$data = array('mensaje' => 'El contacto no se pudo guardar');
-			
+			echo '<script> alert("'+$data['mensaje']+'"); </script>';
 			redirect('Administrador/clientes','refresh', $data);
 			}
 			// 9.- valida si se guardó la direccion
 			} else {
 			$data = array('mensaje' => 'ERROR! No se pudo guardar la direccion');
-			
+			echo '<script> alert("'+$data['mensaje']+'"); </script>';
 			redirect('Administrador/clientes','refresh', $data);
 			}
 			// 8.- valida si se guardó la empresa
 			} else {
 			$data = array('mensaje' => 'ERROR! No se pudo guardar la empresa');
-			
+			echo '<script> alert("'+$data['mensaje']+'"); </script>';
 			redirect('Administrador/clientes','refresh', $data);
 			}
 			// 7.- valida si se guardó el encargado
 			} else {
 			$data = array('mensaje' => 'ERROR! No se pudo guardar el encargado');
-			
+			echo '<script> alert("'+$data['mensaje']+'"); </script>';
 			redirect('Administrador/clientes','refresh', $data);
 			}
 			//6.- valida si se guardó el usuario
 			} else {
 			$data = array('mensaje' => 'ERROR! El Usuario no se pudo guardar');
-			
+			echo '<script> alert("'+$data['mensaje']+'"); </script>';
 			redirect('Administrador/clientes','refresh', $data);
 			}
 			//5.- valida el rut de la empresa
 			} else  {
 			$data = array('mensaje' => 'ERROR! El rut de la empresa ya existe');
-			
+			echo '<script> alert("'+$data['mensaje']+'"); </script>';
 			redirect('Administrador/clientes','refresh', $data);
 			}
 			//4.- valida el rut del encargado
 			} else  {
 			$data = array('mensaje' => 'ERROR! El rut del encargado ya existe');
-
+			echo '<script> alert("'+$data['mensaje']+'"); </script>';
 			redirect('Administrador/clientes','refresh', $data);
 			}
 			//3.- el usuario ya existe
 	 		} else  {
 			$data = array('mensaje' => 'ERROR! Ya existe un usuario con ese nombre');
-
+			echo '<script> alert("'+$data['mensaje']+'"); </script>';
 			redirect('Administrador/clientes','refresh', $data);
 			}
 			//2.- el usuario ya existe
 	 		} else  {
 			$data = array('mensaje' => 'ERROR! Ya existe un usuario con ese nombre');
-
+			echo '<script> alert("'+$data['mensaje']+'"); </script>';
 			redirect('Administrador/clientes','refresh', $data);
 			}
 			//1.- la clave y reclave son diferentes
 			} else {
 		 	$data = array('mensaje' => 'ERROR! La clave y re clave no son iguales');
-		 	
+		 	echo '<script> alert("'+$data['mensaje']+'"); </script>';
 		 	redirect('Administrador/clientes','refresh', $data);
 		 	}
 

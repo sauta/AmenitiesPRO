@@ -12,7 +12,7 @@
                         <th></th>
                         <th>Nombre</th>
                         <th>Rut</th>
-                        <th></th>
+                     
                         </tr>
                       </thead>
                       <tfoot>
@@ -20,7 +20,7 @@
                         <th></th>
                         <th>Nombre</th>
                         <th>Rut</th>
-                        <th></th>
+            
                       </tr>
                       </tfoot>
                   </table>

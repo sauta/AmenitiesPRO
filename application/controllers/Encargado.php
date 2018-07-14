@@ -13,7 +13,11 @@ class Encargado extends CI_Controller {
 
 	public function getEncargado()
 	{
-		echo json_encode($this->mencargado->listar());
+		$c = $this->session->userdata('s_idEmpresa');
+
+		$parametro = $this->mencargado->listarId($c);
+
+		echo json_encode($parametro);
 	}
 
 	public function deleteEncargado()

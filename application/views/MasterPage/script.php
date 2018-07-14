@@ -93,8 +93,7 @@
     <script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
     <!-- tabla de productos formato pedidos -->
     <script src="<?=base_url()?>js/datatable/Pedidos.js"></script>
-
-    <script src="<?=base_url()?>js/clases/Pedidos.js"></script>
+    <script src="<?=base_url()?>js/datatable/Encargados.js"></script>
 
   <?php }?>
 

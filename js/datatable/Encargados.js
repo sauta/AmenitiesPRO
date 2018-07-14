@@ -1,3 +1,5 @@
+
+
 function format ( d ) {
     // `d` is the original data object for the row
     return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
@@ -34,14 +36,14 @@ var t = $('#tblEncargados').DataTable({
 
          "columnDefs": [
         {
+            //
           "targets": [1], 
-          "data": "idEncargado", 
+          "data": "Nombre", 
           "render": function(data, type, row) {
-            return '$ '+data;              
+            return data;              
               }
            }
         ],
-
 
         "order": [[1, 'asc']]
 	});

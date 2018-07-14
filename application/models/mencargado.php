@@ -15,12 +15,17 @@ class Mencargado extends CI_Model
 	    	# code...
 	    }
 	    
-	    public function listar()
+	    public function listarId($id)
 	    {
-	    	$parametro = $this->db->get('encargado');
-	    	$this->db->where('PK_idUsuario',$this->session->userdata('s_idUsuario'));
+	    	$this->db->select('en.Nombre, en.Rut');
+	    	$this->db->from('encargado en');
+	    	$this->db->join('contacto c', 'c.PK_idEncargado = en.idEncargado');
+	   	 	$this->db->join('empresa em', 'em.idEmpresa = c.PK_idEmpresa');
+	    	$this->db->where('em.idEmpresa', $id );
+
+	    	$query = $this->db->get();
 			
-	        return $parametro->result();
+	        return $query->result();
 	    }
 
 	    public function guardar($parametro)

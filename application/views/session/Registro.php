@@ -228,8 +228,6 @@
       <div class="modal-body">
           <label id="mensaje">
             <?php 
-            $mensaje = 'funca';
-
             if(isset($mensaje)){ ?>
                   <?=$mensaje?> 
               <?php } ?>

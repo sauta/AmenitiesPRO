@@ -14,7 +14,7 @@ class Musuario extends CI_Model
 		public function login($parametro)
 	   	 {  
 	   	 	$this->db->select('u.idUsuario, u.NombreUsu, u.Clave, u.url_foto_perfil, e.Nombre, c.Telefono, c.Email, c.Celular, em.NombreFantasia, p.Permiso, a.Cargo, em.Rut, em.RazonSocial, em.Descripcion, re.Region,
-	   	 		d.Direccion, pr.Provincia, cm.Comuna, td.Tipo, pr.Provincia');
+	   	 		d.Direccion, pr.Provincia, cm.Comuna, td.Tipo, pr.Provincia, em.idEmpresa, e.idEncargado');
 	   	 	
 	   	 	$this->db->from('usuario u');
 	   	 	$this->db->join('encargado e', 'e.PK_idUsuario = u.idUsuario');
@@ -54,17 +54,15 @@ class Musuario extends CI_Model
 					's_comuna' => $r->Comuna,
 					's_rut' => $r->Rut,
 
-					's_idEmpresa' => $r->PK_idEmpresa,
-					's_idEncargado' => $r->PK_idEncargado,
+					's_idEmpresa' => $r->idEmpresa,
+					's_idEncargado' => $r->idEncargado,
 
 					's_nombreFantasia' => $r->NombreFantasia,
 					's_email' => $r->Email,
 					's_telefono' => $r->Telefono,
 					's_celular' => $r->Celular,
 					's_foto' => $r->url_foto_perfil,
-
-//ojo arreglar vulneravilidad
-					's_clave' => $r->Clave);
+					);
 
 				$this->session->set_userdata($s_usuario);
 				return true;
