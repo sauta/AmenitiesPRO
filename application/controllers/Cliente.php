@@ -146,9 +146,9 @@ class Cliente extends CI_Controller {
 					$this->load->view('MasterPage/header',$data);
 					$this->load->view('MasterPage/asideLeft',$data);
 					$this->load->view($pagina,$data);
-					$this->load->view('MasterPage/footer');
+					$this->load->view('MasterPage/footer',$data);
 					$this->load->view('MasterPage/asideRight');
-					$this->load->view('MasterPage/script');
+					$this->load->view('MasterPage/script',$data);
 				}else{redirect('Administrador/cpanel');}
 			}else{redirect('Login');}
 		}

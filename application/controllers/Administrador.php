@@ -22,7 +22,7 @@ class Administrador extends CI_Controller
 	public function perfil()
 		//perfil del usuario ya sea administrador o cliente de cualquier tipo
 		{
-
+			
 			$pagina = 'MasterPage/asideLeft';
 			$this->cargarPagina($pagina);
 				
@@ -51,6 +51,16 @@ class Administrador extends CI_Controller
 
 			$pagina = 'usuario/administrador/estadistica/vventa';
 					$this->cargarPagina($pagina);
+		}
+
+
+		public function estadisticas_de_productos()
+		//estadisticas de las facturas del los clientes que seleccione el administrador
+		{
+
+			$pagina = 'usuario/administrador/estadistica/vproductos';
+			$this->cargarPagina($pagina);
+				
 		}
 
 /*****************************************Mantenedores*********************************************/
@@ -158,9 +168,9 @@ class Administrador extends CI_Controller
 					$this->load->view('MasterPage/header',$data);
 					$this->load->view('MasterPage/asideLeft',$data);
 					$this->load->view($pagina,$data);
-					$this->load->view('MasterPage/footer');
+					$this->load->view('MasterPage/footer',$data);
 					$this->load->view('MasterPage/asideRight');
-					$this->load->view('MasterPage/script');
+					$this->load->view('MasterPage/script',$data);
 					}else{redirect('Cliente/cpanel');}
 			}else{redirect('Login');}
 		}

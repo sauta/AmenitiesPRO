@@ -57,7 +57,7 @@
                         </ul>
                         <button type="submit" class="btn btn-primary"><b>Editar</b></button>
                     </div>
-                  </form>
+                 </form>
               </div>
               <!-- /.tab-pane -->
             </div>

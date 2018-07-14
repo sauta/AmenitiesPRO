@@ -14,7 +14,7 @@
     </div>
          <div class="box-body">
 
-            <form name="form1"  action="<?=site_url()?>/Registro/registro" method="POST" >
+            <form name="form1"  action="<?=site_url()?>/Registro/registroAdmin" method="POST" >
                 <!--***********************************Registro Usuario************************************-->
           
                 <div class="row justify-content-center">
