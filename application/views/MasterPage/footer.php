@@ -13,7 +13,7 @@
     <strong>Copyright &copy; 2010-2018 <a href="https://admenitieschile.cl"></a>Amenities Chile</strong> Todos los derechos reservados
   </footer>
   
-
+<!-- 
 <div class="modal fade" id="alerta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -35,4 +35,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

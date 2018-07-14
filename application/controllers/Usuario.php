@@ -55,7 +55,7 @@ class Usuario extends CI_Controller {
 		
 		if(!$parametro['Clave'] == '' || !$parametro['repClave'] == '' || !$parametro['NombreUsuario'] == '')
 		{
-			echo '<script type="text/javascript">alert("hey listen");</script>';
+			//echo '<script type="text/javascript">alert("hey listen");</script>';
 			if($parametro['Clave'] == $parametro['repClave']){
 
 

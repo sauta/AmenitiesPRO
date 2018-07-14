@@ -78,6 +78,9 @@
   <?php }?>
   <?php if($this->uri->segment(2)=='estadisticas_de_pedidos'){?>
   	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
+    <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/chart.js/Chart.js"></script>
+    <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="<?=base_url()?>js/estadisticas/Empresas.js"></script>
 
   <?php }?>
   <?php if($this->uri->segment(2)=='encargadado'){?>
@@ -155,19 +158,25 @@
   <?php if($this->uri->segment(2)=='estadisticas_de_facturas'){?>
   	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
     
-    <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/chart.js/Chart.js"></script>
+        <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/chart.js/Chart.js"></script>
     <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/fastclick/lib/fastclick.js"></script>
-    <script src="<?=base_url()?>js/estadisticas/facturas.js"></script>
+    <script src="<?=base_url()?>js/estadisticas/Empresas.js"></script>
     
   <?php }?>
 
   <?php if($this->uri->segment(2)=='estadisticas_de_pedidos'){?>
   	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
 
+        <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/chart.js/Chart.js"></script>
+    <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="<?=base_url()?>js/estadisticas/Empresas.js"></script>
   <?php }?>
   <?php if($this->uri->segment(2)=='estadisticas_de_ventas'){?>
   	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>
 
+        <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/chart.js/Chart.js"></script>
+    <script src="<?=base_url()?>AdminLTE-2.4.2/bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="<?=base_url()?>js/estadisticas/Empresas.js"></script>
   <?php }?>
   <?php if($this->uri->segment(2)=='clientes'){?>
   	<script src="<?=base_url()?>AdminLTE-2.4.2/"></script>

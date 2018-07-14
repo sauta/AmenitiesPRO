@@ -16,7 +16,7 @@ class Mempresa extends CI_Model
 
 	    public function listar()
 	    {
-	    	# code...
+	    	$query = $this->db->get('empresa',array('NombreFantasia'
 	    }
 	    /********************************************Guardadores******************************************/
 	    public function guardar($parametro)
@@ -75,5 +75,11 @@ class Mempresa extends CI_Model
 	        	
 	    }
 
+	    public function getEmpresas(){
+
+	    	$parametro = $this->db->get('empresa');
+    	
+    		return $parametro->result();
+    	}
 	}
 ?>
