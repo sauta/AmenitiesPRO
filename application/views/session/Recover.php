@@ -30,9 +30,25 @@
   <div class="login-box-body">
     <p class="login-box-msg">Recuperar Clave Por Email</p>
 
-    <form id="frmRestablecer" action="validaremail.php" method="post">
+
+<h2>Contacto</h2>
+<form action="<?=base_url("RecoverPass/enviar")?>" method="post">
+    Correo electronico: <br/>
+    <input type="email" name="email" /><br/>
+    Asunto: <br/>
+    <input type="text" name="asunto" /><br/>
+    Mensaje:<br/>
+    <textarea name="mensaje"></textarea><br/>
+    <input type="submit" name="submit" value="Enviar"/>
+</form>
+<?php
+if($this->session->flashdata('envio')){
+    echo $this->session->flashdata('envio');
+}
+?>
+<!-- <form id="frmRestablecer" action="<?=site_url()?>/RecoverPass/recuperar" method="post">
   <div class="panel panel-default">
-    <div class="panel-heading"> Restaurar contraseña </div>
+    <div class="panel-heading">Restaurar contraseña </div>
     <div class="panel-body">
       <div class="form-group">
         <label for="email"> Escribe el email asociado a tu cuenta para recuperar tu contraseña </label>
@@ -43,7 +59,7 @@
       </div>
     </div>
   </div>
-</form>
+</form> -->
  
 <div id="mensaje"></div>
 

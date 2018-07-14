@@ -55,23 +55,14 @@ class Mcontacto extends CI_Model
 	    }
 //ojoooo //$this->session->userdata('s_permiso') == 'Cliente'
 	    
-		public function generarLinkTemporal($idusuario, $username)
-		{
-		   // Se genera una cadena para validar el cambio de contraseña
-		   $cadena = $idusuario.$username.rand(1,9999999).date('Y-m-d');
-		   $token = sha1($cadena);
-		 
-		   $conexion = new mysqli('localhost', 'root', '', 'amenitiespro');
-		   // Se inserta el registro en la tabla tblreseteopass
-		   $sql = "INSERT INTO usuario (idUsuario, NombreUsu, Clave) VALUES($idusuario,'$username','$token');";
-		   $resultado = $conexion->query($sql);
-		   if($resultado){
-		      // Se devuelve el link que se enviara al usuario
-		      $enlace = $_SERVER["SERVER_NAME"].'/pass/restablecer.php?idusuario='.sha1($idusuario).'&token='.$token;
-		      return $enlace;
-		   }
-		   else
-		      return FALSE;
-		}
+	// 	function new_user($correo)
+	// {
+ //       $data = array(
+ //            'Email' => $correo,
+ //            'PK_idEmpresa' => session->userdata('s_idEmpresa'),
+ //            'PK_idEncargado' => session->userdata('s_idEncargado')
+ //        );
+ //        return $this->db->insert('contacto', $data);	
+ //    }
 
   }

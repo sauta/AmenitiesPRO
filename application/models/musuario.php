@@ -53,8 +53,10 @@ class Musuario extends CI_Model
 					's_provincia' => $r->Provincia,
 					's_comuna' => $r->Comuna,
 					's_rut' => $r->Rut,
-					// 's_idTipoCliente' => $r->PK_idTipoCliente,
-					// 's_idCargo' => $r->PK_idCargo,
+
+					's_idEmpresa' => $r->PK_idEmpresa,
+					's_idEncargado' => $r->PK_idEncargado,
+
 					's_nombreFantasia' => $r->NombreFantasia,
 					's_email' => $r->Email,
 					's_telefono' => $r->Telefono,

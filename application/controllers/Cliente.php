@@ -128,7 +128,9 @@ class Cliente extends CI_Controller {
 						  'nombre' => $this->session->userdata('s_nombreEncargado'),
 						  'permiso' => $this->session->userdata('s_permiso'),
 						  'nombrePerfil' => $this->session->userdata('s_nombreUsuario'),
-						  // 'clave' => $this->session->userdata('s_clave'),
+						  
+						  'idEmpresa' => $this->session->userdata('s_idEmpresa'),
+						  'idEncargado' => $this->session->userdata('s_idEncargado'),
 
 						  'email' => $this->session->userdata('s_email'),
 						  'direccion' => $this->session->userdata('s_direccion'),
